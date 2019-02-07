@@ -15,9 +15,11 @@
 </head>
 <body>
   <h3 style="display:none;" id="counter" ><span id="egg1" class="egg" onClick="findegg(1)">Easter Egg</span>s: <span id="eggs">0</span></h3>
-  <h1 id="title">The <span id="egg3">Easter Egg</span> Game</h1>
+  <div text-align="center">
+    <h1 id="title">The <span id="egg3">Easter Egg</span> Game</h1>
+  </div>
   <div id="egg0" class="egg">    
-  <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
+    <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
   <script>
@@ -43,7 +45,6 @@
         alert("Ok, finished uploading the code...")
         alert("I'm Visionist btw")
         document.getElementById("title").style.display="inline"
-        document.getElementById("title").align="center";
       },4000);
       }},
       
