@@ -1,6 +1,9 @@
 <head>
   <title>Easter Egg Game</title>
 <style>
+#title {
+  
+  }
 #egg0 {
   position:absolute;
   right:50%;
@@ -13,7 +16,10 @@
 <body>
   <h3 style="display:none;" id="counter" ><span id="egg1" class="egg" onClick="findegg(1)">Easter Egg</span>s: <span id="eggs">0</span></h3>
   <div id="egg0" class="egg">
-<img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
+    
+    <h1>The <span>Easter Egg</span> Game</h1>
+    
+  <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
   <script>
@@ -27,15 +33,18 @@
       {s:function(){//1
         alert("Didn't expect you to find an egg there, did you?");
         document.getElementById("egg1").id="egg2";
-        document.getElementById("egg2").innerHTML='<img onClick="findegg(2)" width="30" style="vertical-align:middle;" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">';
+        document.getElementById("egg2").innerHTML='<img onClick="findegg(2)" width="20" style="vertical-align:middle;" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">';
       }},
       {s:function(){//2
       alert("It looks like you found a pretty good rule of thumb:")
       alert("Click the eggs!")
       alert("Well, you might want to keep in mind some of these helpful tips!")
       alert("They always may come into play later...")
-      }}
+      alert("Ima add some new features now... brb");
+      }},
+      
 ];
+    
     //fill in "found" state
     for (var i = 0; i<egglist.length; i++){
       egglist[i].found=false;
