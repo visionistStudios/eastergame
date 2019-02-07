@@ -12,7 +12,9 @@
   user-select:none;
   }
   .section {
-    color:rgb(244, 238, 66);
+    background-color:rgb(244, 238, 66);
+    display:none;
+    align:center;
   }
 </style>
 </head>
@@ -26,7 +28,7 @@
     <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
-  <div id="request" class="section">
+  <div id="request" class="section" width="200" height="100">
     hi there noob
   </div>
   
@@ -53,7 +55,8 @@
         alert("Ok, finished uploading the code...")
         alert("I'm Visionist btw")
         alert("(You know... one of the all-powerful devs?)")
-        document.getElementById("title").style.display="inline"
+        document.getElementById("title").style.display="inline";
+        document.getElemtById("request").style.display="inline";
       },4000);
       }},
       {s:function(){//3
