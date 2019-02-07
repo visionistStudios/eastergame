@@ -11,18 +11,29 @@
 </style>
 </head>
 <body>
-  <h3>Easter Eggs: <span id="eggs">0</span></h3>
-  <div id="egg1">
-<img onClick="clickEgg()" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
+  <h3><span id="egg1" class="egg">Easter Eggs:</span> <span id="eggs">0</span></h3>
+  <div id="egg0" class="egg">
+<img onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
   <script>
-    var eggnum = document.getElementById("eggs");
-    var eggbtn = document.getElementById("egg1");
+    //egg counter and list of all easter eggs
     var eggs = 0;
-    function clickEgg(){
+    var egglist = [
+      {s:function(){alert("You found an easter egg!")}},
+      {s:function(){}}
+];
+    //fill in "found" state
+    for (var i = 0; i<egglist.length; i++){
+      egglist[i].found=false;
+    }
+    var eggnum = document.getElementById("eggs");
+    function findegg(id){
       eggs++;
       eggnum.innerHTML=eggs;
+      if (id.s){id.s();}
     }
+    
+    
   </script>
     </body>
