@@ -11,6 +11,9 @@
   transform:translate(50%,-50%);
   user-select:none;
   }
+  .section {
+    color:rgb(244, 238, 66);
+  }
 </style>
 </head>
 <body>
@@ -18,8 +21,13 @@
   <div align="center">
     <h1 id="title">The <span id="egg3" onClick="findegg(3)">Easter Egg</span> Game</h1>
   </div>
+  
   <div id="egg0" class="egg">    
     <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
+  </div>
+  
+  <div id="request" class="section">
+    hi there noob
   </div>
   
   <script>
@@ -39,7 +47,7 @@
       alert("It looks like you found the rule of the game:")
       alert("Click the easter eggs!")
       alert("Well, you might want to keep in mind some of these helpful tips!")
-      alert("They always may come into play later...")
+      alert("They always may come into play later... Loool")
       alert("Ima add some new features now... brb");
       setTimeout(function(){
         alert("Ok, finished uploading the code...")
@@ -50,8 +58,7 @@
       }},
       {s:function(){//3
         alert("Haha!  I told you that you should click on eggs, not the words \"Easter Egg\"!")
-        alert("Well, that was a clever trick! Take this present:\n+2 Eggs");
-        eggs+=1;
+        alert("Well, that was a clever trick! Have an egg!");
       }}
 ];
     
