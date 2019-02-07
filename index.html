@@ -11,16 +11,18 @@
 </head>
 <body>
   <h3>Easter Eggs: <span id="eggs">0</span></h3>
-  <button onClick="clickEgg()" id="egg1">
+  <div id="egg1">
 <img src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
-  </button>
+  </div>
   
   <script>
     var eggnum = document.getElementById("eggs");
+    var eggbtn = document.getElementById("egg1");
     var eggs = 0;
     function clickEgg(){
       eggs++;
       eggnum.innerHTML=eggs;
     }
+    eggbtn.onmousedown=clickEgg();
   </script>
     </body>
