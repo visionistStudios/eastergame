@@ -11,7 +11,7 @@
 </style>
 </head>
 <body>
-  <h3><span id="egg1" class="egg">Easter Eggs:</span> <span id="eggs">0</span></h3>
+  <h3><span id="egg1" class="egg" onClick="findegg(1)">Easter Eggs:</span> <span id="eggs">0</span></h3>
   <div id="egg0" class="egg">
 <img onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
@@ -20,8 +20,14 @@
     //egg counter and list of all easter eggs
     var eggs = 0;
     var egglist = [
-      {s:function(){alert("You found an easter egg!")}},
-      {s:function(){}}
+      {s:function(){
+        alert("You found an easter egg!");
+      }},
+      {s:function(){
+        alert("Didn't expect you to find an egg there, did you?");
+        document.getElementById("egg1").id="egg2";
+        document.getElementById("egg2").innerHTML='<img onClick="findegg(1)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">';
+      }}
 ];
     //fill in "found" state
     for (var i = 0; i<egglist.length; i++){
