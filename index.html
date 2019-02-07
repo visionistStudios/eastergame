@@ -3,6 +3,7 @@
 <style>
 #title {
   text-align:center;
+  display:none;
   }
 #egg0 {
   position:absolute;
@@ -15,10 +16,8 @@
 </head>
 <body>
   <h3 style="display:none;" id="counter" ><span id="egg1" class="egg" onClick="findegg(1)">Easter Egg</span>s: <span id="eggs">0</span></h3>
-  <div id="egg0" class="egg">
-    
-    <h1>The <span>Easter Egg</span> Game</h1>
-    
+  <h1 id="title">The <span id="egg3">Easter Egg</span> Game</h1>
+  <div id="egg0" class="egg">    
   <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
@@ -41,6 +40,11 @@
       alert("Well, you might want to keep in mind some of these helpful tips!")
       alert("They always may come into play later...")
       alert("Ima add some new features now... brb");
+      setTimeout(function(){
+        alert("Ok, finished uploading the code...")
+        alert("I'm Visionist btw")
+        document.getElementById("title").style="display:inline;"
+      },4000);
       }},
       
 ];
