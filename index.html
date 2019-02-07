@@ -29,11 +29,11 @@
     }
     var eggnum = document.getElementById("eggs");
     function findegg(id){
-      if (!id.found){
+      if (!egglist[id].found){
       eggs++;
       eggnum.innerHTML=eggs;
-      if (id.s){id.s();}
-      id.found=true;
+      if (egglist[id].s){egglist[id].s();}
+      egglist[id].found=true;
       }
     }
     
