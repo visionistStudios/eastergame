@@ -11,23 +11,30 @@
 </style>
 </head>
 <body>
-  <h3><span id="egg1" class="egg" onClick="findegg(1)">Easter Eggs:</span> <span id="eggs">0</span></h3>
+  <h3 display="none" id="counter"><span id="egg1" class="egg" onClick="findegg(1)">Easter Eggs:</span> <span id="eggs">0</span></h3>
   <div id="egg0" class="egg" text-align="center">
-<img onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
+<img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
   <script>
     //egg counter and list of all easter eggs
     var eggs = 0;
     var egglist = [
-      {s:function(){
+      {s:function(){//1
         alert("You found an easter egg!");
+        document.getElementById("counter").display="inline";
       }},
-      {s:function(){
+      {s:function(){//2
         alert("Didn't expect you to find an egg there, did you?");
         document.getElementById("egg1").id="egg2";
-        document.getElementById("egg2").innerHTML='<img onClick="findegg(2)" width="30" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">';
-      }}
+        document.getElementById("egg2").innerHTML='<img onClick="findegg(2)" width="30" class="egg" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">';
+      }},
+      {s:function(){
+      alert("It looks like you found the rule of thumb")
+      alert("Click the eggs!")
+      alert("Well, you might want to keep in mind some of these helpful tips!")
+      alert("They always may come into play later...")
+      }}//3
 ];
     //fill in "found" state
     for (var i = 0; i<egglist.length; i++){
