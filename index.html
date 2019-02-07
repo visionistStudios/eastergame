@@ -6,12 +6,13 @@
   right:50%;
   top:50%;
   transform:translate(50%,-50%);
+  user-select:none;
   }
 </style>
 </head>
 <body>
   <h3>Easter Eggs: <span id="eggs">0</span></h3>
-  <button id="egg1">
+  <button id="egg1" onClick="clickEgg()">
 <img src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </button>
   
@@ -23,6 +24,5 @@
       eggs++;
       eggnum.innerHTML=eggs;
     }
-    eggbtn.onmousedown=clickEgg();
   </script>
     </body>
