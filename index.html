@@ -11,7 +11,7 @@
 </style>
 </head>
 <body>
-  <h3 display="none" id="counter"><span id="egg1" class="egg" onClick="findegg(1)">Easter Eggs:</span> <span id="eggs">0</span></h3>
+  <h3 style="display:none;" id="counter"><span id="egg1" class="egg" onClick="findegg(1)">Easter Egg</span>s: <span id="eggs">0</span></h3>
   <div id="egg0" class="egg" text-align="center">
 <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
@@ -22,7 +22,7 @@
     var egglist = [
       {s:function(){//1
         alert("You found an easter egg!");
-        document.getElementById("counter").display="inline";
+        document.getElementById("counter").style="display:inline;";
       }},
       {s:function(){//2
         alert("Didn't expect you to find an egg there, did you?");
