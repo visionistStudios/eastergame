@@ -35,8 +35,14 @@ h1, h2, h3, p {
   width:300px;
   height:100px;
   }
+#menu {
+  background-color:rgb(244, 238, 66);
+  display:none;
+  text-align:center;
+  padding:20px;
+  }
 .section {
-    background-color:rgb(244, 238, 66);
+    background-color:rgb(244, 223, 66);
     display:none;
     text-align:center;
     padding:20px;
@@ -58,17 +64,17 @@ h1, h2, h3, p {
   </div>
   
   <div id="egg0" class="egg">    
-    <img class="egg" onClick="findegg(0)" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
+    <img class="egg" onClick="clickEgg()" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
   <div id="request" class="section" align="center">
     <h3>Request a New Feature</h3>
-    <button>Request</button>
+    <button onClick="request()">Request</button>
   </div>
   
   <div id="guide" class="section" align="center">
     <h3>Guide to the <span onClick="reset()">Easter Eggs</span></h3>
-    <p><span onClick="reset()">Easter Eggs</span> are very elusive creatures.  They are triggered by a certain action. (ex: clicking <span>the egg</span> or pressing e)  Some <span onClick="reset()">easter eggs</span> require multiple steps to activate.  Also, no one likes smart @$$es who click on every instance of "<span onClick="reset()">easter egg</span>".  I'm telling you: <strong>I WILL RESET YOUR GAME</strong> if I catch you clicking on the words "<span onClick="reset()">easter egg</span>".  I mean, just click on <span>everything else</span>, though.  Doesn't hurt to try!</p>
+    <p><span onClick="reset()">Easter Eggs</span> are very elusive creatures.  They are triggered by a certain action. (ex: clicking <span onClick="findegg(5)">the egg</span> or pressing e)  Some <span onClick="reset()">easter eggs</span> require multiple steps to activate.  Also, no one likes smart @$$es who click on every instance of "<span onClick="reset()">easter egg</span>".  I'm telling you: <strong>I WILL RESET YOUR GAME</strong> if I catch you clicking on the words "<span onClick="reset()">easter egg</span>".  I mean, just click on <span onClick="findegg(6)">everything else</span>, though.  Doesn't hurt to try!</p>
     <br>
     <img src="https://raw.githubusercontent.com/visionistStudios/game/master/key.png" class="key"onClick="vars['hasguidekey']=true;this.style.display='none';">
   </div>
@@ -78,6 +84,10 @@ h1, h2, h3, p {
     <button onClick="vars['btnclicks1']++;check('btnclicks1',25,unlock,'egg4')">No Click Me Plz</button>
     <br>
     <img src="https://raw.githubusercontent.com/visionistStudios/game/master/chest.png" id="egg4" class="chest" onClick="check('hasguidekey',true,findegg,4)" style="display:none;">
+  </div>
+  
+  <div id="menu">
+    HOWDY FELLAS!  YOU BEET THE GAME LOL
   </div>
   
   <script>
@@ -115,6 +125,17 @@ h1, h2, h3, p {
       }},
       {s:function(){//4
         alert("Wierd, I wonder who would lock eggs up in chests?");
+        vars.eggstage=1;
+      }},
+      {s:function(){//5
+        alert("WOW What a smartass.  You click on it JUST because it says \"the egg\" rather than \"easter egg\".");
+      }},
+      {s:function(){//6
+        alert("Yes.  I mean EVERYTHING!");
+      }},
+      {s:function(){//7
+        alert("You have good instict!");
+        alert("Always come back old easter eggs in case things have changed...");
       }}
 ];
     
@@ -145,7 +166,6 @@ h1, h2, h3, p {
     }
     
     //checkvar
-    
     function check(v,val,f,p){
       if (vars[v]==val){
         if (f){
@@ -158,12 +178,29 @@ h1, h2, h3, p {
       }
     }
     
+    //main egg click
+    function clickEgg(){
+      if (vars.eggstage==0){
+        findegg(0);
+      }
+      if (vars.eggstage==1){
+        findegg(7);
+      }
+    }
+    
     //autoupdate eggs
     setInterval(function(){
       document.getElementById("eggs").innerHTML=eggs;
     },1000);
     
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {hasguidekey:false,btnclicks1:0};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0};
+    
+    //request feature
+    function request(){
+      if (egglist[7].found){
+        unlock("menu");
+      }
+    }
   </script>
     </body>
