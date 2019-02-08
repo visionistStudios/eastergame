@@ -194,12 +194,19 @@ h1, h2, h3, p {
     },1000);
     
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0};
     
     //request feature
     function request(){
-      if (egglist[7].found){
-        unlock("menu");
+      if (vars.requeststage==0){
+        if (egglist[7].found){
+          alert("Alrighty, here you go.");
+          unlock("menu");
+          vars.requeststage = 1;
+        }else{
+          alert("I don't want to code right now.");
+          alert("Get me a giant fried egg and I'll think about it");
+        }
       }
     }
   </script>
