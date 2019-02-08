@@ -193,8 +193,8 @@ h1, h2, h3, p {
     function checkKey(event,k,f,p){
       var x = event.keyCode;
       var y = String.fromCharCode(x);
-      if (y==k){
-        if (f){if(p){f(p);}}else{f();}
+      if (y=="e"){
+        f(p);
         return true;
       }else{return false;}
     }
