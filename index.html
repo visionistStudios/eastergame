@@ -87,7 +87,7 @@ h1, h2, h3, p {
   </div>
   
   <div id="menu">
-    HOWDY FELLAS!  YOU BEET THE GAME LOL
+  
   </div>
   
   <script>
@@ -209,5 +209,14 @@ h1, h2, h3, p {
         }
       }
     }
+    
+    //temp ending
+    setInterval(function(){
+      if (eggs>=8){
+        document.getElementById("menu").innerHTML="<h1><strong>YOU BEAT THE GAME YAYAYAYAYA</strong></h1>"
+      }else{
+        document.getElementById("menu").innerHTML="<p>You need to get 8 easter eggs to beat the game.</p>"
+      }
+    },10000);
   </script>
     </body>
