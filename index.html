@@ -1,7 +1,7 @@
 <head>
   <title>Easter Egg Game</title>
 <style>
-h1, h2, h3 {
+h1, h2, h3, p {
   font-family:"Lucida Console";
   }
 #title {
@@ -28,6 +28,13 @@ h1, h2, h3 {
   width:300px;
   height:100px;
   }
+#clickybtn {
+  position:absolute;
+  right:0%;
+  top:350px;
+  width:300px;
+  height:100px;
+  }
 .section {
     background-color:rgb(244, 238, 66);
     display:none;
@@ -47,11 +54,17 @@ h1, h2, h3 {
   </div>
   
   <div id="request" class="section" align="center">
-    <button><h3>Request a New Feature</h3></button>
+    <h3>Request a New Feature</h3>
+    <button>Request</button>
   </div>
   
   <div id="guide" class="section" align="center">
     <h3>Guide to the Easter Eggs</h3>
+  </div>
+  
+  <div id="clickybtn" class="section" align="center">
+    <h3>Random Clicky Button -.-</h3>
+    <button>Hi, I do nothing</button>
   </div>
   
   <script>
@@ -80,6 +93,7 @@ h1, h2, h3 {
         unlock("title");
         unlock("request");
         unlock("guide");
+        unlock("clickybtn");
       },4000);
       }},
       {s:function(){//3
