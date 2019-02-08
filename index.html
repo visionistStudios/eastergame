@@ -51,7 +51,7 @@ h1, h2, h3, p {
 .section {
     background-color:rgb(244, 223, 66);
     display:none;
-    text-align:center;
+    text-align:left;
     padding:20px;
     overflow-x:hidden;
     overflow-y:scroll;
@@ -65,7 +65,8 @@ h1, h2, h3, p {
   .menu-btn {
     width:100;
     height:100;
-    color:rgb(255,255,255);
+    background-color:rgb(255,255,255);
+    color:rgb(0,0,0);
     border-radius:10px;
   }
 </style>
@@ -104,7 +105,7 @@ h1, h2, h3, p {
     <button class="menu-btn">The Egg Map</button>
     <button class="menu-btn">The Computer</button>
     <button class="menu-btn">The Storage Room</button>
-    <button class="menu-btn">The Kitchen</button>
+    <button class="menu-btn" style="display:none;">The Kitchen</button>
   </div>
   
   <script>
