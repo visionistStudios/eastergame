@@ -43,6 +43,12 @@ h1, h2, h3, p {
     overflow-x:hidden;
     overflow-y:scroll;
   }
+ .key {
+   height:100;
+  }
+  .chest {
+    height:100;
+  }
 </style>
 </head>
 <body>
@@ -64,14 +70,14 @@ h1, h2, h3, p {
     <h3>Guide to the <span onClick="reset()">Easter Eggs</span></h3>
     <p><span onClick="reset()">Easter Eggs</span> are very elusive creatures.  They are triggered by a certain action. (ex: clicking <span>the egg</span> or pressing e)  Some <span onClick="reset()">easter eggs</span> require multiple steps to activate.  Also, no one likes smart @$$es who click on every instance of "<span onClick="reset()">easter egg</span>".  I'm telling you: <strong>I WILL RESET YOUR GAME</strong> if I catch you clicking on the words "<span onClick="reset()">easter egg</span>".  I mean, just click on <span>everything else</span>, though.  Doesn't hurt to try!</p>
     <br>
-    <img src="https://raw.githubusercontent.com/visionistStudios/game/master/key.png" onClick="hasguidekey=true;this.style.display='none';">
+    <img src="https://raw.githubusercontent.com/visionistStudios/game/master/key.png" class="key"onClick="vars.hasguidekey=true;this.style.display='none';">
   </div>
   
   <div id="clickybtn" class="section" align="center">
-    <h3>Random Clicky Button -.-</h3>
-    <button>Hi, I do nothing</button>
+    <h3 >Random Clicky Button -.-</h3>
+    <button onClick="vars.btnclicks1++;check(btnclicks1,25,unlock('chest4'))">No Click Plz</button>
     <br>
-    <img src="https://raw.githubusercontent.com/visionistStudios/game/master/chest.png" id="egg4" onClick="check(hasguidekey,true,findegg(4))">
+    <img src="https://raw.githubusercontent.com/visionistStudios/game/master/chest.png" id="egg4" class="chest" id="chest4" onClick="check(hasguidekey,true,findegg(4))">
   </div>
   
   <script>
@@ -155,6 +161,6 @@ h1, h2, h3, p {
     },1000);
     
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {hasguidekey:false};
+    var vars = {hasguidekey:false,btnclicks1:0};
   </script>
     </body>
