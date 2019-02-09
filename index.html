@@ -246,13 +246,13 @@ h1, h2, h3, p {
     }
     
     //area switch
-    function area(a){
-      for (i = 0; i < 4; i++){
+    function page(a){
+      for (i = 0; i < 5; i++){
         document.getElementById("page"+i).style.display="none";
       }
       document.getElementById("page"+a).style.display="inline";
     }
-    
+    page(0);//hide all other pages
     //autoupdate eggs
     setInterval(function(){
       document.getElementById("eggs").innerHTML=eggs;
