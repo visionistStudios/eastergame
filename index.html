@@ -279,16 +279,16 @@ h1, h2, h3, p {
     //main egg click
     var notreadymsg = ["I'm not ready yet.","Come back later.","I'm BUSY GO AWAY.","Stop, I'm playing fortnite","Go click something else","Stop egging me."];
     function clickEgg(){
-      if (vars.eggstage==0){
+      else if (vars.eggstage==0){
         findegg(0);
         vars.eggstage=-1;
       }
-      if (vars.eggstage==1){
+      else if (vars.eggstage==1){
         findegg(7);
         vars.eggstage=-1;
       }
       //not ready stage
-      if (vars.eggstage==-1){
+      else if (vars.eggstage==-1){
           alert(notreadymsg[Math.floor(Math.random()*notreadymsg.length)]);
       }
     }
