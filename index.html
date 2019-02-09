@@ -276,7 +276,8 @@ h1, h2, h3, p {
       }
       document.getElementById("page"+a).style.display="inline";
     }
-    page(0);//hide all other pages
+    setTimeout(function(){page(0);},1000);//set starter page
+      
     //autoupdate eggs
     setInterval(function(){
       document.getElementById("eggs").innerHTML=eggs;
