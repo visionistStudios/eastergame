@@ -265,6 +265,11 @@ h1, h2, h3, p {
     }
     
     //area switch
+    var maxpages = 0;
+    while (document.getElementById("page"+x)){
+        maxpages++;
+    }
+    
     function page(a){
       for (i = 0; i < 6; i++){
         document.getElementById("page"+i).style.display="none";
