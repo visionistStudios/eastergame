@@ -71,11 +71,16 @@ h1, h2, h3, p {
     border:0px;
   }
   .menu-btn:hover {
-    background-color:rgb(241, 244, 66);
+    background-color:rgb(181, 157, 72);
+  }
+  
+  #page0 {
+    display:inline;
   }
 </style>
 </head>
 <body>
+<div id="page0">
   <h3 style="display:none;" id="counter" ><span id="egg1" class="egg" onClick="findegg(1)">Easter Egg</span>s: <span id="eggs">0</span></h3>
   <div align="center">
     <h1 id="title">The <span id="egg3" onClick="findegg(3)">Easter Egg</span> Game</h1>
@@ -103,9 +108,25 @@ h1, h2, h3, p {
     <br>
     <img src="https://raw.githubusercontent.com/visionistStudios/game/master/chest.png" id="egg4" class="chest" onClick="check('hasguidekey',true,findegg,4)" style="display:none;">
   </div>
+</div>
   
+<div id="page1">
+  <h1>The Egg Map</h1>
+</div>
+  
+<div id="page2">
+  <h1>The Computer</h1>
+</div>
+  
+<div id="page3">
+  <h1>The Storage Room</h1>
+</div>
+  
+<div id="page4">
+  <h1>The Kitchen</h1>
+</div>
   <div id="menu">
-    <button class="menu-btn">The First Egg</button>
+    <button class="menu-btn">The Egg Room</button>
     <button class="menu-btn">The Egg Map</button>
     <button class="menu-btn">The Computer</button>
     <button class="menu-btn">The Storage Room</button>
@@ -222,6 +243,14 @@ h1, h2, h3, p {
       if (vars.eggstage==1){
         findegg(7);
       }
+    }
+    
+    //area switch
+    function area(a){
+      for (i = 0; i < 4; i++){
+        document.getElementById("page"+i).style.display="none";
+      }
+      document.getElementById("page"+a).style.display="inline";
     }
     
     //autoupdate eggs
