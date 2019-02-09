@@ -79,14 +79,14 @@ h1, h2, h3, p {
     background-color:rgb(181, 157, 72);
   }
   
-  #page0 {
-    display:inline;
-  }
+  .page {
+      display:none;
+    }
 </style>
 </head>
 <body>
   <h3 style="display:none;" id="counter" ><span id="egg1" class="egg" onClick="findegg(1)">Easter Egg</span>s: <span id="eggs">0</span></h3>
-<div id="page0">
+<div id="page0" class="page">
   <div align="center">
     <h1 id="title">The <span id="egg3" onClick="findegg(3)">Easter Egg</span> Game</h1>
   </div>
@@ -116,25 +116,25 @@ h1, h2, h3, p {
   </div>
 </div>
   
-<div id="page1">
+<div id="page1" class="page">
   <div align="center">
     <h1>The Egg Map</h1>
   </div>
 </div>
   
-<div id="page2">
+<div id="page2" class="page">
   <div align="center">
     <h1>The Computer</h1>
   </div>
 </div>
   
-<div id="page3">
+<div id="page3" class="page">
   <div align="center">
     <h1>The Storage Room</h1>
   </div>
 </div>
   
-<div id="page4">
+<div id="page4" class="page">
   <div align="center">
     <h1>The Kitchen</h1>
   </div>
@@ -271,7 +271,7 @@ h1, h2, h3, p {
     }
     
     function page(a){
-      for (i = 0; i < 6; i++){
+      for (i = 0; i < maxpages; i++){
         document.getElementById("page"+i).style.display="none";
       }
       document.getElementById("page"+a).style.display="inline";
