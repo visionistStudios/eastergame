@@ -254,16 +254,6 @@ h1, h2, h3, p {
       }else{return false;}
     }
     
-    //main egg click
-    function clickEgg(){
-      if (vars.eggstage==0){
-        findegg(0);
-      }
-      if (vars.eggstage==1){
-        findegg(7);
-      }
-    }
-    
     //area switch
     var maxpages = 0;
     while (document.getElementById("page"+maxpages)){
@@ -285,7 +275,24 @@ h1, h2, h3, p {
     
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
     var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0};
-    
+        
+    //main egg click
+    var notreadymsg = ["I'm not ready yet.","Come back later.","I'm BUSY GO AWAY.","Stop, I'm playing fortnite"];
+    function clickEgg(){
+      if (vars.eggstage==0){
+        findegg(0);
+        vars.eggstage=-1;
+      }
+      if (vars.eggstage==1){
+        findegg(7);
+        vars.eggstage=-1;
+      }
+      //not ready stage
+      if (vars.eggstage==-1){
+          alert(notreadymsg[Math.floor(Math.random()*notreadymsg.length)]);
+      }
+    }
+      
     //request feature
     function request(){
       if (vars.requeststage==0){
