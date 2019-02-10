@@ -1,4 +1,4 @@
 # Easter Egg Game
 This game is all about easter eggs.  Just click around and try to find all of the secrets!
 
-FLUFFCAKES HI CHECK HANGOUTS
+:D:D:D:D:D:D:D:D:):):):):):):):)XDXDXDXDXDXDXDXD
