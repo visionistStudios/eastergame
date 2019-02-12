@@ -53,6 +53,10 @@ h1, h2, h3, p {
   height:100px;
   border-radius:20px;
   }
+#map-container {
+    border:3px black;
+    overflow-x:hidden;
+    }
 .section {
   background-color:rgb(244, 223, 66);
   display:none;
@@ -120,7 +124,9 @@ h1, h2, h3, p {
 <div id="page1" class="page">
   <div align="center">
     <h1>The Egg Map</h1>
-      <img src="/game/map.png">
+      <div id="map-container">
+        <img src="/game/map.png">
+      </div>
   </div>
 </div>
   
