@@ -159,7 +159,7 @@ h1, h2, h3, p, span {
         <span class="map-btn">The Volcano</span>
         <span class="map-btn">The Storm</span>
         <img src="/game/map.png" height="100%">
-        <img src="/game/compass.png" id="map-compass">
+        <img src="/game/compass.png" id="map-compass" onClick="vars.hascompass=true;this.style.display='none';alert('Ooh, a compass!')">
       </div>
   </div>
 </div>
@@ -337,7 +337,7 @@ h1, h2, h3, p, span {
     },1000);
     
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hascompass:false};
         
     //main egg click
     var notreadymsg = ["I'm not ready yet.","Come back later.","I'm BUSY GO AWAY.","Stop, I'm playing fortnite","Go click something else","Stop egging me."];
@@ -365,13 +365,24 @@ h1, h2, h3, p, span {
           vars.requeststage = 1;
         }else{
           alert("I don't want to code right now.");
-          alert("Get me a giant fried egg and I'll think about it");
+          alert("Get me a giant egg and I'll think about it");
+        }
+      }
+      if (vars.requeststage==1){
+        if (vars.hascompass){
+          alert("I guess a compass is a type of magnet!");
+          alert("Uploading some code!");
+          unlock("menu");
+          vars.requeststage = 2;
+        }else{
+          alert("I'm afraid I cannot code at the moment.");
+          alert("Coding is a complicated process, and I need a magnet to upload the code");
+          alert("Find me one, and I can get you some more features.");
         }
       }
     }
       
     //Clicky Button Face
-    var cbfacecount=0;
     var cbfaces=["-.*","*.-","*.* <em>yawn</em>","-.- zzz","o.o good morning",
                  "o.0","0.o Hey!","o.o stop bugging me","o.o no really","-.- plz stop",
                  "o.o its really annoying","0.0 STOPPPP","o.o Okiee.... I guess you won't...",
@@ -384,8 +395,8 @@ h1, h2, h3, p, span {
         findegg(8);
         return;
       }
-      document.getElementById("cbface").innerHTML=cbfaces[cbfacecount];
-      cbfacecount++;
+      document.getElementById("cbface").innerHTML=cbfaces[vars.cbface];
+      vars.cbface++;
     }
   </script>
     </body>
