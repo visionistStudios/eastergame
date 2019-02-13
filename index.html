@@ -304,12 +304,15 @@ h1, h2, h3, p {
                   {x:0,y:0},//The Fog
                   {x:0,y:0},//The Volcano
                   {x:0,y:0}];//The Storm
-    
+    function updateMap(){
     for (var i = 0; i < mapbtn.length; i++){
       var s = document.getElementsByClassName("map-btn")[i];
       s.style.left=mapbtn[i].x;
       s.style.top=mapbtn[i].y;
     }
+    }
+    updateMap();
+      
     //autoupdate eggs
     setInterval(function(){
       document.getElementById("eggs").innerHTML=eggs;
