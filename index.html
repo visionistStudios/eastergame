@@ -62,6 +62,7 @@ h1, h2, h3, p, span {
     width:200;
     height:30;
     border: 1px solid black;
+    display:none;
     }
 </style>
 <style>
@@ -129,7 +130,7 @@ h1, h2, h3, p, span {
   </div>
   
   <div id="egg0">
-      <div id="map-pickup">~ ` . * ,_^</div>
+      <div id="map-pickup" onClick="unlock('menu2');this.style.display='none';">~ ` . * ,_^</div>
     <img onClick="clickEgg()" src="https://vignette.wikia.nocookie.net/minecraft360/images/f/fc/Egg-1-.png/revision/latest?cb=20140721080247"align="middle">
   </div>
   
@@ -367,6 +368,7 @@ h1, h2, h3, p, span {
           alert("Alrighty, here you go.");
           unlock("menu");
           unlock("menu1");
+          unlock("map-pickup");
           vars.requeststage = 1;
         }else{
           alert("I don't want to code right now.");
