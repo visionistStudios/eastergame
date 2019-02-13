@@ -95,6 +95,7 @@ h1, h2, h3, p, span {
   .map-btn {
       font-size:15px;
       position:absolute;
+      color:red;
     }
   .map-btn:hover {
       cursor:pointer;
@@ -302,15 +303,15 @@ h1, h2, h3, p, span {
     setTimeout(function(){page(0);},1000);//set starter page
       
     //Map Buttons
-    var mapbtn = [{x:75,y:150},//The Village
-                  {x:100,y:200},//The Cemetary
-                  {x:50,y:80},//The River's End
-                  {x:20,y:400},//The Mountains
+    var mapbtn = [{x:75,y:100},//The Village
+                  {x:87,y:175},//The Cemetary
+                  {x:100,y:275},//The River's End
+                  {x:200,y:175},//The Mountains
                   {x:40,y:70},//The Jungle Temple
-                  {x:70,y:40},//The Hole
-                  {x:140,y:30},//The Fog
-                  {x:350,y:300},//The Volcano
-                  {x:350,y:350}];//The Storm
+                  {x:275,y:250},//The Hole
+                  {x:300,y:300},//The Fog
+                  {x:387,y:175},//The Volcano
+                  {x:375,y:325}];//The Storm
     function updateMap(){
     for (var i = 0; i < mapbtn.length; i++){
       var s = document.getElementsByClassName("map-btn")[i];
