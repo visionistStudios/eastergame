@@ -137,7 +137,7 @@ h1, h2, h3, p, span {
   </div>
   
   <div id="clickybtn" class="section" align="center">
-    <h3 >Random Clicky Button -.-</h3>
+      <h3 >Random Clicky Button <span id="cbface">-.-</span></h3>
     <button onClick="vars['btnclicks1']++;check('btnclicks1',5,unlock,'egg4')" style="padding:20px;"><p>Clicky Button</p></button>
     <br>
     <br>
@@ -242,9 +242,10 @@ h1, h2, h3, p, span {
         alert("Always come back old easter eggs in case things have changed...");
       }},
       {s:function(){//8
-        alert("AHAHA you actually pressed 'e'!");
-        alert("Good Job, I guess you deserve an egg");
-      }}
+        alert("I didn't put that face there...");
+        alert("It must've been a bug.");
+        alert("I guess you can have an egg for finding it...");
+      }},
 ];
     
     //fill in "found" state
@@ -335,7 +336,7 @@ h1, h2, h3, p, span {
     },1000);
     
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0};
         
     //main egg click
     var notreadymsg = ["I'm not ready yet.","Come back later.","I'm BUSY GO AWAY.","Stop, I'm playing fortnite","Go click something else","Stop egging me."];
@@ -366,6 +367,22 @@ h1, h2, h3, p, span {
           alert("Get me a giant fried egg and I'll think about it");
         }
       }
+    }
+      
+    //Clicky Button Face
+    var cbfacecount=0;
+    var cbfaces=["-.*","*.-","*.* <em>yawn</em>","-.- zzz","o.o wow",
+                 "o.0","0.o","o.o stop bugging me","o.o no really","-.- plz stop",
+                 "o.o its really annoying","0.0 STOPPPP","o.o Okiee.... I guess you won't...",
+                 "[].[] <strong>I HAVE LASER VISION!</strong>","o.o Ok no I guess...","o.o I may not have a mouth...",
+                 "oOo BUT I CAN SCREEEEAM!","@O@ <AAEEEEEEEEEEEEEEEAAEEAAAAAAAAAAAAAAAAAAEEEEEEEEEEH!!!!!!"];
+    function cbfaceClick(){
+      if (cbfacecount==cbfaces.length){
+        findegg(8);
+        return;
+      }
+      document.getElementById("cbface").innerHTML=cbfaces[cbfacecount];
+      cbfacecount++;
     }
   </script>
     </body>
