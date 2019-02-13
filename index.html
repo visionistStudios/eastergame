@@ -85,6 +85,13 @@ h1, h2, h3, p {
   .menu-btn:hover {
     background-color:rgb(181, 157, 72);
   }
+  .map-btn {
+      font-size:15px;
+      position:relative;
+    }
+  .map-btn:hover {
+      cursor:pointer;
+    }
   
   .page {
       display:none;
@@ -128,6 +135,15 @@ h1, h2, h3, p {
     <h1>The Egg Map</h1>
       <div id="map-container">
         <img src="/game/map.png" height="100%">
+          <span class="map-btn">The Village</span>
+          <span class="map-btn">The Cemetary</span>
+          <span class="map-btn">The River's End</span>
+          <span class="map-btn">The Mountains</span>
+          <span class="map-btn">The Jungle Temple</span>
+          <span class="map-btn">The Hole</span>
+          <span class="map-btn">The Fog</span>
+          <span class="map-btn">The Volcano</span>
+          <span class="map-btn">The Storm</span>
       </div>
   </div>
 </div>
@@ -140,7 +156,7 @@ h1, h2, h3, p {
   
 <div id="page3" class="page">
   <div align="center">
-    <h1>The Storage Room</h1>
+    <h1>The Closet</h1>
   </div>
 </div>
   
@@ -153,7 +169,7 @@ h1, h2, h3, p {
       <button class="menu-btn" onClick="page(0)"><p>The Egg Room</p></button>
       <button class="menu-btn" onClick="page(1)"><p>The Egg Map</p></button>
       <button class="menu-btn" onClick="page(2)"><p>The Computer</p></button>
-      <button class="menu-btn" onClick="page(3)"><p>The Storage Room</p></button>
+      <button class="menu-btn" onClick="page(3)"><p>The Closet</p></button>
       <button class="menu-btn" onClick="page(4)"><p>The Kitchen</p></button>
   </div>
     
@@ -278,6 +294,22 @@ h1, h2, h3, p {
     }
     setTimeout(function(){page(0);},1000);//set starter page
       
+    //Map Buttons
+    var mapbtn = [{x:100,y:50},//The Village
+                  {x:0,y:0},//The Cemetary
+                  {x:0,y:0},//The River's End
+                  {x:0,y:0},//The Mountains
+                  {x:0,y:0},//The Jungle Temple
+                  {x:0,y:0},//The Hole
+                  {x:0,y:0},//The Fog
+                  {x:0,y:0},//The Volcano
+                  {x:0,y:0}];//The Storm
+    
+    for (var i = 0; i < mapbtn.length; i++){
+      var s = document.getElementsByClassName("map-btn")[i];
+      s.style.left=mapbtn[i].x;
+      s.style.top=mapbtn[i].y;
+    }
     //autoupdate eggs
     setInterval(function(){
       document.getElementById("eggs").innerHTML=eggs;
