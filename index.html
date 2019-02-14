@@ -286,7 +286,7 @@ h1, h2, h3, p, span {
     function hide(id){
       document.getElementById(id).style.display="none";
       if (unlocked.search(id)!==-1){
-        Array.remove(unlocked,id);
+        delete unlocked[unlocked.search(id)];
       }
     }
     
@@ -436,7 +436,11 @@ h1, h2, h3, p, span {
         }
         
         for (var i = 0; i < ekeys.length; i++){
-        localStorage["egglist"+i]=egglist[ekeys[i]];
+          localStorage["egglist"+i]=egglist[ekeys[i]];
+        }
+        
+        for (var i = 0; i < unlocked.length; i++){
+          localStorage["unlocked"+i]=unlocked[i];
         }
         localStorage.eggs=eggs;
       } else {
@@ -445,16 +449,22 @@ h1, h2, h3, p, span {
     }
     function load(){
       var vkeys = Object.keys(vars);
+      var ekeys = Object.keys(vars);
       for (var i = 0; i < vkeys.length; i++){
         if (localStorage["vars"+i]){
           vars[vkeys[i]] = localStorage["vars"+i];
         }
       }
+      
+      for (var i = 0; i < ekeys.length; i++]
+        egglist[ekeys[i]] = localStorage["egglist"+i];
+      }
+      unlocked=[];
+      for (var i = 0; i < unlocked.length; i++){
+        unlocked.push(localStorage["unlocked"+i]);
+      }
       if (localStorage.eggs){
         eggs = localStorage.eggs;
-      }
-      if (localStorage.egglist){
-        egglist = localStorage.egglist;
       }
     }
   
