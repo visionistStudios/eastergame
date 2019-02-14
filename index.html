@@ -421,7 +421,7 @@ h1, h2, h3, p, span {
       var vkeys = Object.keys(vars);
       alert("You are about to save your game.  load your game with load() in the console or press the load button.");
       if (typeof(Storage) !== "undefined") {
-        for (var i = 0; i<vars.length; i++){
+        for (var i = 0; i<vkeys.length; i++){
         localStorage.vars[i]=vars[vkeys[i]];
         }
         localStorage.eggs=eggs;
@@ -432,7 +432,7 @@ h1, h2, h3, p, span {
     }
     function load(){
       var vkeys = Object.keys(vars);
-      for (var i = 0; i < vars.length; i++){
+      for (var i = 0; i < vkeys.length; i++){
         if (localStorage.vars){
           vars[vkeys[i]] = localStorage.vars[i];
         }
