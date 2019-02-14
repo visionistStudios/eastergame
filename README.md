@@ -17,7 +17,7 @@ Zappiturtle - Seal Island inspiration / Beta Tester
 
 Tyson - (im)Moral support / Beta Tester
 
-Why_Not_Synchro - Beta Tester
+Why_Not_Synchro - Promotion / Beta Tester
 
 Morpheye - Beta Tester
 
