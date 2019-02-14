@@ -418,9 +418,12 @@ h1, h2, h3, p, span {
   <script>
     //SAVING SYSTEM
     function save(){
+      var vkeys = Object.keys(vars);
       alert("You are about to save your game.  load your game with load() in the console or press the load button.");
       if (typeof(Storage) !== "undefined") {
-        localStorage.vars=vars;
+        for (var i = 0; i<vars.length; i++){
+        localStorage["var"+vkeys[i]]=vars[vkeys[i]];
+        }
         localStorage.eggs=eggs;
         localStorage.egglist=egglist;
       } else {
@@ -428,8 +431,11 @@ h1, h2, h3, p, span {
       }
     }
     function load(){
-      if (localStorage.vars){
-        vars = localStorage.vars;
+      var vkeys = Object.keys(vars);
+      for (var i = 0; i < vars.length; i++){
+        if (localStorage.vars){
+          vars[vkeys[i]] = localStorage["var"+vkeys[i]];
+        }
       }
       if (localStorage.eggs){
         eggs = localStorage.eggs;
