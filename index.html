@@ -128,7 +128,7 @@ h1, h2, h3, p, span {
   <div align="center">
     <h1 id="title">The <span id="egg3" onClick="findegg(3)">Easter Egg</span> Game</h1>
       <br>
-    <div id="map-pickup" onClick="unlock('menu2');this.style.display='none';alert('oooh, a map!');">~ ` . * ,_^</div>
+    <div id="map-pickup" onClick="unlock('menu2');hide('map-pickup');alert('oooh, a map!');">~ ` . * ,_^</div>
   </div>
   
   <div id="egg0">
@@ -144,7 +144,7 @@ h1, h2, h3, p, span {
     <h3>Guide to the <span onClick="reset()">Easter Eggs</span></h3>
     <p><span onClick="reset()">Easter Eggs</span> are very elusive creatures.  They are triggered by a certain action. (ex: clicking <span onClick="findegg(5)">the egg</span> or pressing e)  Some <span onClick="reset()">easter eggs</span> require multiple steps to activate.  Also, no one likes smart @$$es who click on every instance of "<span onClick="reset()">easter egg</span>".  I'm telling you: <strong>I WILL RESET YOUR GAME</strong> if I catch you clicking on the words "<span onClick="reset()">easter egg</span>".  I mean, just click on <span onClick="findegg(6)">everything else</span>, though.  Doesn't hurt to try!  Also, another thing: there are a lot of other <span onClick="reset()">easter eggs</span> that don't actually count as eggs, but are just cool things to notice.</p>
     <br>
-    <img src="/game/key.png" class="key" onClick="vars['hasguidekey']=true;this.style.display='none';alert('Hmm, I wonder what this key does...')">
+    <img src="/game/key.png" class="key" id='key0' onClick="vars['hasguidekey']=true;hide('key0');alert('Hmm, I wonder what this key does...')">
   </div>
   
   <div id="clickybtn" class="section" align="center">
@@ -170,7 +170,7 @@ h1, h2, h3, p, span {
         <span class="map-btn">The Volcano</span>
         <span class="map-btn">The Storm</span>
         <img src="/game/map.png" height="100%">
-        <img src="/game/compass.png" id="map-compass" onClick="vars.hascompass=true;this.style.display='none';alert('Ooh, a compass!')">
+        <img src="/game/compass.png" id="map-compass" onClick="vars.hascompass=true;hide('map-compass');alert('Ooh, a compass!')">
       </div>
   </div>
 </div>
@@ -276,9 +276,18 @@ h1, h2, h3, p, span {
       }
     }
     
-    //unlock new feature
+    //unlock newthings
+    var unlocked = [];
     function unlock(id){
       document.getElementById(id).style.display="inline";
+      unlocked.push(id);
+    }
+    
+    function hide(id){
+      document.getElementById(id).style.display="none";
+      if (unlocked.search(id)!==-1){
+        Array.remove(unlocked,id);
+      }
     }
     
     //checkvar
