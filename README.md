@@ -28,3 +28,5 @@ Austin - Beta Tester
 Matthew - Beta Tester
 
 Thraximundar - Beta Tester
+
+Dragon Master - Beta Tester
