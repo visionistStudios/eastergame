@@ -414,4 +414,29 @@ h1, h2, h3, p, span {
       vars.cbface++;
     }
   </script>
+    
+  <script>
+    //SAVING SYSTEM
+    function save(){
+      alert("You are about to save your game.  load your game with load() in the console or press the load button.");
+      if (typeof(Storage) !== "undefined") {
+        localStorage.vars=vars;
+        localStorage.eggs=eggs;
+        localStorage.egglist=egglist;
+      } else {
+        alert("Save failed.  You are probably using a browser that does not use local storage.");
+      }
+    }
+    function load(){
+      if (localStorage.vars){
+        vars = localStorage.vars;
+      }
+      if (localStorage.eggs){
+        eggs = localStorage.eggs;
+      }
+      if (localStorage.egglist){
+        egglist = localStorage.egglist;
+      }
+    }
+  </script>
     </body>
