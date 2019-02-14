@@ -419,13 +419,17 @@ h1, h2, h3, p, span {
     //SAVING SYSTEM
     function save(){
       var vkeys = Object.keys(vars);
+      var ekeys = Object.keys(vars);
       alert("You are about to save your game.  load your game with load() in the console or press the load button.");
       if (typeof(Storage) !== "undefined") {
         for (var i = 0; i<vkeys.length; i++){
         localStorage["vars"+i]=vars[vkeys[i]];
         }
+        
+        for (var i = 0; i < ekeys.length; i++){
+        localStorage["egglist"+i]=egglist[ekeys[i]];
+        }
         localStorage.eggs=eggs;
-        localStorage.egglist=egglist;
       } else {
         alert("Save failed.  You are probably using a browser that does not use local storage.");
       }
