@@ -448,15 +448,17 @@ h1, h2, h3, p, span {
     
   <script>
     //SAVING SYSTEM
-    
     function parse(a){
       var n;
-      if (parseInt(a)+"." == "NaN."){
+      if (parseInt(a)+"." !== "NaN."){
+          n = parseInt(a);
+      }
+      else if (parseInt(a)+"." == "NaN."){
         if (a == "true"){
         n = true; 
         }
         if (a=="false"){
-        n=false;
+        n = false;
         }
       }else{
         n=a;
