@@ -25,7 +25,7 @@ h1, h2, h3, p, span {
 #menu1, #menu2, #menu3, #menu4, #menu5 {
     display:none;
     }
-#egg2 {
+#egg1, egg2 {
   display:none;
   }
 </style>
@@ -285,7 +285,9 @@ h1, h2, h3, p, span {
     var unlocked = [];
     function unlock(id){
       document.getElementById(id).style.display="inline";
-      unlocked.push(id);
+      if (unlocked.indexOf(id)==-1){
+        unlocked.push(id);
+      }
     }
     
     function hide(id){
