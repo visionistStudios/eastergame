@@ -437,10 +437,7 @@ h1, h2, h3, p, span {
         for (var i = 0; i < egglist.length; i++){
           localStorage["egglist"+i]=egglist[i].found;
         }
-        
-        for (var i = 0; i < unlocked.length; i++){
-          localStorage["unlocked"+i]=unlocked[i];
-        }
+        localStorage.unlocked=unlocked;
         localStorage.eggs=eggs;
       } else {
         alert("Save failed.  You are probably using a browser that does not use local storage.");
@@ -458,8 +455,8 @@ h1, h2, h3, p, span {
         egglist[i].found = localStorage["egglist"+i];
       }
       unlocked=[];
-      for (var i = 0; i < unlocked.length; i++){
-        unlock(localStorage["unlocked"+i]);
+      for (var i = 0; i < localStorage.unlocked.length; i++){
+        unlock(localStorage.unlocked[i]);
       }
       if (localStorage.eggs){
         eggs = localStorage.eggs;
