@@ -288,7 +288,7 @@ h1, h2, h3, p, span {
     //find egg
     function findegg(id,load){
       if (!egglist[id].found){
-      if (egglist[id].a&&load==false){egglist[id].a();}
+      if (egglist[id].a&&!load){egglist[id].a();}
       if (egglist[id].s){egglist[id].s();}
       eggs++;
       eggnum.innerHTML=eggs;
