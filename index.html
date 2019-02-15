@@ -363,7 +363,18 @@ h1, h2, h3, p, span {
     }
     }
     updateMap();
-      
+    
+    //Map size adjust
+    var whrate = 550 / 400;
+    var hper = 0.65;
+    function resizeMap(){
+      var h = hper*(window.innerHeight-100);
+      var w = whrate*h;
+      document.getElementById("map-container").style.height=h;
+      document.getElementById("map-container").style.width=w;
+    }
+    
+    
     //autoupdate eggs
     setInterval(function(){
       document.getElementById("eggs").innerHTML=eggs;
