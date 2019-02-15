@@ -10,7 +10,7 @@ Visionist - Lead Programmer / Lead Designer
 
 FluffCakes - Lead Artist / Designer
 
-Andy - Lead Storyline Writer / Inspiration
+Dogey - Lead Storyline Writer / Inspiration
 
 # Support, Inspiration, and Beta Testers
 Zappiturtle - Seal Island inspiration / Beta Tester
@@ -32,3 +32,5 @@ Thraximundar - Beta Tester
 Dragon Master - Beta Tester
 
 Temmie - Beta Tester
+
+Aman - Beta Tester
