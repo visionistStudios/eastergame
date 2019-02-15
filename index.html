@@ -448,6 +448,22 @@ h1, h2, h3, p, span {
     
   <script>
     //SAVING SYSTEM
+    
+    function parse(a){
+      var n;
+      if (parseInt(a)+"." == "NaN."){
+        if (a == "true"){
+        n = true; 
+        }
+        if (a=="false"){
+        n=false;
+        }
+      }else{
+        n=a;
+      }
+      return n;
+    }
+    
     function save(){
       var vkeys = Object.keys(vars);
       alert("You are about to save your game.  load your game with load() in the console or press the load button.");
@@ -466,19 +482,20 @@ h1, h2, h3, p, span {
       }
     }
     function load(){
+      unlocked=[];
       var vkeys = Object.keys(vars);
       for (var i = 0; i < vkeys.length; i++){
         if (localStorage["vars"+i]){
+          
           vars[vkeys[i]] = localStorage["vars"+i];
         }
       }
       
       for (var i = 0; i < egglist.length; i++){
-        if (localStorage["egglist"+i]==true){
-          findegg(i);
+        if (localStorage["egglist"+i]=="true"){
+          findegg(parse(i));
         }
       }
-      unlocked=[];
       var storageunlocked = localStorage.unlocked.split(",");
       for (var i = 0; i < storageunlocked.length; i++){
         if (storageunlocked[i]!=="undefined"){
