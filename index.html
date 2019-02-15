@@ -428,15 +428,14 @@ h1, h2, h3, p, span {
     //SAVING SYSTEM
     function save(){
       var vkeys = Object.keys(vars);
-      var ekeys = Object.keys(vars);
       alert("You are about to save your game.  load your game with load() in the console or press the load button.");
       if (typeof(Storage) !== "undefined") {
         for (var i = 0; i<vkeys.length; i++){
         localStorage["vars"+i]=vars[vkeys[i]];
         }
         
-        for (var i = 0; i < ekeys.length; i++){
-          localStorage["egglist"+i]=egglist[ekeys[i]];
+        for (var i = 0; i < egglist.length; i++){
+          localStorage["egglist"+i]=egglist[i].found;
         }
         
         for (var i = 0; i < unlocked.length; i++){
@@ -450,15 +449,14 @@ h1, h2, h3, p, span {
     function load(){
       location.reload();
       var vkeys = Object.keys(vars);
-      var ekeys = Object.keys(vars);
       for (var i = 0; i < vkeys.length; i++){
         if (localStorage["vars"+i]){
           vars[vkeys[i]] = localStorage["vars"+i];
         }
       }
       
-      for (var i = 0; i < ekeys.length; i++){
-        egglist[ekeys[i]] = localStorage["egglist"+i];
+      for (var i = 0; i < egglist.length; i++){
+        egglist[ekeys[i]].found = localStorage["egglist"+i];
       }
       unlocked=[];
       for (var i = 0; i < unlocked.length; i++){
