@@ -465,7 +465,9 @@ h1, h2, h3, p, span {
       unlocked=[];
       var storageunlocked = localStorage.unlocked.split(",");
       for (var i = 0; i < storageunlocked.length; i++){
-        unlock(storageunlocked[i]);
+        if (storageunlocked[i]!==undefined){
+          unlock(storageunlocked[i]);
+        }
       }
       if (localStorage.eggs){
         eggs = parseInt(localStorage.eggs);
