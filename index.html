@@ -462,7 +462,7 @@ h1, h2, h3, p, span {
       }
       unlocked=[];
       for (var i = 0; i < unlocked.length; i++){
-        unlocked.push(localStorage["unlocked"+i]);
+        unlock(localStorage["unlocked"+i]);
       }
       if (localStorage.eggs){
         eggs = localStorage.eggs;
