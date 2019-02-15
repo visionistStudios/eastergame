@@ -488,14 +488,13 @@ h1, h2, h3, p, span {
       var vkeys = Object.keys(vars);
       for (var i = 0; i < vkeys.length; i++){
         if (localStorage["vars"+i]){
-          
-          vars[vkeys[i]] = localStorage["vars"+i];
+          vars[vkeys[i]] = parse(localStorage["vars"+i]);
         }
       }
       
       for (var i = 0; i < egglist.length; i++){
         if (localStorage["egglist"+i]=="true"){
-          findegg(parse(i),true);
+          findegg(i,true);
         }
       }
       var storageunlocked = localStorage.unlocked.split(",");
