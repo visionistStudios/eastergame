@@ -366,9 +366,9 @@ h1, h2, h3, p, span {
     
     //Map size adjust
     var whrate = 550 / 400;
-    var hper = 0.65;
+    var hper = 0.7;
     function resizeMap(){
-      var h = hper*(window.innerHeight-152);
+      var h = hper*(window.innerHeight-244);
       var w = whrate*h;
       document.getElementById("map-container").style.height=h;
       document.getElementById("map-container").style.width=w;
