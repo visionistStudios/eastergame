@@ -460,11 +460,12 @@ h1, h2, h3, p, span {
         egglist[i].found = localStorage["egglist"+i];
       }
       unlocked=[];
-      for (var i = 0; i < localStorage.unlocked.length; i++){
-        unlock(localStorage.unlocked[i]);
+      var storageunlocked = localStorage.unlocked.split(",");
+      for (var i = 0; i < storageunlocked.length; i++){
+        unlock(storageunlocked[i]);
       }
       if (localStorage.eggs){
-        eggs = localStorage.eggs;
+        eggs = parseInt(localStorage.eggs);
       }
     }
   
