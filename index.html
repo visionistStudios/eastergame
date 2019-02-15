@@ -294,7 +294,7 @@ h1, h2, h3, p, span {
     function hide(id){
       document.getElementById(id).style.display="none";
       if (unlocked.indexOf(id)!==-1){
-        delete unlocked[unlocked.indexOf(id)];
+        unlocked[unlocked.indexOf(id)]=undefined;
       }
     }
     
@@ -465,7 +465,7 @@ h1, h2, h3, p, span {
       unlocked=[];
       var storageunlocked = localStorage.unlocked.split(",");
       for (var i = 0; i < storageunlocked.length; i++){
-        if (storageunlocked[i]!==undefined){
+        if (storageunlocked[i]!=="undefined"){
           unlock(storageunlocked[i]);
         }
       }
