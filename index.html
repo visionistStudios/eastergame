@@ -212,18 +212,18 @@ h1, h2, h3, p, span {
   <script>
     //egg counter and list of all easter eggs
     var eggs = 0;
-    var egglist = [
+    var egglist = [//a is alerts, u is unlocks, s is special
       {a:function(){//0
         alert("You found an easter egg!");
       },
-      s:function(){
+      u:function(){
         unlock("counter");
         unlock("egg1");
       }},
       {a:function(){//1
         alert("Didn't expect you to find an egg there, did you?");
       },
-      s:function(){
+      u:function(){
         hide("egg1");
         unlock("egg2");
       }},
@@ -239,7 +239,7 @@ h1, h2, h3, p, span {
         alert("(You know... one of the all-powerful devs?)")
       },4000);
       },
-      s:function(){
+      u:function(){
       setTimeout(function(){
         unlock("title");
         unlock("request");
@@ -269,7 +269,6 @@ h1, h2, h3, p, span {
         alert("Always come back old easter eggs in case things have changed...");
       }},
       {a:function(){//8
-        document.getElementById("cbface").innerHTML="";
         alert("I didn't put that face there...");
         alert("It must've been a bug.");
         alert("I guess you can have an egg for finding it...");
@@ -288,7 +287,11 @@ h1, h2, h3, p, span {
     //find egg
     function findegg(id,load){
       if (!egglist[id].found){
-      if (egglist[id].a&&!load){egglist[id].a();}
+        if (!load){
+          if (egglist[id].a){egglist[id].a();}
+          if (egglist[id].u){egglist[id].u();}
+        }
+
       if (egglist[id].s){egglist[id].s();}
       eggs++;
       eggnum.innerHTML=eggs;
