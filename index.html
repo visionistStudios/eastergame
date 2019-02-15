@@ -387,7 +387,13 @@ h1, h2, h3, p, span {
     
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
     var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hascompass:false};
-        
+    var varonload = {
+      4:function(){
+        cbfaceClick(load);
+      },
+      
+    };
+    
     //main egg click
     var notreadymsg = ["I'm not ready yet.","Come back later.","I'm BUSY GO AWAY.","Stop, I'm playing fortnite","Go click something else","Stop egging me."];
     function clickEgg(){
@@ -448,13 +454,15 @@ h1, h2, h3, p, span {
                  "o.o NOW STOP CLICKING","o.o or I will unleash my secret weapon...","o.o 3...","o.o 2...","o.o 1...",
                  "<br>[].[] I HAVE LASER VISION!","<br>o.o Ok no I guess...","<br>o.o I may not have a mouth...",
                  "<br>oOo BUT I CAN SCREEEEAM!","<br>@O@ <em>AAEEEEEEEEEEEEEEEAAEEAAAAAAAAAAAAAAAAAAEEEEEEEEEEH!!!!!!</em>"];
-    function cbfaceClick(){
-      if (vars.cbface==cbfaces.length){
+    function cbfaceClick(load){
+      if (vars.cbface>=cbfaces.length){
         findegg(8);
         return;
       }
       document.getElementById("cbface").innerHTML=cbfaces[vars.cbface];
+      if (!load){
       vars.cbface++;
+      }
     }
   </script>
     
@@ -501,6 +509,9 @@ h1, h2, h3, p, span {
       for (var i = 0; i < vkeys.length; i++){
         if (localStorage["vars"+i]){
           vars[vkeys[i]] = parse(localStorage["vars"+i]);
+          if (varonload[i]){
+            varonload[i]();
+          }
         }
       }
       
