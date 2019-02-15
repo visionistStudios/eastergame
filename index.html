@@ -214,17 +214,21 @@ h1, h2, h3, p, span {
     //egg counter and list of all easter eggs
     var eggs = 0;
     var egglist = [
-      {s:function(){//0
+      {a:function(){//0
         alert("You found an easter egg!");
+      },
+      s:function(){
         unlock("counter");
         unlock("egg1");
       }},
-      {s:function(){//1
+      {a:function(){//1
         alert("Didn't expect you to find an egg there, did you?");
+      },
+      s:function(){
         hide("egg1");
         unlock("egg2");
       }},
-      {s:function(){//2
+      {a:function(){//2
       alert("It looks like you found the rule of the game:")
       alert("Click the easter eggs!")
       alert("Well, you might want to keep in mind some of these helpful tips!")
@@ -234,36 +238,45 @@ h1, h2, h3, p, span {
         alert("Ok, finished uploading the code...")
         alert("I'm Visionist btw")
         alert("(You know... one of the all-powerful devs?)")
+      },4000);
+      },
+      s:function(){
+      setTimeout(function(){
         unlock("title");
         unlock("request");
         unlock("guide");
         unlock("clickybtn");
       },4000);
       }},
-      {s:function(){//3
+      {a:function(){//3
         alert("Haha!  I told you that you should click on eggs, not the words \"Easter Egg\"!")
         alert("Well, that was a clever trick! Have an egg!");
       }},
-      {s:function(){//4
+      {a:function(){//4
         alert("Wierd, I wonder who would lock eggs up in chests?");
+      },
+      s:function(){
         vars.eggstage=1;
       }},
-      {s:function(){//5
+      {a:function(){//5
         alert("WOW What a smartass.  You click on it JUST because it says \"the egg\" rather than \"easter egg\".");
       }},
-      {s:function(){//6
+      {a:function(){//6
         alert("Yes.  I mean EVERYTHING!");
       }},
-      {s:function(){//7
+      {a:function(){//7
         alert("You have good instict!");
         alert("Always come back old easter eggs in case things have changed...");
       }},
-      {s:function(){//8
+      {a:function(){//8
         document.getElementById("cbface").innerHTML="";
         alert("I didn't put that face there...");
         alert("It must've been a bug.");
         alert("I guess you can have an egg for finding it...");
-      }},
+      },
+      s:function(){
+        document.getElementById("cbface").innerHTML="";
+      }}
 ];
     
     //fill in "found" state
@@ -275,6 +288,7 @@ h1, h2, h3, p, span {
     //find egg
     function findegg(id){
       if (!egglist[id].found){
+      if (egglist[id].a){egglist[id].a();}
       if (egglist[id].s){egglist[id].s();}
       eggs++;
       eggnum.innerHTML=eggs;
@@ -460,7 +474,9 @@ h1, h2, h3, p, span {
       }
       
       for (var i = 0; i < egglist.length; i++){
-        egglist[i].found = localStorage["egglist"+i];
+        if (localStorage["egglist"+i]==true){
+          findegg(i);
+        }
       }
       unlocked=[];
       var storageunlocked = localStorage.unlocked.split(",");
