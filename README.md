@@ -5,6 +5,23 @@ The game is live at: https://visioniststudios.github.io/game/!
 
 Note: This game is a Work In Progress.  There are currently 9 Easter Eggs, but we are adding more, so stay tuned!
 
+# Things to Know
+Saving:
+
+1: Open command console (Ctrl + Shift + J)
+
+2: Type `save()` and Enter
+
+3: Come back later on later (It is OK to close the window)
+
+4: Type `load()` in command console, and everything should be happy
+
+Note: A more integrated save system will be added in the near future.  
+
+Release Date:
+
+Official release date will be April 21, 2019 (Easter 2019)
+
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
