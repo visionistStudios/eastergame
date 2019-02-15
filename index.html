@@ -396,7 +396,7 @@ h1, h2, h3, p, span {
     //request feature
     function request(){
       if (vars.requeststage==0){
-        if (egglist[7].found){
+        if (egglist[7].found==true){
           alert("Alrighty, here you go.");
           unlock("menu");
           unlock("menu1");
@@ -409,7 +409,7 @@ h1, h2, h3, p, span {
         }
       }
       if (vars.requeststage==1){
-        if (vars.hascompass){
+        if (vars.hascompass==true){
           alert("I guess a compass is a type of magnet!");
           alert("Uploading some code!");
           unlock("menu4");
