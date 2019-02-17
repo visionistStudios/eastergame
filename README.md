@@ -25,7 +25,7 @@ Official release date will be April 21, 2019 (Easter 2019)
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
-Fluffcakes - Lead Artist / Designer
+Smiles (Fluffcakes) - Lead Artist / Designer
 
 Dogey - Lead Storyline Writer / Inspiration
 
