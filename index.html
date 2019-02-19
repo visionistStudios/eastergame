@@ -384,7 +384,7 @@ h1, h2, h3, p, span {
     }
     updateMap();
     
-    //Map size adjust
+    //Map size adjust (also changes play area)
     var whrate = 550 / 400;
     var hper = 0.95;
     function resizeMap(){
@@ -394,6 +394,9 @@ h1, h2, h3, p, span {
       document.getElementById("map-container").style.width=w;
       document.getElementById("map-compass").style.height=h*87/400;
       document.getElementById("map-compass").style.width=h*87/400;
+      //also update play area
+      document.getElementById("area-container").style.height=h;
+      document.getElementById("area-container").style.width=w;
     }
     resizeMap();
     
