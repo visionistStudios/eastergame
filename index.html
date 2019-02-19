@@ -80,6 +80,11 @@ h1, h2, h3, p, span {
     }
 </style>
 <style>
+  location {
+    width:100%;
+  }
+</style>
+<style>
 .section {
   background-color:rgb(244, 223, 66);
   display:none;
@@ -194,6 +199,10 @@ h1, h2, h3, p, span {
     <h1>The Kitchen</h1>
   </div>
 </div>
+<div id="page5" class="page">
+  <h1 id="location-name"></h1>
+  <img id="location">
+</div>
   <div id="menu">
       <button class="menu-btn" onClick="page(0)" id="menu1"><p>The Egg Room</p></button>
       <button class="menu-btn" onClick="page(1)" id="menu2"><p>The Egg Map</p></button>
@@ -203,7 +212,7 @@ h1, h2, h3, p, span {
   </div>
     
   <!--Loading Screen-->
-<div id="page5">
+<div id="page6">
   <img src="https://i.kym-cdn.com/entries/icons/mobile/000/017/618/pepefroggie.jpg" width="100%" height="90%">
   <h1>THE GAME IS CURRENTLY LOADING<h1>
 </div>
@@ -387,11 +396,39 @@ h1, h2, h3, p, span {
       document.getElementById("eggs").innerHTML=eggs;
     },1000);
     
+    //map locations
+    var locations = [{
+      name:"The Village",
+      src:"/game/chest",
+      obj:[
+        {//key
+          x:0,
+          y:0,
+          html:"<h1>hiihihihihih</h1>",
+          onclick:function(){
+            alert("gg");
+          }
+        }
+        ]
+    }];
+    function location(l){
+      page(5);
+      document.getElementById("location").src=locations[l].src;
+      document.getElementById("location-name").innerHTML = locations[l].name;
+      
+      for (var i = 0; i < locations[l].obj.length; i++){
+        var obj = locations[l].obj[i];
+        document.getElementById("page5").innerHTML+="<span style='position:absolute;x:"+obj.x+";y:"+obj.y+">"+obj.html+"</span>";
+      }
+    }
+  </script>
+    
+  <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
     var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hascompass:false};
     var varonload = {
       4:function(){
-        cbfaceClick(load);
+        cbfaceClick(true);
       },
       
     };
