@@ -400,7 +400,7 @@ h1, h2, h3, p, span {
     //map locations
     var locations = [{
       name:"The Village",
-      src:"/game/chest",
+      src:"/game/chest.png",
       obj:[
         {//key
           x:0,
@@ -419,7 +419,7 @@ h1, h2, h3, p, span {
       
       for (var i = 0; i < locations[l].obj.length; i++){
         var obj = locations[l].obj[i];
-        document.getElementById("page5").innerHTML+="<span style='position:absolute;x:"+obj.x+";y:"+obj.y+">"+obj.html+"</span>";
+        document.getElementById("page5").innerHTML+="<span style='position:absolute;x:"+obj.x+";y:"+obj.y+";'>"+obj.html+"</span>";
       }
     }
   </script>
