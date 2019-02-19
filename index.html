@@ -201,8 +201,6 @@ h1, h2, h3, p, span {
   </div>
 </div>
 <div id="page5" class="page">
-  <h1 id="location-name"></h1>
-  <img id="location">
 </div>
   <div id="menu">
       <button class="menu-btn" onClick="page(0)" id="menu1"><p>The Egg Room</p></button>
@@ -414,8 +412,7 @@ h1, h2, h3, p, span {
     }];
     function visit(l){
       page(5);
-      document.getElementById("location").src=locations[l].src;
-      document.getElementById("location-name").innerHTML = locations[l].name;
+      document.getElementById("page5").innerHTML="<h1 id='location-name'>"+locations[l].name+"</h1><img id='location' src='"+locations[l].src+"'>";
       
       for (var i = 0; i < locations[l].obj.length; i++){
         var obj = locations[l].obj[i];
