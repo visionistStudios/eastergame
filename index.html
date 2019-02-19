@@ -412,9 +412,12 @@ h1, h2, h3, p, span {
     }
     resizeMap();
     
-    //autoupdate eggs
+    //autoupdate
     setInterval(function(){
+      //update egg counter
       document.getElementById("eggs").innerHTML=eggs;
+      //update map
+      resizeMap();
     },1000);
     
     //map locations
