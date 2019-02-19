@@ -367,7 +367,7 @@ h1, h2, h3, p, span {
     setTimeout(function(){page(0);},1000);//set starter page
       
     //Map Buttons
-    var mapbtn = [{x:75,y:100},//The Village
+    /*(by pixels h=392.35, w=539.481)var mapbtn = [{x:75,y:100},//The Village
                   {x:87,y:175},//The Cemetary
                   {x:100,y:275},//The River's End
                   {x:200,y:200},//The Mountains
@@ -375,12 +375,23 @@ h1, h2, h3, p, span {
                   {x:275,y:250},//The Hole
                   {x:287,y:325},//The Fog
                   {x:387,y:175},//The Volcano
-                  {x:375,y:275}];//The Storm
+                  {x:375,y:275}];//The Storm*/
+    var mapbtn = [
+      {x:13.9,y:25.48},//The Village
+      {x:16.12,y:44.6},//The Cemetary
+      {x:18.53,y:70.09},//The River's End
+      {x:37.07,y:50.97},//The Mountains
+      {x:50.97,y:31.85},//The Jungle Temple
+      {x:50.97,y:63.71},//The Hole
+      {x:53.19,y:82.83},//The Fog
+      {x:71.73,y:44.6},//The Volcano
+      {x:69.51,y:70.09}//The Storm*/
+      ];
     function updateMap(){
     for (var i = 0; i < mapbtn.length; i++){
       var s = document.getElementsByClassName("map-btn")[i];
-      s.style.left=mapbtn[i].x;
-      s.style.top=mapbtn[i].y;
+      s.style.left=mapbtn[i].x+"%";
+      s.style.top=mapbtn[i].y+"%";
     }
     }
     updateMap();
