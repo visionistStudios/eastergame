@@ -403,7 +403,6 @@ h1, h2, h3, p, span {
       s.style.top=mapbtn[i].y+"%";
     }
     }
-    updateMap();
     
     //Map size adjust (also changes play area)
     var whrate = 550 / 400;
@@ -419,7 +418,6 @@ h1, h2, h3, p, span {
       document.getElementById("area-container").style.height=h;
       document.getElementById("area-container").style.width=w;
     }
-    resizeMap();
     
     //autoupdate
     setInterval(function(){
