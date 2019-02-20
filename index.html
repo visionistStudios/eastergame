@@ -319,17 +319,23 @@ h1, h2, h3, p, span {
     
     //unlock new things and hide things
     var unlocked = [];
-    function unlock(id){
+    function unlock(id,obj){
       document.getElementById(id).style.display="inline";
       if (unlocked.indexOf(id)==-1){
         unlocked.push(id);
       }
+      if (obj){
+        obj.unlocked=true;
+      }
     }
     
-    function hide(id){
+    function hide(id,obj){
       document.getElementById(id).style.display="none";
       if (unlocked.indexOf(id)!==-1){
         unlocked[unlocked.indexOf(id)]="undefined";
+      }
+      if (obj){
+        obj.unlocked=false;
       }
     }
     
@@ -429,25 +435,26 @@ h1, h2, h3, p, span {
       name:"The Village",
       src:"/game/village.png",
       obj:[
-        
         {//chest
           x:50,
           y:83,
+          unlocked:false,
           style:"transform:translate(-50%,-50%);width:7%;",
-          html:"<img id='villagechest' style='display:none;' width='100%' src='/game/chest.png'>",
+          html:"<img id='villagechest' width='100%' src='/game/chest.png'>",
           onclick:function(){
             alert("I wonder what this chest does...");
           }
         },
         {//fire
           x:50,
-          y:83,
-          style:"transform:translate(-50%,-50%);width:10%;",
+          y:79.7,
+          unlocked:true,
+          style:"transform:translate(-50%,-50%);width:13%;",
           html:"<img id='villagefire' width='100%' src='/game/villagefire.png'>",
           onclick:function(){
             alert("Whoosh, you put out the fire.");
-            hide("villagefire");
-            unlock("villagechest");
+            hide("villagefire",locations[0].obj[1]);
+            unlock("villagechest",locations[0].obj[0]);
           }
         }
         ]
