@@ -374,7 +374,6 @@ h1, h2, h3, p, span {
       }
       document.getElementById("page"+a).style.display="inline";
     }
-    setTimeout(function(){page(0);},1000);//set starter page
       
     //Map Buttons
     /*(by pixels h=392.35, w=539.481)var mapbtn = [{x:75,y:100},//The Village
@@ -520,7 +519,7 @@ h1, h2, h3, p, span {
         }
         ]
     }];
-    function visit(l){
+    function visit(l,init){
       page(5);
       if (!locations[l]){l=locations.length-1;}
       document.getElementById("location-name").innerHTML=locations[l].name;
@@ -533,8 +532,14 @@ h1, h2, h3, p, span {
         if (obj.id){divid="id='"+obj.id+"'";}
         
         var divunlocked = "";
-        if (obj.unlocked==false){divunlocked="display:none;";}
-        else {divunlocked="display:inline;";}
+        if (obj.unlocked==false){
+          divunlocked="display:none;";
+          if (obj.id&&init){hide(obj.id,[l,i]);}
+        }
+        else {
+          divunlocked="display:inline;";
+          if (obj.id&&init){unlock(obj.id,[l,i]);}
+        }
         
         var objstyle = "position:absolute;";
         objstyle+="left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style;
@@ -542,6 +547,7 @@ h1, h2, h3, p, span {
         document.getElementById("area-container").innerHTML+="<div "+divid+" onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+divunlocked+"'>"+obj.html+"</div>";
       }
     }
+    
   </script>
     
   <script>
@@ -627,4 +633,5 @@ h1, h2, h3, p, span {
   </script>
     
   <script src="/game/save.js"></script>
+  <script src="/game/init.js"></script>
     </body>
