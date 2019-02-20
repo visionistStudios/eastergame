@@ -172,14 +172,14 @@ h1, h2, h3, p, span {
     <h1>The Egg Map</h1>
       <div id="map-container">
         <span class="map-btn" onClick="visit(0)">The Village</span>
-        <span class="map-btn" onClick="visit(0)">The Cemetary</span>
-        <span class="map-btn" onClick="visit(0)">The River's End</span>
-        <span class="map-btn" onClick="visit(0)">The Mountains</span>
-        <span class="map-btn" onClick="visit(0)">The Jungle Temple</span>
-        <span class="map-btn" onClick="visit(0)">The Hole</span>
-        <span class="map-btn" onClick="visit(0)">The Fog</span>
-        <span class="map-btn" onClick="visit(0)">The Volcano</span>
-        <span class="map-btn" onClick="visit(0)">The Storm</span>
+        <span class="map-btn" onClick="visit(1)">The Cemetary</span>
+        <span class="map-btn" onClick="visit(2)">The River's End</span>
+        <span class="map-btn" onClick="visit(3)">The Mountains</span>
+        <span class="map-btn" onClick="visit(4)">The Jungle Temple</span>
+        <span class="map-btn" onClick="visit(5)">The Hole</span>
+        <span class="map-btn" onClick="visit(6)">The Fog</span>
+        <span class="map-btn" onClick="visit(7)">The Volcano</span>
+        <span class="map-btn" onClick="visit(8)">The Storm</span>
         <img src="/game/map.png" height="100%">
         <img src="/game/compass.png" id="map-compass" onClick="vars.hascompass=true;hide('map-compass');alert('Ooh, a compass!')">
       </div>
@@ -462,7 +462,7 @@ h1, h2, h3, p, span {
         ]
     },
     {
-      name:"Lol we haven't made locations yet...",
+      name:"Lol we haven't made this location yet...",
       src:"/game/chest.png",
       obj:[
         {//chest text
@@ -471,13 +471,14 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);",
           html:"<h1>This is under construction</h1>",
           onclick:function(){
-            alert("this is the end of the game currently, come back in a few days to see any new things!\nAlso, make sure to save using the developer console!");
+            alert("If only there were more easter eggs...!");
           }
         }
         ]
     }];
     function visit(l){
       page(5);
+      if (!locations[l]){l=locations.length-1;}
       document.getElementById("location-name").innerHTML=locations[l].name;
       document.getElementById("area-container").innerHTML="<img id='location' src='"+locations[l].src+"'>";
       
