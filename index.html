@@ -483,6 +483,7 @@ h1, h2, h3, p, span {
         var obj = locations[l].obj[i];
         var objstyle = "position:absolute;";
         if (obj.unlocked==false){objstyle+="display:none;";}
+        else {objstyle+="display:inline;";}
         objstyle+="left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style;
         document.getElementById("area-container").innerHTML+="<div onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+"'>"+obj.html+"</div>";
       }
