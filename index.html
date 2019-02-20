@@ -319,13 +319,13 @@ h1, h2, h3, p, span {
     
     //unlock new things and hide things
     var unlocked = [];
-    function unlock(id,obj){
+    function unlock(id,o){
       document.getElementById(id).style.display="inline";
       if (unlocked.indexOf(id)==-1){
         unlocked.push(id);
       }
-      if (obj){
-        obj.unlocked=true;
+      if (o[0]&&o[1]){
+        locations[o[0]].obj[o[1]].unlocked=true;
       }
     }
     
@@ -481,7 +481,10 @@ h1, h2, h3, p, span {
       
       for (var i = 0; i < locations[l].obj.length; i++){
         var obj = locations[l].obj[i];
-        document.getElementById("area-container").innerHTML+="<div onClick='locations["+l+"].obj["+i+"].onclick();' style='position:absolute;left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style+"'>"+obj.html+"</div>";
+        var objstyle = "position:absolute;";
+        if (obj.unlocked==false){objstyle+="display:none;";}
+        objstyle+="left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style;
+        document.getElementById("area-container").innerHTML+="<div onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+"'>"+obj.html+"</div>";
       }
     }
   </script>
