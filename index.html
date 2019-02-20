@@ -532,11 +532,9 @@ h1, h2, h3, p, span {
         var divunlocked = "";
         if (obj.unlocked==false){
           divunlocked="display:none;";
-          if (obj.id&&init){hide(obj.id,[l,i]);}
         }
         else {
           divunlocked="display:inline;";
-          if (obj.id&&init){unlock(obj.id,[l,i]);}
         }
         
         var objstyle = "position:absolute;";
