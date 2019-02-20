@@ -429,13 +429,25 @@ h1, h2, h3, p, span {
       name:"The Village",
       src:"/game/village.png",
       obj:[
-        {//chest text
+        
+        {//chest
           x:50,
-          y:80,
-          style:"transform:translate(-50%,-50%);width:10%;",
-          html:"<img width='100%' src='/game/chest.png'>",
+          y:83,
+          style:"transform:translate(-50%,-50%);width:7%;",
+          html:"<img id='villagechest' style='display:none;' width='100%' src='/game/chest.png'>",
           onclick:function(){
             alert("I wonder what this chest does...");
+          }
+        },
+        {//fire
+          x:50,
+          y:83,
+          style:"transform:translate(-50%,-50%);width:10%;",
+          html:"<img id='villagefire' width='100%' src='/game/villagefire.png'>",
+          onclick:function(){
+            alert("Whoosh, you put out the fire.");
+            hide("villagefire");
+            unlock("villagechest");
           }
         }
         ]
