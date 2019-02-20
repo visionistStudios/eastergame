@@ -436,21 +436,23 @@ h1, h2, h3, p, span {
       src:"/game/village.png",
       obj:[
         {//chest
+          id:"villagechest",
+          unlocked:false,
           x:50,
           y:83,
-          unlocked:false,
           style:"transform:translate(-50%,-50%);width:7%;",
-          html:"<img id='villagechest' width='100%' src='/game/chest.png'>",
+          html:"<img width='100%' src='/game/chest.png'>",
           onclick:function(){
             alert("I wonder what this chest does...");
           }
         },
         {//fire
+          id:"villagefire",
+          unlocked:true,
           x:50,
           y:79.7,
-          unlocked:true,
           style:"transform:translate(-50%,-50%);width:13%;",
-          html:"<img id='villagefire' width='100%' src='/game/villagefire.png'>",
+          html:"<img width='100%' src='/game/villagefire.png'>",
           onclick:function(){
             alert("Whoosh, you put out the fire.");
             hide("villagefire",[0,1]);
@@ -480,12 +482,18 @@ h1, h2, h3, p, span {
       document.getElementById("area-container").innerHTML="<img id='location' src='"+locations[l].src+"'>";
       
       for (var i = 0; i < locations[l].obj.length; i++){
+        var divid = "";
+        if (obj.id){divid="id='"+obj.id+"';}
+        
+        var divunlocked = "";
+        if (obj.unlocked==false){divunlocked="display:none;";}
+        else {divunlocked="display:inline;";}
+        
         var obj = locations[l].obj[i];
         var objstyle = "position:absolute;";
-        if (obj.unlocked==false){objstyle+="display:none;";}
-        else {objstyle+="display:inline;";}
         objstyle+="left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style;
-        document.getElementById("area-container").innerHTML+="<div onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+"'>"+obj.html+"</div>";
+        
+        document.getElementById("area-container").innerHTML+="<div "+divid+" onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+divunlocked+"'>"+obj.html+"</div>";
       }
     }
   </script>
