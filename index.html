@@ -543,6 +543,11 @@ h1, h2, h3, p, span {
         objstyle+="left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style;
         
         document.getElementById("area-container").innerHTML+="<div "+divid+" onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+divunlocked+"'>"+obj.html+"</div>";
+ 
+        if (obj.id&&init){
+          if (obj.unlocked==false){hide(obj.id,[l,i]);}
+          else {if (obj.id&&init){unlock(obj.id,[l,i]);}
+        }
       }
     }
     
