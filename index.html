@@ -426,6 +426,21 @@ h1, h2, h3, p, span {
     
     //map locations
     var locations = [{
+      name:"The Village",
+      src:"/game/village.png",
+      obj:[
+        {//chest text
+          x:75,
+          y:90,
+          style:"transform:translate(-50%,-50%)",
+          html:"<img src='/game/chest.png'>",
+          onclick:function(){
+            alert("I wonder what this chest does...");
+          }
+        }
+        ]
+    },
+    {
       name:"Lol we haven't made locations yet...",
       src:"/game/chest.png",
       obj:[
