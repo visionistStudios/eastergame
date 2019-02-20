@@ -324,18 +324,18 @@ h1, h2, h3, p, span {
       if (unlocked.indexOf(id)==-1){
         unlocked.push(id);
       }
-      if (o[0]&&o[1]){
+      if (o){
         locations[o[0]].obj[o[1]].unlocked=true;
       }
     }
     
-    function hide(id,obj){
+    function hide(id,o){
       document.getElementById(id).style.display="none";
       if (unlocked.indexOf(id)!==-1){
         unlocked[unlocked.indexOf(id)]="undefined";
       }
-      if (obj){
-        obj.unlocked=false;
+      if (o){
+        locations[o[0]].obj[o[1]].unlocked=false;
       }
     }
     
