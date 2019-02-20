@@ -453,8 +453,8 @@ h1, h2, h3, p, span {
           html:"<img id='villagefire' width='100%' src='/game/villagefire.png'>",
           onclick:function(){
             alert("Whoosh, you put out the fire.");
-            hide("villagefire",locations[0].obj[1]);
-            unlock("villagechest",locations[0].obj[0]);
+            hide("villagefire",[0,1]);
+            unlock("villagechest",[0,0]);
           }
         }
         ]
