@@ -320,7 +320,9 @@ h1, h2, h3, p, span {
     //unlock new things and hide things
     var unlocked = [];
     function unlock(id,o){
-      document.getElementById(id).style.display="inline";
+      if (document.getElementById(id)){
+        document.getElementById(id).style.display="inline";
+      }
       if (unlocked.indexOf(id)==-1){
         unlocked.push(id);
       }
@@ -330,7 +332,9 @@ h1, h2, h3, p, span {
     }
     
     function hide(id,o){
-      document.getElementById(id).style.display="none";
+      if (document.getElementById(id)){
+        document.getElementById(id).style.display="none";
+      }
       if (unlocked.indexOf(id)!==-1){
         unlocked[unlocked.indexOf(id)]="undefined";
       }
