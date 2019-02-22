@@ -319,6 +319,7 @@ h1, h2, h3, p, span {
     
     //unlock new things and hide things
     var unlocked = [];
+    var unlockedobj = [];
     function unlock(id,o){
       if (document.getElementById(id)){
         document.getElementById(id).style.display="inline";
@@ -328,6 +329,7 @@ h1, h2, h3, p, span {
       }
       if (o){
         locations[o[0]].obj[o[1]].unlocked=true;
+        unlockedobj.push(o);
       }
     }
     
@@ -340,6 +342,7 @@ h1, h2, h3, p, span {
       }
       if (o){
         locations[o[0]].obj[o[1]].unlocked=false;
+        unlockedobj[unlocked.indexOf(o)]=[];
       }
     }
     
