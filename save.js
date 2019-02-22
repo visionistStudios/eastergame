@@ -63,9 +63,13 @@
       }
      
       var storageobj = localStorage.unlockedobj.split(",");
-      for (var i = 0; i < storageobj.length; i++){
-          if (storageobj[i]!=="undefined"){
-            unlock(null,storageobj[i].split(":"));
+      for (var l = 0; l < locations.length; l++){
+          for (var i = 0; i < locations[l].obj.length; i++){
+            if (storageobj.indexOf(l+":"+i)!==-1){
+              unlock(null,[l,i]);
+            }else{
+              hide(null,[l,i]);
+            }
           }
         }
      
