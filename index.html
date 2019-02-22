@@ -329,7 +329,7 @@ h1, h2, h3, p, span {
       }
       if (o){
         locations[o[0]].obj[o[1]].unlocked=true;
-        unlockedobj.push(o);
+        unlockedobj.push(o[0]+":"+o[1]);
       }
     }
     
@@ -342,7 +342,7 @@ h1, h2, h3, p, span {
       }
       if (o){
         locations[o[0]].obj[o[1]].unlocked=false;
-        unlockedobj[unlocked.indexOf(o)]=[];
+        unlockedobj[unlocked.indexOf(o[0]+":"+o[1])]=[];
       }
     }
     
@@ -625,7 +625,7 @@ h1, h2, h3, p, span {
                  "o.0","0.o Hey!","o.o stop bugging me","o.o no really","-.- plz stop",
                  "o.o its really annoying","0.0 STOPPPP","o.o Okiee.... I guess you won't...",
                  "<br>................o.o","<br>.............o.o.....","<br>......o.o..........","<br>o.o There we go....",
-                 "o.o NOW STOP CLICKING","o.o or I will unleash my secret weapon...","o.o 3...","o.o 2...","o.o 1...",
+                 "<br>o.o NOW STOP CLICKING","<br>o.o or I will unleash my secret weapon...","<br>o.o 3...","<br>o.o 2...","<br>o.o 1...",
                  "<br>[].[] I HAVE LASER VISION!","<br>o.o Ok no I guess...","<br>o.o I may not have a mouth...",
                  "<br>oOo BUT I CAN SCREEEEAM!","<br>@O@ <em>AAEEEEEEEEEEEEEEEAAEEAAAAAAAAAAAAAAAAAAEEEEEEEEEEH!!!!!!</em>"];
     function cbfaceClick(load){
