@@ -29,8 +29,7 @@
           localStorage["egglist"+i]=egglist[i].found;
         }
         localStorage.unlocked=unlocked;
-       
-        localStorage.unlockedobj = unlockedobj;
+        localStorage.unlockedobj=unlockedobj;
         localStorage.eggs=eggs;
       } else {
         alert("Save failed.  You are probably using a browser that does not use local storage.");
@@ -53,12 +52,21 @@
           findegg(i,true);
         }
       }
+     
       var storageunlocked = localStorage.unlocked.split(",");
       for (var i = 0; i < storageunlocked.length; i++){
         if (storageunlocked[i]!=="undefined"){
           unlock(storageunlocked[i]);
         }
       }
+     
+      var storageobj = localStorage.unlockedobj.split(",");
+      for (var i = 0; i < storageobj.length; i++){
+          if (storageobj[i]!=="undefined"){
+            unlock(null,storageobj[i].split(":"));
+          }
+        }
+     
       if (localStorage.eggs){
         eggs = parseInt(localStorage.eggs);
       }
