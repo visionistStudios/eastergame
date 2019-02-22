@@ -37,6 +37,8 @@
     }
     function load(){
       unlocked=[];
+      unlockedobj=[];      
+      
       var vkeys = Object.keys(vars);
       for (var i = 0; i < vkeys.length; i++){
         if (localStorage["vars"+i]){
