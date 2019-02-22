@@ -324,7 +324,7 @@ h1, h2, h3, p, span {
       if (document.getElementById(id)){
         document.getElementById(id).style.display="inline";
       }
-      if (unlocked.indexOf(id)==-1){
+      if (unlocked.indexOf(id)==-1&&!o){
         unlocked.push(id);
       }
       if (o){
@@ -337,7 +337,7 @@ h1, h2, h3, p, span {
       if (document.getElementById(id)){
         document.getElementById(id).style.display="none";
       }
-      if (unlocked.indexOf(id)!==-1){
+      if (unlocked.indexOf(id)!==-1&&!o){
         unlocked[unlocked.indexOf(id)]="undefined";
       }
       if (o){
