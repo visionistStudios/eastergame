@@ -29,6 +29,8 @@
           localStorage["egglist"+i]=egglist[i].found;
         }
         localStorage.unlocked=unlocked;
+       
+        localStorage.unlockedobj = unlockedobj;
         localStorage.eggs=eggs;
       } else {
         alert("Save failed.  You are probably using a browser that does not use local storage.");
