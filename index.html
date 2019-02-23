@@ -292,6 +292,10 @@ h1, h2, h3, p, span {
       }},
       {a:function(){//9
         alert("The classic under-the-carpet trick!");
+      }},
+      {a:function(){//10
+        alert("Still, who keeps putting chests everywhere?");
+        alert("It's not me, I swear!");
       }}
 ];
     
@@ -446,7 +450,11 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:7%;",
           html:"<img width='100%' src='/game/chest.png'>",
           onclick:function(){
-            alert("I wonder what this chest does...");
+            if (checkvar("hasclosetkey",true)){
+              findegg(10);
+            }else{
+              alert("There must be a key for this chest...");
+            }
           }
         },
         {//fire
@@ -524,12 +532,13 @@ h1, h2, h3, p, span {
         },
         {//closet
           unlocked:true,
-          x:50,
-          y:90,
+          x:34,
+          y:57,
           style:"transform:translate(-50%,-50%);",
           html:"<img src='/game/villagecloset.png'>",
           onclick:function(){
-            
+            vars.hasclosetkey=true;
+            alert("If theres a key, there must be a lock!");
           }
         }
         ]
@@ -587,7 +596,7 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hascompass:false};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,hascompass:false};
     var varonload = {
       4:function(){
         cbfaceClick(true);
