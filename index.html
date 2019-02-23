@@ -450,7 +450,7 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:7%;",
           html:"<img width='100%' src='/game/chest.png'>",
           onclick:function(){
-            if (checkvar("hasclosetkey",true)){
+            if (check("hasclosetkey",true)){
               findegg(10);
             }else{
               alert("There must be a key for this chest...");
@@ -537,8 +537,11 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);",
           html:"<img src='/game/villagecloset.png'>",
           onclick:function(){
+            check("hasclosetkey",false,function(){
             vars.hasclosetkey=true;
+            alert("Oooh, a key!");
             alert("If theres a key, there must be a lock!");
+            });
           }
         }
         ]
