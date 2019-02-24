@@ -292,6 +292,9 @@ h1, h2, h3, p, span {
       }},
       {a:function(){//9
         alert("The classic under-the-carpet trick!");
+      },
+      u:function(){
+        hide("egg9",[1,2]);
       }},
       {a:function(){//10
         alert("Still, who keeps putting chests everywhere?");
@@ -545,7 +548,7 @@ h1, h2, h3, p, span {
           id:"egg9",
           x:34,
           y:47,
-          style:"transform:translate(-50%,-50%);width:2%;",
+          style:"transform:translate(-50%,-50%);width:6%;",
           html:"<img width='100%' src='/game/egg.png'>",
           onclick:function(){
             findegg(9);
@@ -555,14 +558,15 @@ h1, h2, h3, p, span {
           unlocked:false,
           id:"closetkey",
           x:34,
-          y:47,
-          style:"transform:translate(-50%,-50%);width:2%;",
+          y:35,
+          style:"transform:translate(-50%,-50%) rotate(90deg);width:2%;",
           html:"<img width='100%' src='/game/key.png'>",
           onclick:function(){
             check("hasclosetkey",false,function(){
             vars.hasclosetkey=true;
             alert("Oooh, a key!");
             alert("If theres a key, there must be a lock!");
+            hide("closetkey",[1,3]);
             });
           }
         }
