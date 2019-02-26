@@ -1,10 +1,10 @@
  //SAVING SYSTEM
     function parse(a){
       var n;
-      if (parseInt(a)+"." !== "NaN."){
-          n = parseInt(a);
+      if (parseFloat(a)+"." !== "NaN."){
+          n = parseFloat(a);
       }
-      else if (parseInt(a)+"." == "NaN."){
+      else if (parseFloat(a)+"." == "NaN."){
         if (a == "true"){
         n = true; 
         }
