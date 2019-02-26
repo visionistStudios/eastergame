@@ -633,6 +633,28 @@ h1, h2, h3, p, span {
       name:"The Cemetery",
       src:"/game/cemetery.png",
       obj:[
+        {//Ladder
+          id:"cemeteryladder",
+          unlocked:true,
+          x:45,
+          y:0,
+          style:"transform:translate(-50%,0%);width:5%;",
+          html:"<img src='/game/cemeteryladder.png'>",
+          onclick:function(){
+            
+          }
+        },
+        {//Flower
+          id:"cemeteryflowers",
+          unlocked:true,
+          x:45,
+          y:50,
+          style:"transform:translate(-50%,0%);width:5%;",
+          html:"<img src='/game/chest.png'>",
+          onclick:function(){
+            
+          }
+        },
         {//Fog
           id:"cemeteryfog",
           unlocked:true,
@@ -644,17 +666,7 @@ h1, h2, h3, p, span {
             cemeteryLighten();
           }
         },
-        {//Ladder
-          id:"cemeteryladder",
-          unlocked:true,
-          x:50,
-          y:0,
-          style:"transform:translate(-50%,0%);width:5%;",
-          html:"<img src='/game/cemeteryladder.png'>",
-          onclick:function(){
-            visit(3);
-          }
-        }
+        
         ]
     },
     //not made yet location
@@ -797,10 +809,10 @@ h1, h2, h3, p, span {
         vars.cemeteryopacity-=0.1;
       }
       if (vars.cemeteryopacity<=0){
-        hide("cemeteryfog",[5,0]);
+        hide("cemeteryfog",[5,2]);
       }
       else{
-        locations[5].obj[0].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        locations[5].obj[2].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
         if (!load){
         document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
         }
