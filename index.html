@@ -1,4 +1,3 @@
-<!-- 10% opacity for cemetery fog! Don't forget. -->
 <head>
   <title>Easter Egg Game</title>
 <style>
@@ -732,9 +731,9 @@ h1, h2, h3, p, span {
         hide("cemeteryfog",[2,0]);
       }
       else{
-        locations[2].obj[0].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        locations[2].obj[0].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+"%;";
         if (!load){
-        document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
+        document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity+"%";
         }
       }
     }
