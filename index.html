@@ -641,7 +641,7 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,cemeteryopacity:100,hascompass:false};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,cemeteryopacity:1,hascompass:false};
     var varonload = {
       4:function(){
         cbfaceClick(true);
@@ -725,15 +725,15 @@ h1, h2, h3, p, span {
     
     function cemeteryLighten(load){
       if (!load){
-        vars.cemeteryopacity-=10;
+        vars.cemeteryopacity-=0.1;
       }
       if (vars.cemeteryopacity<=0){
         hide("cemeteryfog",[2,0]);
       }
       else{
-        locations[2].obj[0].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+"%;";
+        locations[2].obj[0].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
         if (!load){
-        document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity+"%";
+        document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
         }
       }
     }
