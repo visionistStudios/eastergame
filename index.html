@@ -171,7 +171,7 @@ h1, h2, h3, p, span {
     <h1>The Egg Map</h1>
       <div id="map-container">
         <span class="map-btn" onClick="visit(0)">The Village</span>
-        <span class="map-btn" onClick="visit(2)">The Cemetery</span>
+        <span class="map-btn" onClick="visit(5)">The Cemetery</span>
         <span class="map-btn" onClick="visit(99)">The River's End</span>
         <span class="map-btn" onClick="visit(99)">The Mountains</span>
         <span class="map-btn" onClick="visit(99)">The Jungle Temple</span>
@@ -491,7 +491,7 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:5.7%;",
           html:"<img width='100%' src='/game/villagedoor.png'>",
           onclick:function(){
-            alert("A door lol");
+            visit(2);
           }
         },
         {//door 2
@@ -502,7 +502,7 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:5.7%;",
           html:"<img width='100%' src='/game/villagedoor.png'>",
           onclick:function(){
-            alert("A door lol");
+            visit(3);
           }
         },
         {//door 3
@@ -513,7 +513,7 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:5.7%;",
           html:"<img width='100%' src='/game/villagedoor.png'>",
           onclick:function(){
-            alert("A door lol");
+            visit(4);
           }
         }
         ]
@@ -587,6 +587,46 @@ h1, h2, h3, p, span {
       name:"The Last Village House",
       src:"/game/villagehouse.png",
       obj:[
+        {//rug0
+          unlocked:true,
+          x:50,
+          y:90,
+          style:"transform:translate(-50%,-50%);width:45%;",
+          html:"<img width='100%' src='/game/villagerug.png'>",
+          onclick:function(){
+            
+          }
+        },
+        {//rug1
+          unlocked:true,
+          x:10,
+          y:50,
+          style:"transform:translate(-50%,-50%) rotate(90deg);width:45%;",
+          html:"<img width='100%' src='/game/villagerug.png'>",
+          onclick:function(){
+            
+          }
+        },
+        {//rug2
+          unlocked:true,
+          x:50,
+          y:90,
+          style:"transform:translate(-50%,-50%);width:45%;",
+          html:"<img width='100%' src='/game/villagerug.png'>",
+          onclick:function(){
+            
+          },
+        },
+        {//rug3
+          unlocked:true,
+          x:50,
+          y:90,
+          style:"transform:translate(-50%,-50%);width:45%;",
+          html:"<img width='100%' src='/game/villagerug.png'>",
+          onclick:function(){
+            
+          }
+        }
         ]
     },
     {//5
