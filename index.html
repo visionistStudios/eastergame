@@ -576,14 +576,15 @@ h1, h2, h3, p, span {
       name:"The Cemetery",
       src:"/game/cemetery.png",
       obj:[
-        {//chest text
+        {//Fog
+          id:"cemeteryfog",
           unlocked:true,
           x:50,
           y:50,
           style:"transform:translate(-50%,-50%);width:100%;",
           html:"<img src='/game/cemeteryfog.png'>",
           onclick:function(){
-            alert("I'm working on it");
+            cemeteryLighten();
           }
         }
         ]
@@ -641,12 +642,14 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,hascompass:false};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,cemetaryopacity:100,hascompass:false};
     var varonload = {
       4:function(){
         cbfaceClick(true);
       },
-      
+      6:function(){
+        cemeteryLighten(true);
+      }
     };
     
     //main egg click
@@ -719,6 +722,21 @@ h1, h2, h3, p, span {
       }
       document.getElementById("cbface").innerHTML=cbfaces[vars.cbface];
       
+    }
+    
+    function cemeteryLighten(load){
+      if (!load){
+        vars.cemeteryopacity-=10;
+      }
+      if (vars.cemeteryopacity<=0){
+        hide("cemeteryfog",[2,0]);
+      }
+      else{
+        locations[2].obj[0].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        if (!load){
+        document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
+        }
+      }
     }
   </script>
     
