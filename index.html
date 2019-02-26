@@ -172,14 +172,14 @@ h1, h2, h3, p, span {
     <h1>The Egg Map</h1>
       <div id="map-container">
         <span class="map-btn" onClick="visit(0)">The Village</span>
-        <span class="map-btn" onClick="visit(1)">The Cemetery</span>
-        <span class="map-btn" onClick="visit(2)">The River's End</span>
-        <span class="map-btn" onClick="visit(3)">The Mountains</span>
-        <span class="map-btn" onClick="visit(4)">The Jungle Temple</span>
-        <span class="map-btn" onClick="visit(5)">The Hole</span>
-        <span class="map-btn" onClick="visit(6)">The Fog</span>
-        <span class="map-btn" onClick="visit(7)">The Volcano</span>
-        <span class="map-btn" onClick="visit(8)">The Storm</span>
+        <span class="map-btn" onClick="visit(2)">The Cemetery</span>
+        <span class="map-btn" onClick="visit(99)">The River's End</span>
+        <span class="map-btn" onClick="visit(99)">The Mountains</span>
+        <span class="map-btn" onClick="visit(99)">The Jungle Temple</span>
+        <span class="map-btn" onClick="visit(99)">The Hole</span>
+        <span class="map-btn" onClick="visit(99)">The Fog</span>
+        <span class="map-btn" onClick="visit(99)">The Volcano</span>
+        <span class="map-btn" onClick="visit(99)">The Storm</span>
         <img src="/game/map.png" height="100%">
         <img src="/game/compass.png" id="map-compass" onClick="vars.hascompass=true;hide('map-compass');alert('Ooh, a compass!')">
       </div>
@@ -571,6 +571,20 @@ h1, h2, h3, p, span {
           }
         }
         ]
+    },
+    {
+      name:"The Cemetery",
+      src:"/game/cemetery.png",
+      obj:[
+        {//chest text
+          unlocked:true,
+          x:50,
+          y:50,
+          style:"transform:translate(-50%,-50%);width:100%;",
+          html:"<img src='/game/cemeteryfog.png'>",
+          onclick:function(){
+            alert("I'm working on it");
+          }
     },
     //not made yet location
     {
