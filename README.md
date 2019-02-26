@@ -32,6 +32,8 @@ Dogey - Lead Storyline Writer / Inspiration
 # Support, Inspiration, and Beta Testers
 Zappiturtle - Seal Island inspiration / Beta Tester
 
+MathWizardAZ - "Alpha male" tester
+
 Tyson - (im)Moral support / Beta Tester
 
 Why_Not_Synchro - Promotion / Beta Tester
