@@ -532,7 +532,9 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:45%;",
           html:"<img width='100%' src='/game/villagerug.png'>",
           onclick:function(){
-            unlock("egg9",[1,2]);
+            if (!egglist[9].found){
+              unlock("egg9",[1,2]);
+            }
           }
         },
         {//closet
@@ -542,7 +544,7 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:18%;",
           html:"<img width='100%' src='/game/villagecloset.png'>",
           onclick:function(){
-            unlock("closetkey",[1,3]);
+            check("closetkey",false,function(){unlock("closetkey",[1,3]);});
           }
         },
         {//egg
