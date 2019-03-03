@@ -3,7 +3,7 @@ This game is all about easter eggs.  Just click around and try to find all of th
 
 The game is live at: https://visioniststudios.github.io/game/!
 
-Note: This game is a Work In Progress.  There are currently 9 Easter Eggs, but we are adding more, so stay tuned!
+Note: This game is a Work In Progress.  There are currently 11 Easter Eggs, but we are adding more, so stay tuned!
 
 # Things to Know
 Saving:
