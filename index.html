@@ -697,27 +697,28 @@ h1, h2, h3, p, span {
       document.getElementById("area-container").innerHTML="<img id='location' src='"+locations[l].src+"'>";
       
       for (var i = 0; i < locations[l].obj.length; i++){
-        var obj = locations[l].obj[i];
-        
-        var divid = "";
-        if (obj.id){divid="id='"+obj.id+"'";}
-        
-        var divunlocked = "";
-        if (obj.unlocked==false){
-          divunlocked="display:none;";
+        if (!init){
+          var obj = locations[l].obj[i];
+
+          var divid = "";
+          if (obj.id){divid="id='"+obj.id+"'";}
+
+          var divunlocked = "";
+          if (obj.unlocked==false){
+            divunlocked="display:none;";
+          }
+          else {
+            divunlocked="display:inline;";
+          }
+
+          var objstyle = "position:absolute;";
+          objstyle+="left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style;
+
+          document.getElementById("area-container").innerHTML+="<div "+divid+" onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+divunlocked+"'>"+obj.html+"</div>";
         }
-        else {
-          divunlocked="display:inline;";
-        }
-        
-        var objstyle = "position:absolute;";
-        objstyle+="left:"+obj.x+"%;top:"+obj.y+"%;"+obj.style;
-        
-        document.getElementById("area-container").innerHTML+="<div "+divid+" onClick='locations["+l+"].obj["+i+"].onclick();' style='"+objstyle+divunlocked+"'>"+obj.html+"</div>";
- 
-        if (obj.id&&init){
-          if (obj.unlocked==false){hide(obj.id,[l,i]);}
-          else {unlock(obj.id,[l,i]);}
+        if (init){
+          if (obj.unlocked==false){hide(null,[l,i]);}
+          else {unlock(null,[l,i]);}
         }
       }
     }
