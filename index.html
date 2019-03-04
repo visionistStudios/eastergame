@@ -697,9 +697,8 @@ h1, h2, h3, p, span {
       document.getElementById("area-container").innerHTML="<img id='location' src='"+locations[l].src+"'>";
       
       for (var i = 0; i < locations[l].obj.length; i++){
+        var obj = locations[l].obj[i];
         if (!init){
-          var obj = locations[l].obj[i];
-
           var divid = "";
           if (obj.id){divid="id='"+obj.id+"'";}
 
