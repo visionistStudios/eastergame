@@ -303,6 +303,9 @@ h1, h2, h3, p, span {
       {a:function(){//10
         alert("Still, who keeps putting chests everywhere?");
         alert("It's not me, I swear!");
+      }},
+      {a:function(){//11
+        alert("The Konami Code is the greatest!");
       }}
 ];
     
@@ -596,22 +599,22 @@ h1, h2, h3, p, span {
       obj:[
         {//rug0
           unlocked:true,
-          x:50,
-          y:90,
-          style:"transform:translate(-50%,-50%);width:45%;",
-          html:"<img width='100%' src='/game/villagerug.png'>",
-          onclick:function(){
-            
-          }
-        },
-        {//rug1
-          unlocked:true,
           x:10,
           y:50,
           style:"transform:translate(-50%,-50%) rotate(90deg);width:45%;",
           html:"<img width='100%' src='/game/villagerug.png'>",
           onclick:function(){
-            
+            rugClick(0);
+          }
+        },
+        {//rug1
+          unlocked:true,
+          x:50,
+          y:90,
+          style:"transform:translate(-50%,-50%);width:45%;",
+          html:"<img width='100%' src='/game/villagerug.png'>",
+          onclick:function(){
+            rugClick(1);
           }
         },
         {//rug2
@@ -621,7 +624,7 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%) rotate(90deg);width:45%;",
           html:"<img width='100%' src='/game/villagerug.png'>",
           onclick:function(){
-            
+            rugClick(2);
           },
         },
         {//rug3
@@ -631,7 +634,7 @@ h1, h2, h3, p, span {
           style:"transform:translate(-50%,-50%);width:45%;",
           html:"<img width='100%' src='/game/villagerug.png'>",
           onclick:function(){
-            
+            rugClick(3);
           }
         }
         ]
@@ -729,7 +732,7 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,cemeteryopacity:1,hascompass:false};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,rughousestate:0,cemeteryopacity:1,hascompass:false};
     var varonload = {
       4:function(){
         cbfaceClick(true);
@@ -809,6 +812,22 @@ h1, h2, h3, p, span {
       }
       document.getElementById("cbface").innerHTML=cbfaces[vars.cbface];
       
+    }
+    
+    var ruglist = "33110202";//Konami
+    function rugClick(rug){
+      if (rug == parseInt(ruglist[vars.rughousestate])){
+        vars.rughousestate++;
+        alert("You hear a satisfying click");
+      }
+      else {
+        vars.rughousestate=0;
+        alert("A Klaxon beeps in dissent");
+      }
+      
+      if (vars.rughousestate >= ruglist.length){
+        findegg(11);
+      }
     }
     
     function cemeteryLighten(load){
