@@ -636,6 +636,42 @@ h1, h2, h3, p, span {
           onclick:function(){
             rugClick(3);
           }
+        },
+        {//middle rug
+          id:"midrughouse",
+          unlocked:true,
+          x:50,
+          y:50,
+          style:"transform:translate(-50%,-50%) rotate(-30deg);width:45%;",
+          html:"<img width='100%' src='/game/villagerug.png'>",
+          onclick:function(){
+            alert("There are two buttons behind the rug.");
+            hide("midrughouse",[4,4]);
+            unlock("arughouse",[4,5]);
+            unlock("brughouse",[4,6]);
+          }
+        },
+        {//a button
+          id:"arughouse",
+          unlocked:false,
+          x:50,
+          y:50,
+          style:"transform:translate(-50%,-50%);width:5%;",
+          html:"<h1>A</h1>",
+          onclick:function(){
+            rugClick(4);
+          }
+        },
+        {//b button
+          id:"brughouse",
+          unlocked:false,
+          x:45,
+          y:45,
+          style:"transform:translate(-50%,-50%);width:5%;",
+          html:"<h1>B</h1>",
+          onclick:function(){
+            rugClick(5);
+          }
         }
         ]
     },
@@ -814,7 +850,7 @@ h1, h2, h3, p, span {
       
     }
     
-    var ruglist = "33110202";//Konami
+    var ruglist = "3311020254";//Konami
     function rugClick(rug){
       if (rug == parseInt(ruglist[vars.rughousestate])){
         vars.rughousestate++;
