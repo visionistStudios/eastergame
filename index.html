@@ -159,7 +159,7 @@ h1, h2, h3, p, span {
     <h3>Guide to the <span onClick="reset()">Easter Eggs</span></h3>
     <p><span onClick="reset()">Easter Eggs</span> are very elusive creatures.  They are triggered by a certain action. (ex: clicking <span onClick="findegg(5)">the egg</span> or pressing e)  Some <span onClick="reset()">easter eggs</span> require multiple steps to activate.  Also, no one likes smart @$$es who click on every instance of "<span onClick="reset()">easter egg</span>".  I'm telling you: <strong>I WILL RESET YOUR GAME</strong> if I catch you clicking on the words "<span onClick="reset()">easter egg</span>".  I mean, just click on <span onClick="findegg(6)">everything else</span>, though.  Doesn't hurt to try!  Also, another thing: there are a lot of other <span onClick="reset()">easter eggs</span> that don't actually count as eggs, but are just cool things to notice.</p>
     <br>
-    <img src="/game/key.png" class="key" id='key0' onClick="vars['hasguidekey']=true;hide('key0');alert('Hmm, I wonder what this key does...')">
+    <img src="/eastergame/key.png" class="key" id='key0' onClick="vars['hasguidekey']=true;hide('key0');alert('Hmm, I wonder what this key does...')">
   </div>
   
   <div id="clickybtn" class="section" align="center">
@@ -167,7 +167,7 @@ h1, h2, h3, p, span {
     <button onClick="vars['btnclicks1']++;check('btnclicks1',5,unlock,'egg4')" style="padding:20px;"><p>Clicky Button</p></button>
     <br>
     <br>
-    <img src="/game/chest.png" id="egg4" class="chest" onClick="check('hasguidekey',true,findegg,4)" style="display:none;">
+    <img src="/eastergame/chest.png" id="egg4" class="chest" onClick="check('hasguidekey',true,findegg,4)" style="display:none;">
   </div>
 </div>
   
@@ -184,8 +184,8 @@ h1, h2, h3, p, span {
         <span class="map-btn" onClick="visit(99)">The Fog</span>
         <span class="map-btn" onClick="visit(99)">The Volcano</span>
         <span class="map-btn" onClick="visit(99)">The Storm</span>
-        <img src="/game/map.png" height="100%">
-        <img src="/game/compass.png" id="map-compass" onClick="vars.hascompass=true;hide('map-compass');alert('Ooh, a compass!')">
+        <img src="/eastergame/map.png" height="100%">
+        <img src="/eastergame/compass.png" id="map-compass" onClick="vars.hascompass=true;hide('map-compass');alert('Ooh, a compass!')">
       </div>
   </div>
 </div>
@@ -450,7 +450,7 @@ h1, h2, h3, p, span {
     //map locations
     var locations = [{//0
       name:"The Village",
-      src:"/game/village.png",
+      src:"/eastergame/village.png",
       obj:[
         {//chest
           id:"villagechest",
@@ -458,7 +458,7 @@ h1, h2, h3, p, span {
           x:50,
           y:83,
           style:"transform:translate(-50%,-50%);width:7%;",
-          html:"<img width='100%' src='/game/chest.png'>",
+          html:"<img width='100%' src='/eastergame/chest.png'>",
           onclick:function(){
             if (check("hasclosetkey",true)){
               findegg(10);
@@ -473,7 +473,7 @@ h1, h2, h3, p, span {
           x:50,
           y:79.7,
           style:"transform:translate(-50%,-50%);width:13%;",
-          html:"<img width='100%' src='/game/villagefire.png'>",
+          html:"<img width='100%' src='/eastergame/villagefire.png'>",
           onclick:function(){
             alert("Whoosh, you put out the fire.");
             hide("villagefire",[0,1]);
@@ -486,7 +486,7 @@ h1, h2, h3, p, span {
           x:16.25,
           y:77.25,
           style:"transform:translate(-50%,-50%);width:5.7%;",
-          html:"<img width='100%' src='/game/villagedoor.png'>",
+          html:"<img width='100%' src='/eastergame/villagedoor.png'>",
           onclick:function(){
             visit(1);
           }
@@ -497,7 +497,7 @@ h1, h2, h3, p, span {
           x:40.25,
           y:61.25,
           style:"transform:translate(-50%,-50%);width:5.7%;",
-          html:"<img width='100%' src='/game/villagedoor.png'>",
+          html:"<img width='100%' src='/eastergame/villagedoor.png'>",
           onclick:function(){
             visit(2);
           }
@@ -508,7 +508,7 @@ h1, h2, h3, p, span {
           x:66.5,
           y:59.5,
           style:"transform:translate(-50%,-50%);width:5.7%;",
-          html:"<img width='100%' src='/game/villagedoor.png'>",
+          html:"<img width='100%' src='/eastergame/villagedoor.png'>",
           onclick:function(){
             visit(3);
           }
@@ -519,7 +519,7 @@ h1, h2, h3, p, span {
           x:90.25,
           y:78,
           style:"transform:translate(-50%,-50%);width:5.7%;",
-          html:"<img width='100%' src='/game/villagedoor.png'>",
+          html:"<img width='100%' src='/eastergame/villagedoor.png'>",
           onclick:function(){
             visit(4);
           }
@@ -528,14 +528,14 @@ h1, h2, h3, p, span {
     },
     {//1
       name:"The First Village House",
-      src:"/game/villagehouse.png",
+      src:"/eastergame/villagehouse.png",
       obj:[
         {//rug
           unlocked:true,
           x:50,
           y:90,
           style:"transform:translate(-50%,-50%);width:45%;",
-          html:"<img width='100%' src='/game/villagerug.png'>",
+          html:"<img width='100%' src='/eastergame/villagerug.png'>",
           onclick:function(){
             if (!egglist[9].found){
               unlock("egg9",[1,2]);
@@ -547,7 +547,7 @@ h1, h2, h3, p, span {
           x:34,
           y:57,
           style:"transform:translate(-50%,-50%);width:18%;",
-          html:"<img width='100%' src='/game/villagecloset.png'>",
+          html:"<img width='100%' src='/eastergame/villagecloset.png'>",
           onclick:function(){
             check("hasclosetkey",false,function(){unlock("closetkey",[1,3]);});
           }
@@ -558,7 +558,7 @@ h1, h2, h3, p, span {
           x:64,
           y:93,
           style:"transform:translate(-50%,-50%);width:6%;",
-          html:"<img width='100%' src='/game/egg.png'>",
+          html:"<img width='100%' src='/eastergame/egg.png'>",
           onclick:function(){
             findegg(9);
           }
@@ -569,7 +569,7 @@ h1, h2, h3, p, span {
           x:34,
           y:35,
           style:"transform:translate(-50%,-50%) rotate(90deg);width:2%;",
-          html:"<img width='100%' src='/game/key.png'>",
+          html:"<img width='100%' src='/eastergame/key.png'>",
           onclick:function(){
             check("hasclosetkey",false,function(){
             vars.hasclosetkey=true;
@@ -583,26 +583,26 @@ h1, h2, h3, p, span {
     },
      {//2
       name:"The Second Village House",
-      src:"/game/villagehouse.png",
+      src:"/eastergame/villagehouse.png",
       obj:[
         ]
     },
      {//3
       name:"The Third Village House",
-      src:"/game/villagehouse.png",
+      src:"/eastergame/villagehouse.png",
       obj:[
         ]
     },
     {//4
       name:"The Last Village House",
-      src:"/game/villagehouse.png",
+      src:"/eastergame/villagehouse.png",
       obj:[
         {//rug0
           unlocked:true,
           x:10,
           y:50,
           style:"transform:translate(-50%,-50%) rotate(90deg);width:45%;",
-          html:"<img width='100%' src='/game/villagerug.png'>",
+          html:"<img width='100%' src='/eastergame/villagerug.png'>",
           onclick:function(){
             rugClick(0);
           }
@@ -612,7 +612,7 @@ h1, h2, h3, p, span {
           x:50,
           y:90,
           style:"transform:translate(-50%,-50%);width:45%;",
-          html:"<img width='100%' src='/game/villagerug.png'>",
+          html:"<img width='100%' src='/eastergame/villagerug.png'>",
           onclick:function(){
             rugClick(1);
           }
@@ -622,7 +622,7 @@ h1, h2, h3, p, span {
           x:90,
           y:50,
           style:"transform:translate(-50%,-50%) rotate(90deg);width:45%;",
-          html:"<img width='100%' src='/game/villagerug.png'>",
+          html:"<img width='100%' src='/eastergame/villagerug.png'>",
           onclick:function(){
             rugClick(2);
           },
@@ -632,7 +632,7 @@ h1, h2, h3, p, span {
           x:50,
           y:10,
           style:"transform:translate(-50%,-50%);width:45%;",
-          html:"<img width='100%' src='/game/villagerug.png'>",
+          html:"<img width='100%' src='/eastergame/villagerug.png'>",
           onclick:function(){
             rugClick(3);
           }
@@ -643,7 +643,7 @@ h1, h2, h3, p, span {
           x:50,
           y:50,
           style:"transform:translate(-50%,-50%) rotate(-30deg);width:45%;",
-          html:"<img width='100%' src='/game/villagerug.png'>",
+          html:"<img width='100%' src='/eastergame/villagerug.png'>",
           onclick:function(){
             alert("There are two buttons behind the rug.");
             hide("midrughouse",[4,4]);
@@ -677,7 +677,7 @@ h1, h2, h3, p, span {
     },
     {//5
       name:"The Cemetery",
-      src:"/game/cemetery.png",
+      src:"/eastergame/cemetery.png",
       obj:[
         {//Ladder
           id:"cemeteryladder",
@@ -685,7 +685,7 @@ h1, h2, h3, p, span {
           x:70,
           y:0,
           style:"transform:translate(-50%,0%);width:5%;",
-          html:"<img width='100%' src='/game/cemeteryladder.png'>",
+          html:"<img width='100%' src='/eastergame/cemeteryladder.png'>",
           onclick:function(){
             
           }
@@ -696,7 +696,7 @@ h1, h2, h3, p, span {
           x:45,
           y:50,
           style:"transform:translate(-50%,0%);width:5%;",
-          html:"<img width='100%' src='/game/chest.png'>",
+          html:"<img width='100%' src='/eastergame/chest.png'>",
           onclick:function(){
             
           }
@@ -707,7 +707,7 @@ h1, h2, h3, p, span {
           x:50,
           y:50,
           style:"transform:translate(-50%,-50%);width:100%;",
-          html:"<img width='100%' src='/game/cemeteryfog.png'>",
+          html:"<img width='100%' src='/eastergame/cemeteryfog.png'>",
           onclick:function(){
             cemeteryLighten();
           }
@@ -718,7 +718,7 @@ h1, h2, h3, p, span {
     //not made yet location
     {
       name:"Lol we haven't made this location yet...",
-      src:"/game/chest.png",
+      src:"/eastergame/chest.png",
       obj:[
         {//chest text
           unlocked:true,
@@ -882,6 +882,6 @@ h1, h2, h3, p, span {
     }
   </script>
     
-  <script src="/game/save.js"></script>
-  <script src="/game/init.js"></script>
+  <script src="/eastergame/save.js"></script>
+  <script src="/eastergame/init.js"></script>
     </body>
