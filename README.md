@@ -1,7 +1,7 @@
 # Easter Egg Game
 This game is all about easter eggs.  Just click around and try to find all of the secrets!  However, beware of enemies lurking in the shadows...
 
-The game is live at: https://visioniststudios.github.io/game/!
+The game is live at: https://visioniststudios.github.io/eastergame/!
 
 Note: This game is a Work In Progress.  There are currently 11 Easter Eggs, but we are adding more, so stay tuned!
 
