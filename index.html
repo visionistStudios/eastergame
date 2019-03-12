@@ -303,6 +303,25 @@ h1, h2, h3, p, span {
       }},
       {a:function(){//11
         alert("You solved the Konami code!");
+      },
+      s:function(){
+        vars.rughousestage++;
+      }},
+      {a:function(){//12
+        alert("You solved the Konami code again!");
+      },
+      s:function(){
+        vars.rughousestage++;
+      }},
+      {a:function(){//13
+        alert("You solved the Konami code a third time!");
+        alert("Here, take a key!");
+      },
+      s:function(){
+        vars.rughousestage++;
+      },
+      u:function(){
+        unlock("rughousekey",[4,7]);
       }}
 ];
     
@@ -582,6 +601,16 @@ h1, h2, h3, p, span {
       name:"The Second Village House",
       src:"/eastergame/villagehouse.png",
       obj:[
+        {//chest
+          unlocked:true,
+          x:50,
+          y:90,
+          style:"transform:translate(-50%,-50%);width:20%;",
+          html:"<img width='100%' src='/eastergame/chest.png'>",
+          onclick:function(){
+            //needs rug key
+          }
+        }
         ]
     },
      {//3
@@ -668,6 +697,17 @@ h1, h2, h3, p, span {
           html:"<h1>B</h1>",
           onclick:function(){
             rugClick(5);
+          }
+        },
+        {//key
+          id:"rughousekey",
+          unlocked:false,
+          x:50,
+          y:90,
+          style:"transform:translate(-50%,-50%);width:5%;",
+          html:"<img src='/eastergame/key.png'>",
+          onclick:function(){
+            hide("rughousekey",[4,7]);
           }
         }
         ]
@@ -765,7 +805,7 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,rughousestate:0,cemeteryopacity:1,hascompass:false};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,rughousestate:0,rughousestage:0,cemeteryopacity:1,hascompass:false};
     var varonload = {
       4:function(){
         cbfaceClick(true);
@@ -859,7 +899,15 @@ h1, h2, h3, p, span {
       }
       
       if (vars.rughousestate >= ruglist.length){
-        findegg(11);
+        if (vars.rughousestage==0){
+          findegg(11);
+        }
+        if (vars.rughousestage==1){
+          findegg(12);
+        }
+        if (vars.rughousestage==2){
+          findegg(13);
+        }
       }
     }
     
