@@ -305,12 +305,14 @@ h1, h2, h3, p, span {
         alert("You solved the Konami code!");
       },
       s:function(){
+        vars.rughousestate=0;
         vars.rughousestage++;
       }},
       {a:function(){//12
         alert("You solved the Konami code again!");
       },
       s:function(){
+        vars.rughousestate=0;
         vars.rughousestage++;
       }},
       {a:function(){//13
@@ -318,6 +320,7 @@ h1, h2, h3, p, span {
         alert("Here, take a key!");
       },
       s:function(){
+        vars.rughousestate=0;
         vars.rughousestage++;
       },
       u:function(){
