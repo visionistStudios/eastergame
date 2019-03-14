@@ -51,5 +51,3 @@ Dragon Master - Beta Tester
 Temmie - Beta Tester
 
 Aman - Beta Tester
-
-MathWizardAZ - Alpha Tester
