@@ -325,6 +325,9 @@ h1, h2, h3, p, span {
       },
       u:function(){
         unlock("rughousekey",[4,7]);
+      }},
+      {a:function(){//14
+        alert("REEEEEEEEEEE");
       }}
 ];
     
@@ -717,8 +720,8 @@ h1, h2, h3, p, span {
     },
     {//5
       name:"The Cemetery",
-      src:"/eastergame/cemetery.png",
-      obj:[
+      src:"/eastergame/cemetery.png"
+      obj:[,
         {//Ladder
           id:"cemeteryladder",
           unlocked:true,
@@ -735,10 +738,10 @@ h1, h2, h3, p, span {
           unlocked:true,
           x:45,
           y:50,
-          style:"transform:translate(-50%,0%);width:5%;",
+          style:"transform:translate(-50%,0%);width:3%;",
           html:"<img width='100%' src='/eastergame/yellowflower.png'>",
           onclick:function(){
-            alert("REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+            findegg(14);
           }
         },
         {//Fog
