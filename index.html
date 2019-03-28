@@ -327,7 +327,13 @@ h1, h2, h3, p, span {
         unlock("rughousekey",[4,7]);
       }},
       {a:function(){//14
-        alert("REEEEEEEEEEE");
+        alert("Oh, a flower!");
+      },
+      u:function(){
+        hide("cemeteryflower1",[5,1]);
+      },
+      s:function(){
+        vars.hasyellowflower1=true;
       }}
 ];
     
@@ -734,7 +740,7 @@ h1, h2, h3, p, span {
           }
         },
         {//Flower
-          id:"cemeteryflowers",
+          id:"cemeteryflower1",
           unlocked:true,
           x:45,
           y:50,
@@ -811,7 +817,7 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,rughousestate:0,rughousestage:0,cemeteryopacity:1,hascompass:false};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,rughousestate:0,rughousestage:0,cemeteryopacity:1,hasyellowflower1:false,hascompass:false};
     var varonload = {
       4:function(){
         cbfaceClick(true);
