@@ -366,6 +366,12 @@ h1, h2, h3, p, span {
       },
       s:function(){
         vars.hasyellowflower1=true;
+      }},
+      {a:function(){//15
+        alert("A nest with easter eggs in it lol");
+      },
+      u:function(){
+        hide("cemeterynest",[6,0]);
       }}
 ];
     
@@ -794,6 +800,23 @@ h1, h2, h3, p, span {
           }
         },
         
+        ]
+    },
+    {//6
+      name:"The Cemetery Tree",
+      src:"/eastergame/cemetery.png",
+      obj:[
+        {//Bird Nest
+          id:"cemeterynest",
+          unlocked:true,
+          x:65,
+          y:4050,
+          style:"transform:translate(-50%,-50%);width:100%;",
+          html:"<img width='100%' src='/eastergame/cemeteryfog.png'>",
+          onclick:function(){
+            findegg(15);
+          }
+        }
         ]
     },
     //not made yet location
