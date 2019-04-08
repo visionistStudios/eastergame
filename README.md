@@ -20,7 +20,7 @@ Note: A more integrated save system will be added in the near future.
 
 Release Date:
 
-Official release date will be April 21, 2019 (Easter 2019)
+Official release date will be April 21, 2019 (Easter 2019) possibly easter of 2020 considering our progress ...
 
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
