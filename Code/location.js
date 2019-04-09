@@ -296,7 +296,7 @@
           x:65,
           y:4050,
           style:"transform:translate(-50%,-50%);width:100%;",
-          html:"<img width='100%' src='/eastergame/Images/Cemetery/nest.png'>",
+          html:"<img width='100%' src='/eastergame/Images/Misc/yellowflower.png'>",
           onclick:function(){
             findegg(15);
           }
