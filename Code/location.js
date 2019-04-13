@@ -172,7 +172,7 @@
           x:50,
           y:90,
           style:"transform:translate(-50%,-50%);width:45%;",
-          html:"<img width='100%' src='/eastergame/Images/village/rug.png'>",
+          html:"<img width='100%' src='/eastergame/Images/Village/rug.png'>",
           onclick:function(){
             rugClick(1);
           }
