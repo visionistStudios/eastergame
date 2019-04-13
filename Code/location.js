@@ -291,12 +291,12 @@
       src:"/eastergame/Images/Cemetery/tree.png",
       obj:[
         {//Bird Nest
-          id:"cemeterynest",
+          id:"cemeteryegg",
           unlocked:true,
-          x:50,
+          x:65,
           y:50,
           style:"transform:translate(-50%,-50%);width:100%;",
-          html:"<img width='100%' src='/eastergame/Images/Misc/yellowflower.png'>",
+          html:"<img width='100%' src='/eastergame/Images/Misc/egg.png'>",
           onclick:function(){
             findegg(15);
           }
@@ -304,7 +304,7 @@
         {//Ladder
           id:"cemeterytreeladder",
           unlocked:true,
-          x:70,
+          x:85,
           y:45,
           style:"transform:translate(-50%,0%);width:10%;",
           html:"<img width='100%' src='/eastergame/Images/Cemetery/ladder.png'>",
