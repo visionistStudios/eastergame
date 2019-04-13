@@ -305,7 +305,7 @@
           id:"cemeterytreeladder",
           unlocked:true,
           x:70,
-          y:70,
+          y:65,
           style:"transform:translate(-50%,0%);width:10%;",
           html:"<img width='100%' src='/eastergame/Images/Cemetery/ladder.png'>",
           onclick:function(){
