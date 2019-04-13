@@ -293,8 +293,8 @@
         {//Bird Nest
           id:"cemeterynest",
           unlocked:true,
-          x:65,
-          y:4050,
+          x:50,
+          y:50,
           style:"transform:translate(-50%,-50%);width:100%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/yellowflower.png'>",
           onclick:function(){
@@ -305,7 +305,7 @@
           id:"cemeterytreeladder",
           unlocked:true,
           x:70,
-          y:65,
+          y:45,
           style:"transform:translate(-50%,0%);width:10%;",
           html:"<img width='100%' src='/eastergame/Images/Cemetery/ladder.png'>",
           onclick:function(){
