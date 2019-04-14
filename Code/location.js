@@ -294,7 +294,7 @@
           id:"cemeteryegg",
           unlocked:true,
           x:65,
-          y:50,
+          y:55,
           style:"transform:translate(-50%,-50%);width:5%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/egg.png'>",
           onclick:function(){
