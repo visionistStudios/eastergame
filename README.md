@@ -22,6 +22,8 @@ Release Date:
 
 Official release date will be April 21, 2019 (Easter 2019) possibly easter of 2020 considering our progress ...
 
+Chance of releasing next year - 101%, margin of error, 1% :P
+
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
