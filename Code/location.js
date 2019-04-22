@@ -316,7 +316,7 @@
     },
     {//7
       name:"The Rivers End",
-      src:"/eastergame/Images/River's End/river'send.png",
+      src:"/eastergame/Images/RiversEnd/riversend.png",
       obj:[
         
         ]
