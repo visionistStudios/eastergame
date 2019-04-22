@@ -314,6 +314,13 @@
         }
         ]
     },
+    {//7
+      name:"The Rivers End",
+      src:"/eastergame/Images/River's End/river'send.png",
+      obj:[
+        
+        ]
+    },
     //not made yet location
     {
       name:"Lol we haven't made this location yet...",
