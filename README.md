@@ -32,7 +32,7 @@ Fluffcakes - Lead Artist / Designer
 Dogey - Lead Storyline Writer / Lead Inspiration
 
 # Support, Inspiration, and Beta Testers
-Zappiturtle - Seal Island inspiration / Beta Tester
+Zappiturtle - Seal Island inspiration / Bad Tester
 
 Tyson - (im)Moral support / Beta Tester
 
