@@ -154,6 +154,9 @@ h1, h2, h3, p, span {
   .page {
       display:none;
     }
+  .fluffmsg {
+    font-family:"Palatino Linotype";
+  }
 </style>
 </head>
 <body onload="init()">
@@ -185,10 +188,11 @@ h1, h2, h3, p, span {
   
   <div id="clickybtn" class="section" align="center">
       <h3 >Random Clicky Button <span id="cbface" onClick="cbfaceClick()">-.-</span></h3>
-    <button onClick="vars['btnclicks1']++;check('btnclicks1',5,unlock,'egg4')" style="padding:20px;"><p>Clicky Button</p></button>
+    <button onClick="vars['btnclicks1']++;check('btnclicks1',5,unlock,'egg4');check('btnclicks1',100,findegg,16);" style="padding:20px;"><p>Clicky Button</p></button>
     <br>
     <br>
     <img src="/eastergame/Images/Misc/chest.png" id="egg4" class="chest" onClick="check('hasguidekey',true,findegg,4)" style="display:none;">
+    <p id="cbmsg" class="fluffmsg">;ljkfkjl;sfdklsdfksfDKSDFKL:s:DLKJ</p>
   </div>
 </div>
   
@@ -374,7 +378,10 @@ h1, h2, h3, p, span {
       },
       u:function(){
         hide("cemeteryegg",[6,0]);
-      }}
+      }},
+      {s:function(){//16
+        alert("Very determined are you? :P");
+      },
 ];
     
     //fill in "found" state
