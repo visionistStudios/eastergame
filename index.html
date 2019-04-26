@@ -977,13 +977,13 @@ h1, h2, h3, p, span {
       document.getElementById("cbface").innerHTML=cbfaces[vars.cbface];
     }
     
-    var cbmsgs = ["Wow, I see you like clicking..."];
+    var cbmsgs = ["hmmmmm", "determined are you?", "you know that this is a bad game", "stop playing it", "it's stupid", "all you do is collect easter eggs", "and in the end there is no reward", "so JUST STOP ALREADY", "fine ...", "well, if you are going to keep playing, do me a favor"];
     function cbMsg(load){
       if (vars.btnclicks1>=100&&vars.btnclicks1<=99+cbmsgs.length){
       if (!load){
       vars.cbmsg++;
       }
-      document.getElementById("cbmsg").innerHTML=cbmsgs[vars.cbmsg-100];
+      document.getElementById("cbmsg").innerHTML=cbmsgs[vars.cbmsg];
       }
     }
     
