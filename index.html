@@ -188,11 +188,11 @@ h1, h2, h3, p, span {
   
   <div id="clickybtn" class="section" align="center">
       <h3 >Random Clicky Button <span id="cbface" onClick="cbfaceClick()">-.-</span></h3>
-    <button onClick="vars['btnclicks1']++;check('btnclicks1',5,unlock,'egg4');check('btnclicks1',100,findegg,16);" style="padding:20px;"><p>Clicky Button</p></button>
+    <button onClick="vars['btnclicks1']++;check('btnclicks1',5,unlock,'egg4');cbMsg(false);" style="padding:20px;"><p>Clicky Button</p></button>
     <br>
     <br>
     <img src="/eastergame/Images/Misc/chest.png" id="egg4" class="chest" onClick="check('hasguidekey',true,findegg,4)" style="display:none;">
-    <p id="cbmsg" class="fluffmsg">;ljkfkjl;sfdklsdfksfDKSDFKL:s:DLKJ</p>
+    <p id="cbmsg" class="fluffmsg"></p>
   </div>
 </div>
   
@@ -380,7 +380,7 @@ h1, h2, h3, p, span {
         hide("cemeteryegg",[6,0]);
       }},
       {s:function(){//16
-        document.getElementById("cbmsg").innerHTML="yeeeeet";
+        document.getElementById("cbmsg").innerHTML="Wow, I see you like clicking...";
       }},
 ];
     
@@ -899,6 +899,7 @@ h1, h2, h3, p, span {
     var varonload = {
       4:function(){
         cbfaceClick(true);
+        cbMsg(true);
       },
       6:function(){
         cemeteryLighten(true);
@@ -974,7 +975,16 @@ h1, h2, h3, p, span {
       vars.cbface++;
       }
       document.getElementById("cbface").innerHTML=cbfaces[vars.cbface];
-      
+    }
+    
+    var cbmsgs = ["Wow, I see you like clicking..."];
+    function cbMsg(load){
+      if (vars.cbclick>=100&&vars.cbclick<=99+cbmsgs.length){
+      if (!load){
+      vars.cbmsg++;
+      }
+      document.getElementById("cbmsg").innerHTML=cbmsgs[vars.cbmsg-100];
+      }
     }
     
     var ruglist = "3311020254";//Konami
