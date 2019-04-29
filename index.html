@@ -167,7 +167,7 @@ h1, h2, h3, p, span {
   <div align="center">
     <h1 id="title">The <span id="egg3" onClick="findegg(3)">Easter Egg</span> Game</h1>
       <br>
-    <div id="map-pickup" onClick="unlock('menu2');hide('map-pickup');alert('oooh, a map!');">~ ` . * ,_^</div>
+    <div id="map-pickup" onClick="unlock('menu2');unlock('mapbtn0');hide('map-pickup');alert('oooh, a map!');">~ ` . * ,_^</div>
   </div>
   
   <div id="egg0">
@@ -200,15 +200,15 @@ h1, h2, h3, p, span {
   <div align="center">
     <h1>The Egg Map</h1>
       <div id="map-container">
-        <span class="map-btn" onClick="visit(0)">The Village</span>
-        <span class="map-btn" onClick="visit(5)">The Cemetery</span>
-        <span class="map-btn" onClick="visit(7)">The River's End</span>
-        <span class="map-btn" onClick="visit(99)">The Mountains</span>
-        <span class="map-btn" onClick="visit(99)">The Jungle Temple</span>
-        <span class="map-btn" onClick="visit(99)">The Hole</span>
-        <span class="map-btn" onClick="visit(99)">The Fog</span>
-        <span class="map-btn" onClick="visit(99)">The Volcano</span>
-        <span class="map-btn" onClick="visit(99)">The Storm</span>
+        <span class="map-btn" id="mapbtn0" onClick="visit(0)">The Village</span>
+        <span class="map-btn" id="mapbtn1" onClick="visit(5)">The Cemetery</span>
+        <span class="map-btn" id="mapbtn2" onClick="visit(7)">The River's End</span>
+        <span class="map-btn" id="mapbtn3" onClick="visit(99)">The Mountains</span>
+        <span class="map-btn" id="mapbtn4" onClick="visit(99)">The Jungle Temple</span>
+        <span class="map-btn" id="mapbtn5" onClick="visit(99)">The Hole</span>
+        <span class="map-btn" id="mapbtn6" onClick="visit(99)">The Fog</span>
+        <span class="map-btn" id="mapbtn7" onClick="visit(99)">The Volcano</span>
+        <span class="map-btn" id="mapbtn8" onClick="visit(99)">The Storm</span>
         <img src="/eastergame/Images/Misc/map.png" height="100%">
         <img src="/eastergame/Images/Misc/compass.png" id="map-compass" onClick="vars.hascompass=true;hide('map-compass');alert('Ooh, a compass!')">
       </div>
