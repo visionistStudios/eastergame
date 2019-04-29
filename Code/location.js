@@ -4,7 +4,7 @@
       obj:[
         {//chest
           id:"villagechest",
-          unlocked:false,
+          unlocked:true,
           x:50,
           y:83,
           style:"transform:translate(-50%,-50%);width:7%;",
