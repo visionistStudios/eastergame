@@ -138,11 +138,23 @@
         {//chest
           unlocked:true,
           x:50,
-          y:90,
+          y:80,
           style:"transform:translate(-50%,-50%);width:20%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
           onclick:function(){
-            //needs rug key
+            unlock([2,1],"rugkey");
+          }
+        },
+       {//key
+          id:"rugkey"
+          unlocked:false,
+          x:50,
+          y:65,
+          style:"transform:translate(-50%,-50%);width:20%;",
+          html:"<img width='100%' src='/eastergame/Images/Misc/key.png'>",
+          onclick:function(){
+            unlock("mapbtn1");
+            hide([2,1],"rugkey");
           }
         }
         ]
