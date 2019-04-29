@@ -146,7 +146,7 @@
           }
         },
        {//key
-          id:"rugkey"
+          id:"rugkey",
           unlocked:false,
           x:50,
           y:65,
