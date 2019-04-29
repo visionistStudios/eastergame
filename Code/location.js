@@ -149,8 +149,8 @@
           id:"rugkey",
           unlocked:false,
           x:50,
-          y:65,
-          style:"transform:translate(-50%,-50%);width:20%;",
+          y:75,
+          style:"transform:translate(-50%,-50%);width:2%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/key.png'>",
           onclick:function(){
             unlock("mapbtn1");
