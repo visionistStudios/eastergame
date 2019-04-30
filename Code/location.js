@@ -142,7 +142,7 @@
           style:"transform:translate(-50%,-50%);width:20%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
           onclick:function(){
-            unlock([2,1],"rugkey");
+            unlock("rugkey",[2,1]);
           }
         },
        {//key
@@ -154,7 +154,7 @@
           html:"<img width='100%' src='/eastergame/Images/Misc/key.png'>",
           onclick:function(){
             unlock("mapbtn1");
-            hide([2,1],"rugkey");
+            hide("rugkey",[2,1]);
           }
         }
         ]
