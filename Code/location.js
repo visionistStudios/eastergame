@@ -294,7 +294,7 @@
         onclick:function(){
          hide("cemeteryshovel",[5,2]);
         }
-       }
+       },
         {//Fog
           id:"cemeteryfog",
           unlocked:true,//toggle to false for testing
