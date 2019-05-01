@@ -287,9 +287,9 @@
        {//Shovel
         id:"cemeteryshovel",
         unlocked:true,
-        x:35,
+        x:28,
         y:50,
-        style:"transform:translate(-50%,-50%);width:10%;",
+        style:"transform:translate(-50%,-50%) rotate(15deg);width:6%;",
         html:"<img width='100%' src='/eastergame/Images/Cemetery/shovel.png'>",
         onclick:function(){
          hide("cemeteryshovel",[5,2]);
