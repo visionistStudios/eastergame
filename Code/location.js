@@ -150,7 +150,7 @@
           unlocked:false,
           x:50,
           y:75,
-          style:"transform:translate(-50%,-50%);width:2%;",
+          style:"transform:translate(-50%,-50%);width:8%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/key.png'>",
           onclick:function(){
             unlock("mapbtn1");
@@ -284,9 +284,20 @@
             findegg(14);
           }
         },
+       {//Shovel
+        id:"cemeteryshovel",
+        unlocked:true,
+        x:35,
+        y:50,
+        style:"transform:translate(-50%,-50%);width:10%;",
+        html:"<img width='100%' src='/eastergame/Images/Cemetery/shovel.png'>",
+        onclick:function(){
+         hide("cemeteryshovel",[5,2]);
+        }
+       }
         {//Fog
           id:"cemeteryfog",
-          unlocked:true,
+          unlocked:true,//toggle to false for testing
           x:50,
           y:50,
           style:"transform:translate(-50%,-50%);width:100%;",
