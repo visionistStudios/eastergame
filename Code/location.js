@@ -142,7 +142,7 @@
           style:"transform:translate(-50%,-50%);width:20%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
           onclick:function(){
-            unlock("rugkey",[2,1]);
+            check("hasvillagekey",false,()=>{unlock("rugkey",[2,1]);});
           }
         },
        {//key
@@ -155,6 +155,7 @@
           onclick:function(){
             unlock("mapbtn1");
             hide("rugkey",[2,1]);
+            vars.hasvillagekey=true;
           }
         }
         ]
