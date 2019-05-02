@@ -1013,10 +1013,10 @@ h1, h2, h3, p, span {
         vars.cemeteryopacity-=0.1;
       }
       if (vars.cemeteryopacity<=0){
-        hide("cemeteryfog",[5,2]);
+        hide("cemeteryfog",[5,3]);
       }
       else{
-        locations[5].obj[2].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        locations[5].obj[3].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
         if (!load){
         document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
         }
