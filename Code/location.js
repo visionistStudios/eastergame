@@ -346,10 +346,10 @@
            unlocked:true,
            x:80,
            y:50,
-           style:"transform:translate(-50%,-50%);width:2%;",
+           style:"transform:translate(-50%,-50%);width:100%;",
            html:"<img width='100%' src='/eastergame/Images/Village/door.png'>",
            onclick:function(){
-               
+               alert("REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
            }
         }
         ]
