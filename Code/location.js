@@ -138,11 +138,24 @@
         {//chest
           unlocked:true,
           x:50,
-          y:90,
+          y:80,
           style:"transform:translate(-50%,-50%);width:20%;",
           html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
           onclick:function(){
-            //needs rug key
+            check("hasvillagekey",false,()=>{unlock("rugkey",[2,1]);});
+          }
+        },
+       {//key
+          id:"rugkey",
+          unlocked:false,
+          x:50,
+          y:75,
+          style:"transform:translate(-50%,-50%);width:8%;",
+          html:"<img width='100%' src='/eastergame/Images/Misc/key.png'>",
+          onclick:function(){
+            unlock("mapbtn1");
+            hide("rugkey",[2,1]);
+            vars.hasvillagekey=true;
           }
         }
         ]
@@ -272,9 +285,20 @@
             findegg(14);
           }
         },
+       {//Shovel
+        id:"cemeteryshovel",
+        unlocked:true,
+        x:35.5,
+        y:35,
+        style:"transform:translate(-50%,-50%) rotate(15deg);width:6%;",
+        html:"<img width='100%' src='/eastergame/Images/Cemetery/shovel.png'>",
+        onclick:function(){
+         hide("cemeteryshovel",[5,2]);
+        }
+       },
         {//Fog
           id:"cemeteryfog",
-          unlocked:true,
+          unlocked:true,//toggle to false for testing
           x:50,
           y:50,
           style:"transform:translate(-50%,-50%);width:100%;",
@@ -318,7 +342,16 @@
       name:"The Rivers End",
       src:"/eastergame/Images/RiversEnd/riversend.png",
       obj:[
-        
+        {//lighthouse door
+           unlocked:true,
+           x:80,
+           y:52,
+           style:"transform:translate(-50%,-50%);width:2%;",
+           html:"<img width='100%' src='/eastergame/Images/Village/door.png'>",
+           onclick:function(){
+               alert("REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+           }
+        }
         ]
     },
     //not made yet location

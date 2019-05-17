@@ -167,7 +167,7 @@ h1, h2, h3, p, span {
   <div align="center">
     <h1 id="title">The <span id="egg3" onClick="findegg(3)">Easter Egg</span> Game</h1>
       <br>
-    <div id="map-pickup" onClick="unlock('menu2');hide('map-pickup');alert('oooh, a map!');">~ ` . * ,_^</div>
+    <div id="map-pickup" onClick="unlock('menu2');unlock('mapbtn0');hide('map-pickup');alert('oooh, a map!');">~ ` . * ,_^</div>
   </div>
   
   <div id="egg0">
@@ -200,15 +200,15 @@ h1, h2, h3, p, span {
   <div align="center">
     <h1>The Egg Map</h1>
       <div id="map-container">
-        <span class="map-btn" onClick="visit(0)">The Village</span>
-        <span class="map-btn" onClick="visit(5)">The Cemetery</span>
-        <span class="map-btn" onClick="visit(7)">The River's End</span>
-        <span class="map-btn" onClick="visit(99)">The Mountains</span>
-        <span class="map-btn" onClick="visit(99)">The Jungle Temple</span>
-        <span class="map-btn" onClick="visit(99)">The Hole</span>
-        <span class="map-btn" onClick="visit(99)">The Fog</span>
-        <span class="map-btn" onClick="visit(99)">The Volcano</span>
-        <span class="map-btn" onClick="visit(99)">The Storm</span>
+        <span class="map-btn" id="mapbtn0" onClick="visit(0)">The Village</span>
+        <span class="map-btn" id="mapbtn1" onClick="visit(5)">The Cemetery</span>
+        <span class="map-btn" id="mapbtn2" onClick="visit(7)">The River's End</span>
+        <span class="map-btn" id="mapbtn3" onClick="visit(99)">The Mountains</span>
+        <span class="map-btn" id="mapbtn4" onClick="visit(99)">The Jungle Temple</span>
+        <span class="map-btn" id="mapbtn5" onClick="visit(99)">The Hole</span>
+        <span class="map-btn" id="mapbtn6" onClick="visit(99)">The Fog</span>
+        <span class="map-btn" id="mapbtn7" onClick="visit(99)">The Volcano</span>
+        <span class="map-btn" id="mapbtn8" onClick="visit(99)">The Storm</span>
         <img src="/eastergame/Images/Misc/map.png" height="100%">
         <img src="/eastergame/Images/Misc/compass.png" id="map-compass" onClick="vars.hascompass=true;hide('map-compass');alert('Ooh, a compass!')">
       </div>
@@ -895,7 +895,7 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,rughousestate:0,rughousestage:0,rughousekey:false,cemeteryopacity:1,hasyellowflower1:false,hascompass:false};
+    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,hasvillagekey:false,hasrughousestate:0,rughousestage:0,rughousekey:false,cemeteryopacity:1,hasyellowflower1:false,hascompass:false};
     var varonload = {
       4:function(){
         cbfaceClick(true);
@@ -977,7 +977,7 @@ h1, h2, h3, p, span {
       document.getElementById("cbface").innerHTML=cbfaces[vars.cbface];
     }
     
-    var cbmsgs = ["hmmmmm", "determined are you?", "you know that this is a bad game", "stop playing it", "it's stupid", "all you do is collect easter eggs", "and in the end there is no reward", "so JUST STOP ALREADY", "fine ...", "well, if you are going to keep playing, do me a favor"];
+    var cbmsgs = ["hmmmmm", "determined are you?", "you know that this is a bad game", "stop playing it", "it's stupid", "all you do is collect easter eggs", "and in the end there is no reward", "so JUST STOP ALREADY", "fine ...", "well, if you are going to keep playing, do me a favor","...","Go to the cemetery","And dig up the nice looking grave with the fancy text"];
     function cbMsg(load){
       if (vars.btnclicks1>=100&&vars.btnclicks1<=99+cbmsgs.length){
       document.getElementById("cbmsg").innerHTML=cbmsgs[vars.btnclicks1-100];
@@ -1013,10 +1013,10 @@ h1, h2, h3, p, span {
         vars.cemeteryopacity-=0.1;
       }
       if (vars.cemeteryopacity<=0){
-        hide("cemeteryfog",[5,2]);
+        hide("cemeteryfog",[5,3]);
       }
       else{
-        locations[5].obj[2].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        locations[5].obj[3].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
         if (!load){
         document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
         }
