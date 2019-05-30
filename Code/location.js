@@ -355,7 +355,7 @@
         ]
     },
     {//8
-      name:"YEEET",
+      name:"YEEEEEEET",
       src:"/eastergame/Images/RiversEnd/island.png",
       obj:[
         {//face
@@ -363,7 +363,7 @@
            x:50,
            y:50,
            style:"transform:translate(-50%,-50%);width:200%;",
-           html:"<img width='100%' src='/eastergame/Misc/face.png'>",
+           html:"<img width='100%' src='/eastergame/Images/Misc/face.png'>",
            onclick:function(){
                
            }
