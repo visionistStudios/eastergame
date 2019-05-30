@@ -6,4 +6,5 @@ for (var i = 0; i < l; i++){
 var r = Math.random()*char.length;
 nt+=char[r];
 }
+return nt;
 }
