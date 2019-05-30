@@ -1,4 +1,4 @@
-function yeetText(t){
+function spasmText(t){
 var l = t.length;
 var nt = "";
 var char = "`1234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?☺☻♥♦♣♠•◘○◙♂♀♪♫☼►◄↕‼¶§▬↨↑↓→←∟↔▲▼ûÿÖÜ¢£¥₧ƒáíóúñÑªº";
@@ -12,4 +12,14 @@ for (var i = 0; i < l; i++){
   }
 }
 return nt;
+}
+
+var glitchTime = 10000;
+function glitchTitle(t){
+  setInterval({()=>{
+    var i = setInterval({()=>{
+    document.getElementById("location-name").innerHTML=spasmText(t);
+  },50);
+  setTimeout({()=>{stopInterval(i);},500);
+},glitchTime);
 }
