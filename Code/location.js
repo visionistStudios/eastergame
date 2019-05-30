@@ -354,6 +354,22 @@
         }
         ]
     },
+    {//8
+      name:"YEEET",
+      src:"/eastergame/Images/RiversEnd/island.png",
+      obj:[
+        {//face
+           unlocked:true,
+           x:50,
+           y:50,
+           style:"transform:translate(-50%,-50%);width:200%;",
+           html:"<img width='100%' src='/eastergame/Misc/face.png'>",
+           onclick:function(){
+               
+           }
+        }
+        ]
+    },
     //not made yet location
     {
       name:"Lol we haven't made this location yet...",
