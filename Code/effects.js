@@ -20,6 +20,6 @@ function glitchTitle(t){
     var i = setInterval({()=>{
     document.getElementById("location-name").innerHTML=spasmText(t);
   },50);
-  setTimeout({()=>{stopInterval(i);},500);
+  setTimeout({()=>{clearInterval(i);},500);
 },glitchTime);
 }
