@@ -361,9 +361,9 @@
         {//fog
            unlocked:true,
            x:0,
-           y:0,
-           style:"width:100%;",
-           html:"<img width='100%' src='/eastergame/Images/RiversEnd/fog.png'>",
+           y:21,
+           style:"width:100%;height:58%;",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/RiversEnd/fog.png'>",
            onclick:function(){
                
            }
@@ -371,8 +371,8 @@
         {//light
            unlocked:true,
            x:50,
-           y:50,
-           style:"transform:translate(-50%,-50%);width:50%;",
+           y:80,
+           style:"transform:translate(-50%,-100%);width:25%;height:",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
                
@@ -388,7 +388,7 @@
            unlocked:true,
            x:25,
            y:75,
-           style:"transform:translate(-50%,-50%);width:50%;",
+           style:"transform:translate(-50%,-50%);width:100%;",
            html:"<img width='100%' src='/eastergame/Images/Misc/face.png'>",
            onclick:function(){
                glitchTitle("YEET ISLAND");
