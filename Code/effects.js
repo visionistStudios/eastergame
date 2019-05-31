@@ -16,10 +16,11 @@ return nt;
 
 var glitchTime = 10000;
 function glitchTitle(t){
-  setInterval(()=>{
     var i = setInterval(()=>{
     document.getElementById("location-name").innerHTML=spasmText(t);
   },50);
-  setTimeout(()=>{clearInterval(i);},500);
-},glitchTime);
+  setTimeout(()=>{
+    clearInterval(i);
+    document.getElementById("location-name").innerHTML=t;
+  },500);
 }
