@@ -373,7 +373,7 @@
            x:50,
            y:50,
            style:"transform:translate(-50%,-50%);width:50%;",
-           html:"<img width='100%' src='/eastergame/Images/Misc/light.png'>",
+           html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
                
            }
