@@ -349,7 +349,7 @@
            style:"transform:translate(-50%,-50%);width:2%;",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/lighthousedoor.png'>",
            onclick:function(){
-               alert("REEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
+               visit(8);
            }
         }
         ]
