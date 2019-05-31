@@ -363,7 +363,7 @@
            x:0,
            y:0,
            style:"width:100%;",
-           html:"<img width='100%' src='/eastergame/Images/Misc/fog.png'>",
+           html:"<img width='100%' src='/eastergame/Images/RiversEnd/fog.png'>",
            onclick:function(){
                
            }
