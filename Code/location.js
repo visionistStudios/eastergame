@@ -358,12 +358,22 @@
       name:"The Lighthouse",
       src:"/eastergame/Images/RiversEnd/lighthouse.png",
       obj:[
+        {//fog
+           unlocked:true,
+           x:0,
+           y:0,
+           style:"width:100%;",
+           html:"<img width='100%' src='/eastergame/Images/Misc/fog.png'>",
+           onclick:function(){
+               
+           }
+        },
         {//light
            unlocked:true,
            x:50,
            y:50,
            style:"transform:translate(-50%,-50%);width:50%;",
-           html:"<img width='100%' src='/eastergame/Images/Misc/foglight.png'>",
+           html:"<img width='100%' src='/eastergame/Images/Misc/light.png'>",
            onclick:function(){
                
            }
