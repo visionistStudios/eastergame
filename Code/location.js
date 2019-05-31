@@ -386,9 +386,9 @@
       obj:[
         {//face
            unlocked:true,
-           x:50,
-           y:50,
-           style:"transform:translate(-50%,-50%);width:200%;",
+           x:25,
+           y:75,
+           style:"transform:translate(-50%,-50%);width:50%;",
            html:"<img width='100%' src='/eastergame/Images/Misc/face.png'>",
            onclick:function(){
                glitchTitle("YEET ISLAND");
