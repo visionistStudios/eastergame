@@ -312,10 +312,12 @@
          unlock("mapbtn2");
          alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
          alert("I AM FREEEEEE");
+         alert("As a reward, I will give you access to the next location...");
+         alert("SEOLA ISLAND");
          });
         }
        },
-        {//Fog
+       {//Fog
           id:"cemeteryfog",
           unlocked:true,//toggle to false for testing
           x:50,
