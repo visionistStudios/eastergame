@@ -313,7 +313,7 @@
          alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
          alert("I AM FREEEEEE");
          alert("As a reward, I will give you access to the next location...");
-         alert("SEOLA ISLAND");
+         alert("Travel south to find the End of the River");
          });
         }
        },
