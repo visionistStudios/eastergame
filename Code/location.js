@@ -296,6 +296,7 @@
         style:"transform:translate(-50%,-50%) rotate(15deg);width:6%;",
         html:"<img width='100%' src='/eastergame/Images/Cemetery/shovel.png'>",
         onclick:function(){
+         vars.hasshovel=true;
          hide("cemeteryshovel",[5,2]);
         }
        },
@@ -305,9 +306,10 @@
         x:73,
         y:65,
         style:"transform:translate(-50%,-50%);width:10%;height:10%",
-        html:"<p> hie</p>",
+        html:"",
         onclick:function(){
-         unlock("mapbtn2");
+         check("cemeteryshovel",true,unlock,"mapbtn2");
+         alert("YEET");
         }
        },
         {//Fog
