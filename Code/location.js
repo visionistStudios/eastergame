@@ -306,7 +306,7 @@
         x:73,
         y:65,
         style:"transform:translate(-50%,-50%);width:10%;height:10%",
-        html:"<img width='100%' src='/eastergame/Images/Misc/blank.png",
+        html:"<img width='100%' src='/eastergame/Images/Misc/blank.png'>",
         onclick:function(){
          check("cemeteryshovel",true,unlock,"mapbtn2");
          alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
@@ -323,8 +323,7 @@
           onclick:function(){
             cemeteryLighten();
           }
-        },
-        
+        }
         ]
     },
     {//6
