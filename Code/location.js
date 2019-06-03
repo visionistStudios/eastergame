@@ -306,7 +306,7 @@
         x:73,
         y:65,
         style:"transform:translate(-50%,-50%);width:10%;height:10%",
-        html:"",
+        html:"<img width='100%' src='/eastergame/Images/Misc/blank.png",
         onclick:function(){
          check("cemeteryshovel",true,unlock,"mapbtn2");
          alert("YEET");
@@ -367,7 +367,16 @@
            onclick:function(){
                visit(8);
            }
-        }
+        },
+        {//yeet island
+           unlocked:true,
+           x:15,
+           y:15,
+           style:"transform:translate(-50%,-50%);width:15%;height:5%",
+           html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
+           onclick:function(){
+               visit(9);
+           }
         ]
     },
     {//8
