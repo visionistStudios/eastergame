@@ -309,9 +309,10 @@
         html:"<img width='100%' src='/eastergame/Images/Misc/blank.png'>",
         onclick:function(){
          check("hasshovel",true,()=>{
-         unlock("mapbtn2”);});
+         unlock("mapbtn2");
          alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
          alert("I AM FREEEEEE");
+         });
         }
        },
         {//Fog
