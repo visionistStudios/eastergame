@@ -305,7 +305,7 @@
         x:73,
         y:65,
         style:"transform:translate(-50%,-50%);width:10%;height:10%",
-        html:"",
+        html:"<p> hie</p>",
         onclick:function(){
          unlock("mapbtn2");
         }
