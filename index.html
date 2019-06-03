@@ -1009,14 +1009,15 @@ h1, h2, h3, p, span {
     }
     
     function cemeteryLighten(load){
+      var fogIndex = 4;
       if (!load){
         vars.cemeteryopacity-=0.1;
       }
       if (vars.cemeteryopacity<=0){
-        hide("cemeteryfog",[5,4]);
+        hide("cemeteryfog",[5,fogIndex]);
       }
       else{
-        locations[5].obj[3].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        locations[5].obj[fogIndex].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
         if (!load){
         document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
         }
