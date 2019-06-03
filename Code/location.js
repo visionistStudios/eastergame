@@ -359,7 +359,7 @@
         {//lighthouse door
            unlocked:true,
            x:80,
-           y:52,
+           y:50,
            style:"transform:translate(-50%,-50%);width:2%;",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/lighthousedoor.png'>",
            onclick:function(){
