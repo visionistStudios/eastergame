@@ -156,6 +156,9 @@
             unlock("mapbtn1");
             hide("rugkey",[2,1]);
             vars.hasvillagekey=true;
+            alert("Nice key you found there!");
+            alert("I think it unlocks the cemetery just outside the village.");
+            alert("Don't get spooked by any ghosts!");
           }
         }
         ]
