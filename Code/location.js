@@ -296,6 +296,17 @@
          hide("cemeteryshovel",[5,2]);
         }
        },
+       {//Grave
+        id:"cemeterygravebox",
+        unlocked:true,
+        x:35.5,
+        y:35,
+        style:"transform:translate(-50%,-50%) rotate(15deg);width:10%;height:10%",
+        html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
+        onclick:function(){
+         unlock("mapbtn2");
+        }
+       },
         {//Fog
           id:"cemeteryfog",
           unlocked:true,//toggle to false for testing
