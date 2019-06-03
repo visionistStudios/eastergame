@@ -309,7 +309,8 @@
         html:"<img width='100%' src='/eastergame/Images/Misc/blank.png",
         onclick:function(){
          check("cemeteryshovel",true,unlock,"mapbtn2");
-         alert("YEET");
+         alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
+         alert("I AM FREEEEEE");
         }
        },
         {//Fog
@@ -377,6 +378,7 @@
            onclick:function(){
                visit(9);
            }
+        }
         ]
     },
     {//8
