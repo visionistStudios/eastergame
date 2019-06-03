@@ -308,7 +308,7 @@
         style:"transform:translate(-50%,-50%);width:10%;height:10%",
         html:"<img width='100%' src='/eastergame/Images/Misc/blank.png'>",
         onclick:function(){
-         check("cemeteryshovel",true,()=>{
+         check("hasshovel",true,()=>{
          unlock("mapbtn2”);});
          alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
          alert("I AM FREEEEEE");
