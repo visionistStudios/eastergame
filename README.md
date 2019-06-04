@@ -26,6 +26,10 @@ In my opinion, we won't even finish by 2022 so uh :P
 
 The original release date was for Easter 2019 but whatever.
 
+Our current progress has gone from -_- to :D - 6/4/2019
+
+Visionist is now celebrating 15 years of incompetence, laziness, and memes. :P
+
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
