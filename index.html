@@ -561,7 +561,22 @@ h1, h2, h3, p, span {
     
   <script>
     //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
-    var vars = {eggstage:0,hasguidekey:false,btnclicks1:0,requeststage:0,cbface:0,hasclosetkey:false,hasvillagekey:false,hasrughousestate:0,rughousestage:0,rughousekey:false,cemeteryopacity:1,hasyellowflower1:false,hasshovel:false,hascompass:false};
+    var vars = {eggstage:0,//0
+                hasguidekey:false,//1
+                btnclicks1:0,//2
+                requeststage:0,//3
+                cbface:0,//4
+                hasclosetkey:false,//5
+                hasvillagekey:false,//6
+                hasrughousestate:0,//7
+                rughousestage:0,//8
+                rughousekey:false,//9
+                cemeteryopacity:1,//10
+                hasyellowflower1:false,//11
+                hasshovel:false,//12
+                lighthouseopacity:1,//13
+                hascompass:false,//14
+               };
     var varonload = {
       4:function(){
         cbfaceClick(true);
@@ -569,6 +584,9 @@ h1, h2, h3, p, span {
       },
       6:function(){
         cemeteryLighten(true);
+      },
+      13:function(){
+        lighthouseLighten(true);
       }
     };
     
@@ -689,6 +707,22 @@ h1, h2, h3, p, span {
         locations[5].obj[fogIndex].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
         if (!load){
         document.getElementById("cemeteryfog").style.opacity=vars.cemeteryopacity;
+        }
+      }
+    }
+    
+    function lighthouseLighten(load){.
+      var fogIndex = 0;
+      if (!load){
+        vars.lighthouseopacity=0.5;
+      }
+      if (vars.lighthouseopacity<=0){
+        hide("lighthousefog",[7,fogIndex]);
+      }
+      else{
+        locations[5].obj[fogIndex].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        if (!load){
+        document.getElementById("lighthosuefog").style.opacity=vars.lighthouseopacity;
         }
       }
     }
