@@ -375,9 +375,9 @@
         {//yeet island
            unlocked:true,
            x:15,
-           y:15,
-           style:"transform:translate(-50%,-50%);width:15%;height:5%",
-           html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
+           y:20,
+           style:"transform:translate(-50%,-50%);width:5%;",
+           html:"<img width='100%' src='/eastergame/Images/Misc/face.png'>",
            onclick:function(){
                visit(9);
            }
