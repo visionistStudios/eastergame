@@ -714,13 +714,13 @@ h1, h2, h3, p, span {
     function lighthouseLighten(load){
       var fogIndex = 0;
       if (!load){
-        vars.lighthouseopacity=0.5;
+        vars.lighthouseopacity-=0.5;
       }
       if (vars.lighthouseopacity<=0){
         hide("lighthousefog",[7,fogIndex]);
       }
       else{
-        locations[5].obj[fogIndex].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.cemeteryopacity+";";
+        locations[7].obj[fogIndex].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.lighthouseopacity+";";
         if (!load){
         document.getElementById("lighthosuefog").style.opacity=vars.lighthouseopacity;
         }
