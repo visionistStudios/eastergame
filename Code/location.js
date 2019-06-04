@@ -389,6 +389,7 @@
       src:"/eastergame/Images/RiversEnd/lighthouse.png",
       obj:[
         {//fog
+           id:"lighthousefog",
            unlocked:true,
            x:0,
            y:21,
@@ -405,7 +406,7 @@
            style:"transform:translate(-50%,-100%);width:25%;height:",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
-               
+               check("lighthouseopacity",1,lighthouseLighten);
            }
         }
         ]
