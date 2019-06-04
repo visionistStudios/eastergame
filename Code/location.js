@@ -406,7 +406,7 @@
            style:"transform:translate(-50%,-100%);width:25%;height:",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
-               check("lighthouseopacity",1,lighthouseLighten);
+               check("lighthouseopacity",1,()=>{lighthouseLighten();});
            }
         }
         ]
