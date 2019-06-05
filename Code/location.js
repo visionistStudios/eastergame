@@ -427,6 +427,62 @@
         }
         ]
     },
+    {//10
+      name:"The River's View",
+      src:"/eastergame/Images/RiversEnd/island.png",
+      obj:[
+        {//unlock path
+           unlocked:true,
+           x:50,
+           y:50,
+           style:"transform:translate(-50%,-50%);width:50%;",
+           html:"<h1>Click Here to continue on da path</h1>",
+           onclick:function(){
+               visit(11);
+           }
+         
+        }
+        ]
+    },
+    {//11
+      name:"The River's Path",
+      src:"/eastergame/Images/RiversEnd/island.png",
+      obj:[
+        {//unlock path
+           unlocked:true,
+           x:50,
+           y:50,
+           style:"transform:translate(-50%,-50%);width:50%;",
+           html:"<h1>Click here for mountains yey</h1>",
+           onclick:function(){
+               visit(13);
+           }
+        }
+        ]
+    },
+    {//12
+      name:"SECRIT",
+      src:"/eastergame/Images/RiversEnd/island.png",
+      obj:[
+        {//unlock path
+           unlocked:true,
+           x:50,
+           y:50,
+           style:"transform:translate(-50%,-50%);width:50%;",
+           html:"<h1>Click Here to continue on da path</h1>",
+           onclick:function(){
+               visit(11);
+           }
+         
+        }
+        ]
+    },
+    {//13
+      name:"The Mountains",
+      src:"/eastergame/Images/Mountains/mountains.png",
+      obj:[
+        ]
+    },
     //not made yet location
     {
       name:"Lol we haven't made this location yet...",
