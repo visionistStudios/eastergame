@@ -30,7 +30,7 @@ Our current progress has gone from -_- to :D - 6/4/2019
 
 Visionist is now celebrating 15 years of incompetence, laziness, and memes. :P 
 
-Zappiturtle is being boosted. *facepalm*
+Zappiturtle is being boosted. *sigh ... facepalm*
 
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
