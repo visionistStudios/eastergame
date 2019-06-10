@@ -720,10 +720,10 @@ h1, h2, h3, p, span {
         vars.lighthouseopacity-=0.5;
       }
       if (vars.lighthouseopacity<=0){
-        hide("lighthousefog",[7,fogIndex]);
+        hide("lighthousefog",[8,fogIndex]);
       }
       else{
-        locations[7].obj[fogIndex].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.lighthouseopacity+";";
+        locations[8].obj[fogIndex].style="transform:translate(-50%,-50%);width:100%;opacity:"+vars.lighthouseopacity+";";
         if (!load){
         document.getElementById("lighthousefog").style.opacity=vars.lighthouseopacity;
         }
