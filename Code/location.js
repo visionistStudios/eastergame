@@ -303,23 +303,24 @@
        {//Bush
         id:"cemeterybush",
         unlocked:true,
-        x:35.5,
-        y:35,
-        style:"transform:translate(-50%,-50%) rotate(15deg);width:6%;",
-        html:"<img width='100%' src='/eastergame/Images/Cemetery/bush.png'>",
+        x:50,
+        y:50,
+        style:"transform:translate(-50%,-50%) rotate(15deg);width:8%;",
+        html:"<img width='100%' src='/eastergame/Images/Misc/bush.png'>",
         onclick:function(){
-
+          hide("cemeterybush",[5,3]);
+          unlock("cemeteryface",[5,4]);
         }
        },
        {//Face thing
         id:"cemeteryface",
         unlocked:false,
-        x:35.5,
-        y:35,
+        x:50,
+        y:50,
         style:"transform:translate(-50%,-50%) rotate(15deg);width:6%;",
         html:"<img width='100%' src='/eastergame/Images/Misc/face.png'>",
         onclick:function(){
-
+          findegg(16);
         }
        },
        {//Grave
