@@ -448,6 +448,7 @@
            }
         },
        {//sun
+           id:"happysunthing",
            unlocked:true,
            x:25,
            y:25,
