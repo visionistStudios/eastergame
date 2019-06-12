@@ -404,6 +404,16 @@
            onclick:function(){
                visit(9);
            }
+        },
+        {//rivers view
+           unlocked:true,
+           x:75,
+           y:17,
+           style:"transform:translate(-50%,-50%);width:30%;height:10%;",
+           html:"<img width='100%' src='/eastergame/Images/Misc/chest.png'>",
+           onclick:function(){
+               visit(10);
+           }
         }
         ]
     },
