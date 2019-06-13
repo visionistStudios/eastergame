@@ -317,7 +317,7 @@
         unlocked:false,
         x:50,
         y:50,
-        style:"transform:translate(-50%,-50%) rotate(15deg);width:6%;",
+        style:"transform:translate(-50%,-50%); width:6%;",
         html:"<img width='100%' src='/eastergame/Images/Misc/face.png'>",
         onclick:function(){
           findegg(16);
