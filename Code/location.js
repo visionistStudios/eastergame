@@ -410,7 +410,7 @@
            x:70,
            y:17,
            style:"transform:translate(-50%,-50%);width:30%;height:10%;",
-           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/chest.png'>",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/blank.png'>",
            onclick:function(){
                visit(10);
            }
