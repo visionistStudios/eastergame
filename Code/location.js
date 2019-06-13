@@ -331,13 +331,16 @@
         style:"transform:translate(-50%,-50%);width:10%;height:10%",
         html:"<img width='100%' src='/eastergame/Images/Misc/blank.png'>",
         onclick:function(){
-         check("hasshovel",true,()=>{
-         unlock("mapbtn2");
-         alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
-         alert("I AM FREEEEEE");
-         alert("As a reward, I will give you access to the next location...");
-         alert("Travel south to find the End of the River");
-         });
+          check("fluffval",0,()=>{
+            check("hasshovel",true,()=>{
+            unlock("mapbtn2");
+            alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
+            alert("I AM FREEEEEE");
+            alert("As a reward, I will give you access to the next location...");
+            alert("Travel south to find the End of the River");
+            vars.fluffval=1;
+            });
+          });
         }
        },
        {//Fog
