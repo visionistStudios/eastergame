@@ -380,7 +380,17 @@ h1, h2, h3, p, span {
         hide("cemeteryegg",[6,0]);
       }},
       {a:function(){//16
-        alert("face egg in cemetery");
+        check("fluffval",0,()=>{
+          alert("I think this face is a bug...");
+          alert("Thanks for finding it for me!");
+          alert("Have an egg :P");
+        });
+        check("fluffval",1,()=>{
+          document.getElementById("cemeteryface").innerHTML="<p class='fluffmsg'>Now, now.  We shouldn't be wasting time on silly faces, should we?</p>";
+        });
+        check("fluffval",2,()=>{
+          document.getElementById("cemeteryface").innerHTML="<p class='fluffmsg'><strong>IT'S ALREADY TOO LATE</strong></p>";
+        });
       }},
       {s:function(){//17
         document.getElementById("cbmsg").innerHTML="Wow, I see you like clicking...";
@@ -566,7 +576,7 @@ h1, h2, h3, p, span {
   </script>
     
   <script>
-    //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.
+    //ALL OF THOSE ANNOYING EGG-SPECIFIC VARIABLES .-.  -.-  .-.  -.-  .-.  -.-  .-.  -.-
     var vars = {eggstage:0,//0
                 hasguidekey:false,//1
                 btnclicks1:0,//2
@@ -581,7 +591,8 @@ h1, h2, h3, p, span {
                 hasyellowflower1:false,//11
                 hasshovel:false,//12
                 lighthouseopacity:1,//13
-                hascompass:false//14
+                fluffval:0,//14
+                hascompass:false//15
                };
     var varonload = {
       4:function(){
