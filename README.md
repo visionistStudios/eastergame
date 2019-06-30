@@ -5,6 +5,9 @@ The game is live at: https://visioniststudios.github.io/eastergame/!
 
 Note: This game is a Work In Progress.  There are currently 17 Easter Eggs, but we are adding more, so stay tuned!
 
+Note 2: This main branch of this game is officially on hiatus until later in the summer, when we will be hopefully less busy.
+Thank you for understanding.
+
 # Things to Know
 Saving:
 
