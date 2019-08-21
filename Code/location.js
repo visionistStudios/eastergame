@@ -306,7 +306,7 @@
         x:50,
         y:50,
         style:"transform:translate(-50%,-50%) rotate(15deg);width:8%;",
-        html:"<img width='100%' src='/eastergame/Images/Misc/bush.png'>",
+        html:"<img width='100%' src='/eastergame/Images/Misc/bushy.png'>",
         onclick:function(){
           hide("cemeterybush",[5,3]);
           unlock("cemeteryface",[5,4]);
