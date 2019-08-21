@@ -501,6 +501,7 @@
            style:"transform:translate(-50%,-50%);width:50%;",
            html:"<h1>Click here for mountains yey</h1>",
            onclick:function(){
+               unlock("mapbtn3");
                visit(13);
            }
         }
