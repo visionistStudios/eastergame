@@ -476,7 +476,7 @@
     },
     {//10
       name:"The River's View",
-      src:"/eastergame/Images/RiversEnd/island.png",
+      src:"/eastergame/Images/RiversEnd/view.png",
       obj:[
         {//unlock path
            unlocked:true,
@@ -492,6 +492,22 @@
     },
     {//11
       name:"The River's Path",
+      src:"/eastergame/Images/RiversEnd/path.png",
+      obj:[
+        {//unlock path
+           unlocked:true,
+           x:50,
+           y:50,
+           style:"transform:translate(-50%,-50%);width:50%;",
+           html:"<h1>Click here for path 2</h1>",
+           onclick:function(){
+               visit(12);
+           }
+        }
+        ]
+    },
+    {//12
+      name:"The River's Path 2",
       src:"/eastergame/Images/RiversEnd/island.png",
       obj:[
         {//unlock path
@@ -502,12 +518,12 @@
            html:"<h1>Click here for mountains yey</h1>",
            onclick:function(){
                unlock("mapbtn3");
-               visit(13);
+               visit(14);
            }
         }
         ]
     },
-    {//12
+    {//13
       name:"SECRIT",
       src:"/eastergame/Images/RiversEnd/island.png",
       obj:[
@@ -523,7 +539,7 @@
         }
         ]
     },
-    {//13
+    {//14
       name:"The Mountains",
       src:"/eastergame/Images/Mountains/mountains.png",
       obj:[
