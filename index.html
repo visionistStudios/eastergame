@@ -594,6 +594,7 @@ h1, h2, h3, p, span {
                 hascompass:false,//14
                 fluffval:0,//15
                 cbmsg:0,//16
+                cbtrack:0,//17
                };
     var varonload = {
       4:function(){
@@ -686,10 +687,11 @@ h1, h2, h3, p, span {
                  ["hi dere u r nub haha get rekt kid","lmo","hehehe","heaheaheahea"],
                  ["IT'S TOO LATE fluff=2"]];
     function cbMsg(load){
-      if (vars.btnclicks1>=100&&vars.cbmsg<cbmsgs[vars.fluffval].length){
-        document.getElementById("cbmsg").innerHTML=cbmsgs[vars.fluffval][vars.cbmsg];
+      if (vars.btnclicks1==100){vars.cbtack=vars.fluffval;}
+      if (vars.btnclicks1>=100&&vars.cbmsg<cbmsgs[vars.cbtrack].length){
+        document.getElementById("cbmsg").innerHTML=cbmsgs[vars.cbtrack][vars.cbmsg];
       }
-      else if (vars.cbmsg>cbmsgs[vars.fluffval].length){
+      else if (vars.cbmsg>cbmsgs[vars.cbtrack].length){
         findegg(17);
       }
     }
