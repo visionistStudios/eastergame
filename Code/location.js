@@ -429,7 +429,7 @@
            unlocked:true,
            x:0,
            y:21,
-           style:"width:100%;height:58%;",
+           style:"transform:translate(-50%,-50%);width:100%;height:58%;",
            html:"<img width='100%' height='100%' src='/eastergame/Images/RiversEnd/fog.png'>",
            onclick:function(){
                
@@ -532,9 +532,9 @@
            x:50,
            y:50,
            style:"transform:translate(-50%,-50%);width:50%;",
-           html:"<h1>Click Here to continue on da path</h1>",
+           html:"<h1>sECrIt rOUM</h1>",
            onclick:function(){
-               visit(11);
+               //visit(11);
            }
         }
         ]
