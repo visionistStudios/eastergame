@@ -480,10 +480,10 @@
       obj:[
         {//unlock path
            unlocked:true,
-           x:80,
-           y:50,
-           style:"transform:translate(-50%,-50%);width:20%;height:100%",
-           html:"<img src='/eastergame/Images/Misc/chest.png'>",
+           x:90,
+           y:43,
+           style:"transform:translate(-50%,-50%);width:20%;height:33%",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/blank.png'>",
            onclick:function(){
                visit(11);
            }
