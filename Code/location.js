@@ -508,7 +508,7 @@
     },
     {//12
       name:"The River's Path 2",
-      src:"/eastergame/Images/RiversEnd/island.png",
+      src:"/eastergame/Images/RiversEnd/path2.png",
       obj:[
         {//unlock path
            unlocked:true,
