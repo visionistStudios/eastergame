@@ -297,6 +297,8 @@
         html:"<img width='100%' src='/eastergame/Images/Cemetery/shovel.png'>",
         onclick:function(){
          vars.hasshovel=true;
+         alert("Uh, I don't know why you would need a shovel");
+         alert("I guess you can have it if you want lol");
          hide("cemeteryshovel",[5,2]);
         }
        },
@@ -333,11 +335,12 @@
         onclick:function(){
           check("fluffval",0,()=>{
             check("hasshovel",true,()=>{
+            alert("Um, I don't think you should be disturbing people's graves...");
+            alert("Especially HIS...");
+            alert("But I mean, it probably won't do anything bad xD");
+            if (!prompt("Proceed unearthing the grave?")){return;}
             unlock("mapbtn2");
-            alert("MUAHAHJAHAHAHJHAJHAJHJHAJHAJHAHJAHJHAHJAHJJHJHAJHAJHAJHAJAHJAJHAJJAHHAHAH");
-            alert("I AM FREEEEEE");
-            alert("As a reward, I will give you access to the next location...");
-            alert("Travel south to find the End of the River");
+            page(0);
             vars.fluffval=1;
             });
           });
