@@ -338,9 +338,9 @@
             alert("Um, I don't think you should be disturbing people's graves...");
             alert("Especially HIS...");
             alert("But I mean, it probably won't do anything bad xD");
-            if (!prompt("Proceed unearthing the grave?")){return;}
+            if (!confirm("Proceed unearthing the grave?")){return;}
             unlock("mapbtn2");
-            page(0);
+            page(7);
             vars.fluffval=1;
             });
           });
