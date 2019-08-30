@@ -252,7 +252,7 @@ h1, h2, h3, p, span {
   
 <div id="page7" class="page">
   <div align="center">
-    <h3 id="fluffup" class="fluff">
+    <h3 id="fluffup" class="fluffmsg">
     </h3>
   </div>
 </div>
@@ -609,6 +609,17 @@ h1, h2, h3, p, span {
         document.getElementById("lighthousefog").style.opacity=vars.lighthouseopacity;
         }
       }
+    }
+    
+    var fluffscreentext = [
+      ["hm","hmm","hmmm","hmmmm","hmmmmm","hmmmmm.","hmmmmm..","hmmmmm...","hmmmmm....","hmmmmm.....","hmmmmm......","hmmmmm......?"
+       ,"lol XD","I don't know what that was","nothing in particular happened","I guess you get an egg\n<strong>-.-</strong>","ummm ... wait that isn't an egg"
+       ,"uhhhh let's just move on","go south to the River's End","There are fun islands to explore there",":)"],
+      [],
+      []
+    ];
+    function fluffScreen(i){
+      getElementById("fluffup").innerHTML = "<p onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
     }
   </script>
     
