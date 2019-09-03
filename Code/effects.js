@@ -24,3 +24,9 @@ function glitchTitle(t){
     document.getElementById("location-name").innerHTML=t;
   },500);
 }
+
+function randTransform(id,ins){//ins from 1-10
+  var s='';
+  
+  document.getElementId(id).style = s;
+}
