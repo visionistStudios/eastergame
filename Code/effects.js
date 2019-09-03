@@ -26,8 +26,7 @@ function glitchTitle(t){
 }
 
 function randTransform(id,ins){//ins from 0-10
-  var s='';
-  var t = "transform:";
+  var t = "";
   t+="translate("+(Math.random()*ins*10)+"px,"+(Math.random()*ins*10)+"px) ";
   if (ins>=2){
     t+="scaleX("+(Math.random()*ins/5+1)+")";
@@ -36,7 +35,6 @@ function randTransform(id,ins){//ins from 0-10
   if (ins>=4){
     t+="rotate("+(Math.random()*360*ins/15)+"deg)";
   }
-  s+=t+";";
   
-  document.getElementById(id).style = s;
+  document.getElementById(id).style.transform = t;
 }
