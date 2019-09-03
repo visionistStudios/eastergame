@@ -25,8 +25,18 @@ function glitchTitle(t){
   },500);
 }
 
-function randTransform(id,ins){//ins from 1-10
+function randTransform(id,ins){//ins from 0-10
   var s='';
+  var t = "transform:";
+  t+="translate("+(Math.random()*ins*10)+"px,"+(Math.random()*ins*10)+"px) ";
+  if (ins>=2){
+    t+="scaleX("+(Math.random()*ins/5+1)+")";
+    t+="scaleY("+(Math.random()*ins/5+1)+")";
+  }
+  if (ins>=4){
+    t+="rotate("+(Math.random()*360*ins/15)+"deg)";
+  }
+  s+=t+";";
   
   document.getElementId(id).style = s;
 }
