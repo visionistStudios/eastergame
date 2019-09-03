@@ -38,5 +38,5 @@ function randTransform(id,ins){//ins from 0-10
   }
   s+=t+";";
   
-  document.getElementId(id).style = s;
+  document.getElementById(id).style = s;
 }
