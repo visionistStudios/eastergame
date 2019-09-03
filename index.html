@@ -621,6 +621,9 @@ h1, h2, h3, p, span {
     ];
     function fluffScreen(i){
       document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
+      if (i > fluffscreentext[vars.fluffval].length){
+        document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+spasmText("undefined")+"</p>";
+      }
     }
   </script>
     
