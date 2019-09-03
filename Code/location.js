@@ -342,7 +342,6 @@
             unlock("mapbtn2");
             page(7);
             vars.fluffval=1;
-            fluffScreen(0);
             });
           });
         }
