@@ -614,16 +614,21 @@ h1, h2, h3, p, span {
     var fluffscreentext = [
       [],
       ["hm","hmm","hmmm","hmmmm","hmmmmm","hmmmmm.","hmmmmm..","hmmmmm...","hmmmmm....","hmmmmm.....","hmmmmm......","hmmmmm......?"
-       ,"lol XD","I don't know what that was","nothing in particular happened","I guess you get an egg\n<strong>-.-</strong>","ummm ... wait that isn't an egg"
+       ,"lol XD","I don't know what that was hehe","nothing in particular happened","I guess you get an egg\n<strong>-.-</strong>","ummm ... wait that isn't an egg"
        ,"uhhhh let's just move on","go south to the River's End","There are fun islands to explore there",":)"],
       [],
       []
     ];
+    var rt;
     function fluffScreen(i){
+      clearInterval(rt);
       document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
       if (i > fluffscreentext[vars.fluffval].length){
         document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+spasmText("undefined")+"</p>";
       }
+      rt = setInterval(()=>{
+        randTransform("fluffup",vars.fluffval/3*10 + i/10);
+      },10);
     }
   </script>
     
