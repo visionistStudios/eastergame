@@ -627,15 +627,14 @@ h1, h2, h3, p, span {
       [],
       []
       ];
-    var rt;
     function fluffScreen(i){
       clearInterval(rt);
-      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
+      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='clearInterval(rt);fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
       if (i > fluffscreentext[vars.fluffval].length){
         document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+spasmText("undefined")+"</p>";
       }
-      rt = setInterval(()=>{
-        randTransform("fluffup",vars.fluffval/3*10 + i/10);
+      var rt = setInterval(()=>{
+          randTransform("fluffup",fluffscreentrans[vars.fluffval][i]);
       },10);
     }
   </script>
