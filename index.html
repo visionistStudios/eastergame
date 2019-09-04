@@ -628,15 +628,15 @@ h1, h2, h3, p, span {
       []
       ];
     function fluffScreen(i){
-      clearInterval(rt);
-      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='clearInterval(rt);fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
+      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
       if (i > fluffscreentext[vars.fluffval].length){
         document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+spasmText("undefined")+"</p>";
       }
-      var rt = setInterval(()=>{
+    }
+    
+    rt = setInterval(()=>{
           randTransform("fluffup",fluffscreentrans[vars.fluffval][i]);
       },10);
-    }
   </script>
     
   <script src="/eastergame/Code/save.js"></script>
