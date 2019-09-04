@@ -614,7 +614,7 @@ h1, h2, h3, p, span {
     var fluffscreentext = [
       [],
       ["hm","hmm","hmmm","hmmmm","hmmmmm","hmmmmm.","hmmmmm..","hmmmmm...","hmmmmm....","hmmmmm.....","hmmmmm......","hmmmmm......?"
-       ,"lol XD","I don't know what that was hehe","nothing in particular happened","I guess you get an egg\n<strong>-.-</strong>","ummm ... wait that isn't an egg"
+       ,"lol XD","I don't know what that was hehe","nothing in particular happened","I guess you get an egg \n <strong>-.-</strong>","ummm ... wait that isn't an egg"
        ,"uhhhh let's just move on","go south to the River's End","There are fun islands to explore there",":)"],
       [],
       []
@@ -628,15 +628,14 @@ h1, h2, h3, p, span {
       []
       ];
     function fluffScreen(i){
-      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
+      var rt = setInterval(()=>{
+          randTransform("fluffup",fluffscreentrans[vars.fluffval][i]);
+      },10);
+      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+";clearInterval(rt)'></p>";
       if (i > fluffscreentext[vars.fluffval].length){
         document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+spasmText("undefined")+"</p>";
       }
     }
-    
-    rt = setInterval(()=>{
-          randTransform("fluffup",fluffscreentrans[vars.fluffval][i]);
-      },10);
   </script>
     
   <script src="/eastergame/Code/save.js"></script>
