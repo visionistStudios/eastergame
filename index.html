@@ -629,11 +629,11 @@ h1, h2, h3, p, span {
       ];
     var fluffscreenid = 0;
     function fluffScreen(i){
-      fluffscreenid++;
-      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");clearInterval(rt);'>"+fluffscreentext[vars.fluffval][i]+"</p>";
+      document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+fluffscreentext[vars.fluffval][i]+"</p>";
       if (i > fluffscreentext[vars.fluffval].length){
         document.getElementById("fluffup").innerHTML = "<p class='fluffmsg' onclick='fluffScreen(" +(i + 1)+ ");'>"+spasmText("undefined")+"</p>";
       }
+      fluffscreenid++;
     }
     
     var rt = setInterval(()=>{
