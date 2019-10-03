@@ -7,6 +7,12 @@ Note: This game is a Work In Progress.  There are currently 20ish Easter Eggs, b
 
 Note 2: School has resumed, and we will be updating this game again.  This README will not be very well maintained though.
 
+Note 3: School is in progress, and we will not be updating this game for a while because of work :P We will probably start again sometime next year
+
+We are trolling
+
+:D
+
 # Things to Know
 Saving:
 
