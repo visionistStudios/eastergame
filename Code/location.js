@@ -443,7 +443,7 @@
            unlocked:true,
            x:50,
            y:80,
-           style:"transform:translate(-50%,-100%);width:25%;height:",
+           style:"transform:translate(-50%,-100%);width:25%;height:25%;",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
                check("lighthouseopacity",1,()=>{lighthouseLighten();});
@@ -470,7 +470,7 @@
            unlocked:true,
            x:25,
            y:25,
-           style:"transform:translate(-50%,-50%);width:25%;height:25%",
+           style:"transform:translate(-50%,-50%);width:25%;height:25%;",
            html:"<img width='100%' src='/eastergame/Images/Misc/blank.png'>",
            onclick:function(){
                findegg(18);
@@ -486,7 +486,7 @@
            unlocked:true,
            x:90,
            y:43,
-           style:"transform:translate(-50%,-50%);width:20%;height:33%",
+           style:"transform:translate(-50%,-50%);width:20%;height:33%;",
            html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/blank.png'>",
            onclick:function(){
                visit(11);
