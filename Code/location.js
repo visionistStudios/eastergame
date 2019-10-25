@@ -443,7 +443,7 @@
            unlocked:true,
            x:50,
            y:80,
-           style:"transform:translate(-50%,-100%);width:25%;height:25%;",
+           style:"transform:translate(-50%,-100%);width:25%;    ",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
                check("lighthouseopacity",1,()=>{lighthouseLighten();});
