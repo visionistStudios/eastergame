@@ -470,7 +470,7 @@
            unlocked:true,
            x:25,
            y:25,
-           style:"transform:translate(-50%,-50%);width:25%;height:25%;",
+           style:"transform:translate(-50%,-50%);width:25%;height:25%",
            html:"<img width='100%' src='/eastergame/Images/Misc/blank.png'>",
            onclick:function(){
                findegg(18);
