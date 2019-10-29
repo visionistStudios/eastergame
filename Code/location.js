@@ -431,9 +431,9 @@
         {//fog
            id:"lighthousefog",
            unlocked:true,
-           x:0,
-           y:21,
-           style:"transform:translate(-50%,-50%);width:100%;height:58%;",
+           x:50,
+           y:44.5,
+           style:"transform:translate(-50%,-50%);width:100%;height:68%;",
            html:"<img width='100%' height='100%' src='/eastergame/Images/RiversEnd/fog.png'>",
            onclick:function(){
                
@@ -443,7 +443,7 @@
            unlocked:true,
            x:50,
            y:80,
-           style:"transform:translate(-50%,-100%);width:25%;    ",
+           style:"transform:translate(-50%,-100%);width:25%;",
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
                check("lighthouseopacity",1,()=>{lighthouseLighten();});
