@@ -340,7 +340,7 @@
             alert("But I mean, it probably won't do anything bad xD");
             if (!confirm("Proceed unearthing the grave?")){return;}
             unlock("mapbtn2");
-            page(7);
+            page(6);
             vars.fluffval=1;
             fluffScreen(0);
             });
@@ -555,7 +555,16 @@
           html:"<img src='eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
             alert("REEEEEEEEEEEEEEE");
-          }
+          },
+          {//cave
+          unlocked:true,
+          x:75,
+          y:25,
+          style:"transform:translate(-50%,-50%);width:5%;height:5%;"
+          html:"<img src='eastergame/Images/Misc/blank.png' width='100%'>",
+          onclick:function(){
+            alert("HHIIHHI");
+          },
         ]
     },
     //not made yet location
