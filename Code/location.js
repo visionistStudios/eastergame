@@ -547,6 +547,15 @@
       name:"The Mountains",
       src:"/eastergame/Images/Mountains/mountains.png",
       obj:[
+        {//campfire warp
+          unlocked:true,
+          x:25,
+          y:50,
+          style:"transform:translate(-50%,-50%);width:3%;height:3%;"
+          html:"<img src='eastergame/Images/Misc/blank.png' width='100%'>",
+          onclick:function(){
+            alert("REEEEEEEEEEEEEEE");
+          }
         ]
     },
     //not made yet location
