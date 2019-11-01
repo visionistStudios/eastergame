@@ -554,17 +554,19 @@
           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
           html:"<img src='eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
-            alert("REEEEEEEEEEEEEEE");
-          },
-          {//cave
+            alert("campfire");
+          }
+        },
+        {//cave
           unlocked:true,
           x:75,
           y:25,
           style:"transform:translate(-50%,-50%);width:5%;height:5%;",
           html:"<img src='eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
-            alert("HHIIHHI");
-          },
+            alert("cave");
+          }
+        },
         ]
     },
     //not made yet location
