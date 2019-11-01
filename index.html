@@ -619,7 +619,7 @@ h1, h2, h3, p, span {
         }
       }
     }
-    
+    //messages
     var fluffscreentext = [
       [],
       ["hm","hmm","hmmm","hmmmm","hmmmmm","hmmmmm.","hmmmmm..","hmmmmm...","hmmmmm....","hmmmmm.....","hmmmmm......","hmmmmm......?"
@@ -628,6 +628,7 @@ h1, h2, h3, p, span {
       [],
       []
     ];
+    //transform visually
     var fluffscreentrans = [
       [],
       [0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1,2,3,4
@@ -646,7 +647,7 @@ h1, h2, h3, p, span {
     }
     
     var rt = setInterval(()=>{
-      if (document.getElementById("page7").style.display=="inline"){
+      if (document.getElementById("page6").style.display=="inline"){
         randTransform("fluffup",fluffscreentrans[vars.fluffval][fluffscreenid]);
       }
       },10);
