@@ -559,8 +559,8 @@
         },
         {//cave
           unlocked:true,
-          x:84.5,
-          y:53.5,
+          x:84.25,
+          y:54.25,
           style:"transform:translate(-50%,-50%);width:3%;height:5%;",
           html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
