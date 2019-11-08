@@ -558,7 +558,7 @@ h1, h2, h3, p, span {
                   "Why don't you keep on playing?", "I guarantee that you will find this a very nice experience"],
                  ["IT'S TOO LATE fluff=2"]];
     function cbMsg(load){
-      if (vars.btnclicks1==100){vars.cbtack=vars.fluffval;}
+      if (vars.btnclicks1==100){vars.cbtrack=vars.fluffval;}
       if (vars.btnclicks1>=100&&vars.cbmsg<cbmsgs[vars.cbtrack].length){
         document.getElementById("cbmsg").innerHTML=cbmsgs[vars.cbtrack][vars.cbmsg];
       }
@@ -624,7 +624,7 @@ h1, h2, h3, p, span {
     }
     //messages
     var fluffscreentext = [
-      [],
+      ["112358"],
       ["hm","hmm","hmmm","hmmmm","hmmmmm","hmmmmm.","hmmmmm..","hmmmmm...","hmmmmm....","hmmmmm.....","hmmmmm......","hmmmmm......?"
        ,"lol XD","I don't know what that was hehe","nothing in particular happened","I guess you get an egg \n <strong>-.-</strong>","ummm ... wait that isn't an egg"
        ,"uhhhh let's just move on","go south to the River's End","There are fun islands to explore there",":)"],
