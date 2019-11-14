@@ -505,6 +505,7 @@
            }
         },
         {//grass egg
+           id:"rivergrassegg",
            unlocked:false,
            x:50,
            y:50,
@@ -513,7 +514,17 @@
            onclick:function(){
                findegg(19);
            }
-        }
+        },
+        {//octopus
+           unlocked:true,
+           x:10,
+           y:65,
+           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/egg.png'>",
+           onclick:function(){
+               alert("Oh, look!  An octopus!");
+           }
+        },
         ]
     },
     {//11
