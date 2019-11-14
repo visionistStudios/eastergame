@@ -523,6 +523,7 @@
            html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/egg.png'>",
            onclick:function(){
                alert("Oh, look!  An octopus!");
+               alert("It looks quite a bit like an egg ;)");
            }
         },
         ]
