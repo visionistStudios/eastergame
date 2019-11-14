@@ -506,11 +506,11 @@
         },
         {//grass egg
            id:"rivergrassegg",
-           unlocked:true,
+           unlocked:false,
            x:50,
            y:50,
            style:"transform:translate(-50%,-50%);width:3%;",
-           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/egg.png'>",
+           html:"<img width='100%' src='/eastergame/Images/Misc/egg.png'>",
            onclick:function(){
                findegg(19);
            }
