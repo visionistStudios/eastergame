@@ -516,14 +516,33 @@
            }
         },
         {//octopus
+           id:"octopus",
            unlocked:true,
            x:10,
            y:65,
            style:"transform:translate(-50%,-50%);width:3%;height:3%;",
-           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/egg.png'>",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/RiversEnd/octopus.png'>",
+           onclick:function(){
+               alert(octopusmsgs[vars.octopusclick]);
+               vars.octopusclick++;
+               check("octopusclick",octopusmsgs.length,function(){
+                  alert("I think you made octopus run away...");
+                  hide("octopus",[10,3]);
+                  unlock("ink",[10,4]);
+               }
+           }
+        },
+        {//ink
+           id:"ink",
+           unlocked:false,
+           x:10,
+           y:65,
+           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/RiversEnd/octopus.png'>",
            onclick:function(){
                alert("Oh, look!  An octopus!");
-               alert("It looks quite a bit like an egg ;)");
+               vars.hasink = true;
+               hide(
            }
         },
         ]
