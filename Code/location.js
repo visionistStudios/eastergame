@@ -529,7 +529,8 @@
                   alert("I think you made octopus run away...");
                   hide("octopus",[10,3]);
                   unlock("ink",[10,4]);
-               }
+               });
+           }
            }
         },
         {//ink
@@ -540,9 +541,9 @@
            style:"transform:translate(-50%,-50%);width:3%;height:3%;",
            html:"<img width='100%' height='100%' src='/eastergame/Images/RiversEnd/octopus.png'>",
            onclick:function(){
-               alert("Oh, look!  An octopus!");
+               alert("Octopus left an ink cloud");
                vars.hasink = true;
-               hide(
+               hide([10,4],"ink");
            }
         },
         ]
