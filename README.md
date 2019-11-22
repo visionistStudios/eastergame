@@ -13,6 +13,8 @@ We are trolling
 
 :D
 
+ERROR GAME BROKEN! XD
+
 # Things to Know
 Saving:
 
