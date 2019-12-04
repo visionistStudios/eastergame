@@ -544,8 +544,7 @@
                vars.hasink = true;
                hide([10,4],"ink");
            }
-        },
-        ]
+        }
     },
     {//11
       name:"The River's Path",
