@@ -531,7 +531,6 @@
                   unlock("ink",[10,4]);
                });
            }
-           }
         },
         {//ink
            id:"ink",
@@ -541,7 +540,7 @@
            style:"transform:translate(-50%,-50%);width:3%;height:3%;",
            html:"<img width='100%' height='100%' src='/eastergame/Images/RiversEnd/octopus.png'>",
            onclick:function(){
-               alert("Octopus left an ink cloud");
+               alert("What a nice ink cloud.");
                vars.hasink = true;
                hide([10,4],"ink");
            }
@@ -601,14 +600,14 @@
       name:"The Mountains",
       src:"/eastergame/Images/Mountains/mountains.png",
       obj:[
-        {//campfire warp
+        {//campfire location
           unlocked:true,
           x:28.5,
           y:53.5,
           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
           html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
-            alert("campfire");
+            visit(15);
           }
         },
         {//cave
@@ -618,7 +617,17 @@
           style:"transform:translate(-50%,-50%);width:3%;height:5%;",
           html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
-            alert("cave");
+            visit(16);
+          }
+        },
+       {//campfire object
+        unlocked:true,
+          x:28.5,
+          y:75,
+          style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+          html:"<img src='/eastergame/Images/Misc/egg.png' width='100%'>",
+          onclick:function(){
+            alert("HI");
           }
         },
         ]
