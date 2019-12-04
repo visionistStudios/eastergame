@@ -40,8 +40,6 @@ Our current progress has gone from -_- to :D - 6/4/2019
 
 Visionist is now celebrating 15 years of incompetence, laziness, and memes. :P 
 
-Zappiturtle is being BIG BRAIN HIGH IQ
-
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
@@ -50,7 +48,7 @@ Fluffcakes - Lead Artist / Designer
 Dogey - Lead Storyline Writer / Lead Inspiration
 
 # Support, Inspiration, and Beta Testers
-Zappiturtle - Seal Island inspiration / Worst Tester / Very bad work ethic / does not participate / CRAZY seal / -2,000,000 IQ / :)
+Zappiturtle - Seal Island inspiration / Worst Tester / Very bad work ethic / does not participate / CRAZY seal / -2,000,000 IQ / :) / Viola
 
 Tyson - (im)Moral support / Beta Beta Tester
 
