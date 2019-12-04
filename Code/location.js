@@ -545,6 +545,7 @@
                hide([10,4],"ink");
            }
         }
+       ]
     },
     {//11
       name:"The River's Path",
@@ -628,7 +629,59 @@
           onclick:function(){
             alert("HI");
           }
+        }
+        ]
+    },
+    {//15
+      name:"The Campfire",
+      src:"/eastergame/Images/Mountains/mountains.png",
+      obj:[
+        {//campfire location
+          unlocked:true,
+          x:28.5,
+          y:53.5,
+          style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+          html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
+          onclick:function(){
+            visit(15);
+          }
         },
+        {//cave
+          unlocked:true,
+          x:84.25,
+          y:54.25,
+          style:"transform:translate(-50%,-50%);width:3%;height:5%;",
+          html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
+          onclick:function(){
+            visit(16);
+          }
+        },
+       {//campfire object
+        unlocked:true,
+          x:28.5,
+          y:75,
+          style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+          html:"<img src='/eastergame/Images/Misc/egg.png' width='100%'>",
+          onclick:function(){
+            alert("HI");
+          }
+        },
+        ]
+    },
+    {//16
+      name:"The Caves",
+      src:"/eastergame/Images/Mountains/mountains.png",
+      obj:[
+       {//campfire object
+        unlocked:true,
+          x:28.5,
+          y:75,
+          style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+          html:"<img src='/eastergame/Images/Misc/egg.png' width='100%'>",
+          onclick:function(){
+            alert("HI");
+          }
+        }
         ]
     },
     //not made yet location
