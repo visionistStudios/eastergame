@@ -136,6 +136,9 @@
       }},
       {s:function(){//19
         hide("rivergrassegg",[10,2]);
+      }},
+      {a:function(){//20
+        alert("poop egg");
       }}
 ];
     
