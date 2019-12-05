@@ -634,7 +634,7 @@
     },
     {//15
       name:"The Campfire",
-      src:"/eastergame/Images/Mountains/mountains.png",
+      src:"/eastergame/Images/Mountains/camp.png",
       obj:[
         {//campfire location
           unlocked:true,
@@ -643,7 +643,7 @@
           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
           html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
-            visit(15);
+            
           }
         },
         {//cave
@@ -653,7 +653,7 @@
           style:"transform:translate(-50%,-50%);width:3%;height:5%;",
           html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
           onclick:function(){
-            visit(16);
+            
           }
         },
        {//campfire object
@@ -663,14 +663,14 @@
           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
           html:"<img src='/eastergame/Images/Misc/egg.png' width='100%'>",
           onclick:function(){
-            alert("HI");
+            
           }
         },
         ]
     },
     {//16
       name:"The Caves",
-      src:"/eastergame/Images/Mountains/mountains.png",
+      src:"/eastergame/Images/Mountains/cave.png",
       obj:[
        {//campfire object
         unlocked:true,
