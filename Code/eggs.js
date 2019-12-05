@@ -139,6 +139,7 @@
       }},
       {a:function(){//20
         alert("poop egg");
+        alert("u liik pop eg an i lik pop egg :)))))))))))))");
       }}
 ];
     
