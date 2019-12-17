@@ -625,7 +625,7 @@
           x:28.5,
           y:75,
           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
-          html:"<img src='/eastergame/Images/Misc/egg.png' width='100%'>",
+          html:"<img src='/eastergame/Images/Mountains/campfire.png' width='100%'>",
           onclick:function(){
             alert("HI");
           }
@@ -677,7 +677,7 @@
           x:28.5,
           y:75,
           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
-          html:"<img src='/eastergame/Images/Misc/egg.png' width='100%'>",
+          html:"<img src='/eastergame/Images/Moutains/sealrock.png' width='100%'>",
           onclick:function(){
             alert("HI");
           }
