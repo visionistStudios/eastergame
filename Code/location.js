@@ -567,15 +567,25 @@
       name:"The River's Path 2",
       src:"/eastergame/Images/RiversEnd/path2.png",
       obj:[
-        {//unlock path
+        {//unlock mountain
            unlocked:true,
-           x:50,
-           y:50,
+           x:85,
+           y:5,
            style:"transform:translate(-50%,-50%);width:50%;",
-           html:"<h1>Click here for mountains yey</h1>",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/blank.png>",
            onclick:function(){
                unlock("mapbtn3");
                visit(14);
+           }
+        },
+       {//backwards
+           unlocked:true,
+           x:85,
+           y:85,
+           style:"transform:translate(-50%,-50%);width:50%;",
+           html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/blank.png>",
+           onclick:function(){
+               visit(11);
            }
         }
         ]
