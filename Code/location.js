@@ -569,9 +569,9 @@
       obj:[
         {//unlock mountain
            unlocked:true,
-           x:85,
+           x:87,
            y:5,
-           style:"transform:translate(-50%,-50%);width:50%;",
+           style:"transform:translate(-50%,-50%);width:10%; height:10%;",
            html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/blank.png>",
            onclick:function(){
                unlock("mapbtn3");
@@ -580,9 +580,9 @@
         },
        {//backwards
            unlocked:true,
-           x:85,
-           y:85,
-           style:"transform:translate(-50%,-50%);width:50%;",
+           x:87,
+           y:90,
+           style:"transform:translate(-50%,-50%);width:10%;height:10%;",
            html:"<img width='100%' height='100%' src='/eastergame/Images/Misc/blank.png>",
            onclick:function(){
                visit(11);
