@@ -634,10 +634,20 @@
         unlocked:true,
           x:28.5,
           y:75,
-          style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+          style:"transform:translate(-50%,-50%);width:20%;height:20%;",
           html:"<img src='/eastergame/Images/Mountains/campfire.png' width='100%'>",
           onclick:function(){
             alert("HI");
+          }
+        }.
+        {//sign
+        unlocked:true,
+          x:45,
+          y:85,
+          style:"transform:translate(-50%,-50%);width:20%;height:20%;",
+          html:"<img src='/eastergame/Images/Mountains/sign.png' width='100%'>",
+          onclick:function(){
+            alert("It looks like a crossroads.");
           }
         }
         ]
@@ -682,14 +692,14 @@
       name:"The Caves",
       src:"/eastergame/Images/Mountains/cave.png",
       obj:[
-       {//campfire object
+       {//seal
         unlocked:true,
           x:28.5,
-          y:75,
+          y:84.7,
           style:"transform:translate(-50%,-50%);width:3%;height:3%;",
           html:"<img src='/eastergame/Images/Mountains/sealrock.png' width='100%'>",
           onclick:function(){
-            alert("HI");
+            alert("Arf, it's a seal");
           }
         }
         ]
