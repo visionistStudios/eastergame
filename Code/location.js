@@ -639,8 +639,8 @@
           onclick:function(){
             alert("HI");
           }
-        }.
-        {//sign
+        },
+       {//sign
         unlocked:true,
           x:45,
           y:85,
