@@ -637,13 +637,13 @@
           style:"transform:translate(-50%,-50%);width:20%;height:20%;",
           html:"<img src='/eastergame/Images/Mountains/campfire.png' width='100%'>",
           onclick:function(){
-            alert("HI");
+            alert("Sadly, there isn't an egg inside the fire.");
           }
         },
        {//sign
         unlocked:true,
-          x:45,
-          y:85,
+          x:65,
+          y:55,
           style:"transform:translate(-50%,-50%);width:20%;height:20%;",
           html:"<img src='/eastergame/Images/Mountains/sign.png' width='100%'>",
           onclick:function(){
@@ -656,7 +656,7 @@
       name:"The Campfire",
       src:"/eastergame/Images/Mountains/camp.png",
       obj:[
-        {//campfire location
+        {//idk
           unlocked:true,
           x:28.5,
           y:53.5,
@@ -666,7 +666,7 @@
             alert("UR BAD");
           }
         },
-        {//cave
+        {//idk
           unlocked:true,
           x:84.25,
           y:54.25,
@@ -676,7 +676,7 @@
             
           }
         },
-       {//campfire object
+       {//idk
         unlocked:true,
           x:28.5,
           y:75,
@@ -700,6 +700,16 @@
           html:"<img src='/eastergame/Images/Mountains/sealrock.png' width='100%'>",
           onclick:function(){
             alert("Arf, it's a seal");
+          }
+        },
+       {//entrance to cave
+        unlocked:true,
+          x:50,
+          y:50,
+          style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+          html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
+          onclick:function(){
+            visit(17);
           }
         }
         ]
