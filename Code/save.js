@@ -80,5 +80,6 @@
 function clear(){
      if(confirm('You are about to reset your game. All unlocked locations and eggs will be removed. Proceed?')){
           localStorage.clear();
+          location.reload();
      }
 }
