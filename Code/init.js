@@ -6,4 +6,5 @@ function init(){
   //map
   resizeMap();
   updateMap();
+  load();
 }
