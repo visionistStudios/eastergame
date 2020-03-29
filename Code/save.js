@@ -79,7 +79,7 @@
     }
 function clear(){
       var vkeys = Object.keys(vars);
-      if (typeof(Storage) !== "undefined" && confirm("You are about to clear your game. Your progress will be cleared. Proceed?");) {
+      if (typeof(Storage) !== "undefined" && confirm("You are about to clear your game. Your progress will be cleared. Proceed?")) {
         for (var i = 0; i<vkeys.length; i++){
         localStorage["vars"+i]=null;//I don't even know if this will cause errors or not
         }
