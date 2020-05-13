@@ -42,6 +42,10 @@ Visionist is now celebrating 15 years of incompetence, laziness, and memes. :P
 
 Our progress has been interesting over the past few months, due to Fluffcake's inability to not procrastinate. But that's fine :P
 
+We will try to update stuff as soon as possible lol
+
+or just give up XD
+
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
@@ -50,7 +54,7 @@ Fluffcakes - Lead Artist / Designer
 Dogey - Lead Storyline Writer / Lead Inspiration
 
 # Support, Inspiration, and Beta Testers
-Zappiturtle - Seal Island inspiration / Worst Tester / Very bad work ethic / does not participate / CRAZY seal / -2,000,000 IQ / :) / Viola
+Zappiturtle - Seal Island inspiration / Worst Tester / Very bad work ethic / does not participate / CRAZY seal / -2,000,000 IQ / :) / Viola / Memelord???
 
 Tyson - (im)Moral support / Beta Beta Tester
 
