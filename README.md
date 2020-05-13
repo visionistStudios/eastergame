@@ -40,6 +40,8 @@ Our current progress has gone from -_- to :D - 6/4/2019
 
 Visionist is now celebrating 15 years of incompetence, laziness, and memes. :P 
 
+Our progress has been interesting over the past few months, due to Fluffcake's inability to not procrastinate. But that's fine :P
+
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
