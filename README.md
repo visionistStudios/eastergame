@@ -22,9 +22,11 @@ Saving:
 
 2: Type `save()` and Enter
 
-3: Come back later on later (It is OK to close the window)
+3: Come back later or eventually (It is OK to close the window)
 
-4: Type `load()` in command console, and everything should be happy
+4: Your save will be automatically loaded back, assuming that your browser allows local storage. 
+
+5: Type `clear()` in command console if you want to reset your save. 
 
 Note: A more integrated save system will be added in the near future.  
 
