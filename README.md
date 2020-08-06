@@ -30,7 +30,7 @@ Note: A more integrated save system will be added in the near future.
 
 Release Date:
 
-Official release date will be April 12, 2020 (Easter 2020) possibly easter of 2021 considering our progress ...
+Official release date will be April 12, 2120 (Easter 2120) possibly easter of 3421 considering our progress ...
 
 In my opinion, we won't even finish by 2022 so uh :P
 
