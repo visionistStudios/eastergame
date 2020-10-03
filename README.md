@@ -15,6 +15,8 @@ We are trolling
 
 ERROR GAME BROKEN! XD
 
+NOTE 4: we are trying to work
+
 # Things to Know
 Saving:
 
