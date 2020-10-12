@@ -77,3 +77,5 @@ Dragon Master - Beta Beta Tester
 Temmie - Beta Beta Tester
 
 Aman - Beta Beta Tester
+
+damazing - Beta Beta Tester
