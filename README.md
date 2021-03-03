@@ -17,6 +17,9 @@ ERROR GAME BROKEN! XD
 
 NOTE 4: we are trying to work
 
+ha ha h a  h    a      h              a 
+I spy an artifact here
+
 # Things to Know
 Saving:
 
