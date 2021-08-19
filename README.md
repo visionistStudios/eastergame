@@ -20,6 +20,8 @@ NOTE 4: we are trying to work
 ha ha h a  h    a      h              a 
 I spy an artifact here
 
+Hello, this is Bob, Bob is happy.
+
 # Things to Know
 Saving:
 
