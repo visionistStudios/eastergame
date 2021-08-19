@@ -53,6 +53,8 @@ We will try to update stuff as soon as possible lol
 
 or just give up XD
 
+We will start when we will end
+
 # The All-Powerful Devs:
 Visionist - Lead Programmer / Lead Designer
 
