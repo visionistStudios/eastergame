@@ -138,6 +138,9 @@
         hide("rivergrassegg",[10,2]);
       }},
       {a:function(){//20
+        alert("Egg-shaped lighthouse??");
+      }},
+      {a:function(){//21
         alert("poop egg");
         alert("u liik pop eg an i lik pop egg :)))))))))))))");
       }}
