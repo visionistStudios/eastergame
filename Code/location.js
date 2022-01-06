@@ -447,6 +447,7 @@
            html:"<img width='100%' src='/eastergame/Images/RiversEnd/light.png'>",
            onclick:function(){
                check("lighthouseopacity",1,()=>{lighthouseLighten();});
+               findegg(20);
            }
         }
         ]
@@ -703,6 +704,32 @@
           }
         },
        {//entrance to cave
+        unlocked:true,
+          x:50,
+          y:50,
+          style:"transform:translate(-50%,-50%);width:3%;height:3%;",
+          html:"<img src='/eastergame/Images/Misc/blank.png' width='100%'>",
+          onclick:function(){
+            visit(17);
+          }
+        }
+        ]
+    },
+    {//17
+      name:"The Tunnels",
+      src:"/eastergame/Images/Mountains/dark path.png",
+      obj:[
+       {//lantern
+        unlocked:true,
+          x:28.5,
+          y:84.7,
+          style:"transform:translate(-50%,-50%);width:5%;height:5%;",
+          html:"<img src='/eastergame/Images/Mountains/lantern.png' width='100%'>",
+          onclick:function(){
+            alert("Light it up!");
+          }
+        },
+       {//placeholder
         unlocked:true,
           x:50,
           y:50,
